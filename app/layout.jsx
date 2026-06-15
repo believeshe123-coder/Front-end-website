@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="font-sans antialiased">
         <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 shadow-sm backdrop-blur">
-          <nav className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-4 sm:flex-row sm:items-center sm:justify-between">
+          <nav className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-6 py-4 sm:flex-row sm:items-center sm:justify-between lg:px-8">
             <Link
               href="/"
               className="text-2xl font-bold tracking-tight text-slate-950 transition hover:text-blue-700"
@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
             </div>
           </nav>
         </header>
-        <main className="mx-auto min-h-[calc(100vh-81px)] max-w-6xl px-6 py-12">
+        <main className="min-h-[calc(100vh-73px)]">
           {children}
         </main>
       </body>
