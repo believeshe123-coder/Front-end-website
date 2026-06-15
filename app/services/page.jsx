@@ -66,7 +66,7 @@ const serviceSections = [
 
 export default function ServicesPage() {
   return (
-    <div className="bg-slate-50 text-slate-900">
+    <div className="overflow-hidden bg-white text-blue-950">
       <PageHero
         eyebrow="What we do"
         title="One dedicated team for the office work behind your service business."
@@ -76,7 +76,7 @@ export default function ServicesPage() {
         image="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1100&q=80"
         imageAlt="Contractor using tools at a job site"
       >
-        <div className="rounded-xl bg-blue-50 p-5 text-slate-700">
+        <div className="rounded-xl border border-blue-100 bg-blue-50 p-5 text-slate-700 shadow-inner">
           <p className="leading-7">
             We become an extension of your business, handling the day-to-day
             office operations that keep everything moving while you focus on
@@ -85,19 +85,19 @@ export default function ServicesPage() {
         </div>
       </PageHero>
 
-      <section className="px-6 pb-16 lg:px-8">
+      <section className="bg-stone-50 px-6 py-16 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-6">
           {serviceSections.map((section) => (
             <article
               key={section.title}
-              className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:p-8"
+              className="rounded-2xl border border-slate-200 bg-white p-6 shadow-lg shadow-slate-900/10 transition hover:-translate-y-1 hover:shadow-xl md:p-8"
             >
               <div className="grid gap-6 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
                 <div>
                   <p className="text-sm font-bold uppercase tracking-[0.25em] text-blue-700">
                     Services include
                   </p>
-                  <h2 className="mt-3 text-3xl font-black tracking-tight text-slate-950">
+                  <h2 className="mt-3 text-3xl font-black tracking-tight text-blue-950">
                     {section.title}
                   </h2>
                   <p className="mt-4 leading-7 text-slate-700">{section.intro}</p>
@@ -113,7 +113,7 @@ export default function ServicesPage() {
                     {section.services.map((service) => (
                       <li
                         key={service}
-                        className="rounded-lg border border-slate-200 bg-slate-50 p-4 font-semibold text-slate-800"
+                        className="rounded-lg border border-blue-100 bg-blue-50/60 p-4 font-semibold text-blue-950"
                       >
                         {service}
                       </li>
@@ -131,10 +131,10 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="bg-white px-6 py-16 lg:px-8">
+      <section className="px-6 py-16 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-2">
-          <div className="rounded-2xl border border-blue-100 bg-blue-50 p-8">
-            <h2 className="text-3xl font-black tracking-tight text-slate-950">
+          <div className="rounded-2xl border border-blue-100 bg-blue-50 p-8 shadow-inner">
+            <h2 className="text-3xl font-black tracking-tight text-blue-950">
               One Team. One Point of Contact.
             </h2>
             <p className="mt-4 leading-7 text-slate-700">
@@ -150,7 +150,7 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          <div className="rounded-2xl border border-slate-200 bg-slate-950 p-8 text-white">
+          <div className="rounded-2xl border border-blue-800 bg-blue-950 p-8 text-white shadow-2xl shadow-blue-950/20">
             <h2 className="text-3xl font-black tracking-tight">
               Focus on the Work. We&apos;ll Handle the Office.
             </h2>
