@@ -2,16 +2,15 @@ import Link from "next/link";
 import "./globals.css";
 
 export const metadata = {
-  title: "Blue Collar Office Help",
+  title: "Field Office",
   description:
-    "Scheduling, customer calls, invoicing, and follow-up for growing service businesses.",
+    "Call management, scheduling, financial support, marketing, recruiting, and business support for service businesses.",
 };
 
 const navItems = [
+  { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
-  { href: "/#how-we-work", label: "How We Work" },
-  { href: "/about", label: "About" },
-  { href: "/#resources", label: "Resources" },
+  { href: "/about", label: "About us" },
 ];
 
 export default function RootLayout({ children }) {
@@ -22,10 +21,7 @@ export default function RootLayout({ children }) {
           <nav className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-6 py-4 sm:flex-row sm:items-center sm:justify-between lg:px-8">
             <Link href="/" className="flex items-center gap-3 text-blue-950 transition hover:text-blue-700">
               <span className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-700 text-2xl text-white shadow-lg shadow-blue-700/20">▱</span>
-              <span className="leading-none">
-                <span className="block text-2xl font-black uppercase tracking-[0.08em]">Blue Collar</span>
-                <span className="block text-sm font-black uppercase tracking-[0.35em] text-slate-600">Office Help</span>
-              </span>
+              <span className="block text-2xl font-black uppercase tracking-[0.08em]">Field Office</span>
             </Link>
             <div className="flex flex-wrap items-center gap-4 sm:gap-7">
               {navItems.map((item) => (
@@ -33,17 +29,24 @@ export default function RootLayout({ children }) {
                   {item.label}
                 </Link>
               ))}
-              <Link href="/contact" className="rounded-lg bg-blue-700 px-7 py-3 text-sm font-black text-white shadow-lg shadow-blue-700/20 transition hover:bg-blue-800">
-                Let&apos;s Talk
-              </Link>
+              <div className="group relative">
+                <Link href="/contact" className="text-sm font-black text-blue-950 transition hover:text-blue-700">
+                  Contact us
+                </Link>
+                <div className="absolute right-0 top-full hidden min-w-44 pt-3 group-hover:block group-focus-within:block">
+                  <Link href="/contact" className="block rounded-lg border border-blue-100 bg-white px-4 py-3 text-sm font-black text-blue-950 shadow-xl shadow-blue-950/10 transition hover:bg-blue-50 hover:text-blue-700">
+                    Request a quote
+                  </Link>
+                </div>
+              </div>
             </div>
           </nav>
         </header>
         <main className="min-h-[calc(100vh-73px)]">{children}</main>
         <footer className="border-t border-slate-200 bg-white px-6 py-8 lg:px-8">
           <div className="mx-auto flex max-w-7xl flex-col gap-2 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between">
-            <p>© 2026 Blue Collar Office Help.</p>
-            <p>Practical admin support for contractors and service businesses.</p>
+            <p>© 2026 Field Office.</p>
+            <p>Practical support for businesses that keep things running.</p>
           </div>
         </footer>
       </body>

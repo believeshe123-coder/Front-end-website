@@ -10,9 +10,11 @@ export function PageHero({
   imageAlt,
   children,
   kicker = "Built for busy service pros",
+  compact = false,
+  hideActions = false,
 }) {
   return (
-    <section className="relative overflow-hidden border-b border-blue-100 bg-[radial-gradient(circle_at_top_left,#eef6ff,transparent_34%),linear-gradient(180deg,#ffffff_0%,#f8fbff_100%)] px-6 py-14 text-blue-950 lg:px-8 lg:py-20">
+    <section className={`relative overflow-hidden border-b border-blue-100 bg-[radial-gradient(circle_at_top_left,#eef6ff,transparent_34%),linear-gradient(180deg,#ffffff_0%,#f8fbff_100%)] px-6 text-blue-950 lg:px-8 ${compact ? "py-10 lg:py-12" : "py-14 lg:py-20"}`}>
       <div className="absolute -right-24 top-12 h-72 w-72 rounded-full bg-blue-100/70 blur-3xl" aria-hidden="true" />
       <div className="absolute bottom-0 left-1/2 h-40 w-[34rem] -translate-x-1/2 rounded-full bg-orange-100/50 blur-3xl" aria-hidden="true" />
 
@@ -21,26 +23,28 @@ export function PageHero({
           <p className="text-sm font-black uppercase tracking-[0.28em] text-blue-700">
             {eyebrow}
           </p>
-          <h1 className="mt-5 max-w-4xl text-5xl font-black leading-[0.98] tracking-tight text-blue-950 sm:text-6xl lg:text-7xl">
+          <h1 className={`mt-5 max-w-4xl font-black leading-[0.98] tracking-tight text-blue-950 ${compact ? "text-4xl sm:text-5xl lg:text-6xl" : "text-5xl sm:text-6xl lg:text-7xl"}`}>
             {title}
           </h1>
           <p className="mt-8 max-w-2xl text-lg font-medium leading-8 text-slate-700">
             {description}
           </p>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Link
-              href={primaryHref}
-              className="rounded-lg bg-blue-700 px-7 py-4 text-sm font-black text-white shadow-lg shadow-blue-700/20 transition hover:-translate-y-0.5 hover:bg-blue-800"
-            >
-              {primaryLabel}
-            </Link>
-            <Link
-              href="/"
-              className="rounded-lg border-2 border-blue-600 bg-white px-7 py-4 text-sm font-black text-blue-950 transition hover:-translate-y-0.5 hover:bg-blue-50"
-            >
-              Back home
-            </Link>
-          </div>
+          {!hideActions ? (
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Link
+                href={primaryHref}
+                className="rounded-lg bg-blue-700 px-7 py-4 text-sm font-black text-white shadow-lg shadow-blue-700/20 transition hover:-translate-y-0.5 hover:bg-blue-800"
+              >
+                {primaryLabel}
+              </Link>
+              <Link
+                href="/"
+                className="rounded-lg border-2 border-blue-600 bg-white px-7 py-4 text-sm font-black text-blue-950 transition hover:-translate-y-0.5 hover:bg-blue-50"
+              >
+                Back home
+              </Link>
+            </div>
+          ) : null}
           {children ? <div className="mt-8">{children}</div> : null}
         </div>
 
@@ -50,7 +54,7 @@ export function PageHero({
               <img
                 src={image}
                 alt={imageAlt}
-                className="h-[30rem] w-full object-cover"
+                className={`${compact ? "h-[18rem]" : "h-[30rem]"} w-full object-cover`}
               />
             </div>
             <div className="absolute -bottom-8 left-8 right-8 rounded-xl border border-slate-200 bg-white/95 p-6 shadow-2xl shadow-blue-950/15 backdrop-blur">
