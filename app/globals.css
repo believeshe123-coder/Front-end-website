@@ -11,3 +11,65 @@ body {
   background: #f8fafc;
   color: #0f172a;
 }
+
+@layer components {
+  .site-section {
+    @apply px-6 py-10 lg:px-8 lg:py-12;
+  }
+
+  .site-section-tight {
+    @apply px-6 py-8 lg:px-8 lg:py-10;
+  }
+
+  .site-section-bottom {
+    @apply px-6 pb-10 lg:px-8 lg:pb-12;
+  }
+
+  .hero-section {
+    @apply relative overflow-hidden border-b border-blue-100 bg-[radial-gradient(circle_at_top_left,#eef6ff,transparent_34%),linear-gradient(180deg,#ffffff_0%,#f8fbff_100%)] px-6 py-10 text-blue-950 lg:px-8 lg:py-14;
+  }
+
+  .hero-section-compact {
+    @apply py-8 lg:py-10;
+  }
+
+  .hero-grid {
+    @apply relative mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.95fr_1fr] lg:items-center;
+  }
+
+  .eyebrow {
+    @apply text-sm font-black uppercase tracking-[0.24em] text-blue-700;
+  }
+
+  .hero-title {
+    @apply mt-3 max-w-4xl text-4xl font-black leading-[1.02] tracking-tight text-blue-950 sm:text-5xl lg:text-6xl;
+  }
+
+  .hero-title-large {
+    @apply sm:text-6xl lg:text-7xl;
+  }
+
+  .hero-copy {
+    @apply mt-5 max-w-2xl text-base font-medium leading-7 text-slate-700 sm:text-lg;
+  }
+
+  .action-row {
+    @apply mt-6 flex flex-wrap gap-3;
+  }
+
+  .btn-primary {
+    @apply rounded-lg bg-blue-700 px-6 py-3 text-sm font-black text-white shadow-lg shadow-blue-700/20 transition hover:-translate-y-0.5 hover:bg-blue-800;
+  }
+
+  .btn-secondary {
+    @apply rounded-lg border-2 border-blue-600 bg-white px-6 py-3 text-sm font-black text-blue-950 transition hover:-translate-y-0.5 hover:bg-blue-50;
+  }
+
+  .content-card {
+    @apply rounded-2xl border border-slate-200 bg-white p-5 shadow-lg shadow-slate-900/10 md:p-6;
+  }
+
+  .feature-panel {
+    @apply rounded-2xl p-6 shadow-inner ring-1 md:p-7;
+  }
+}
