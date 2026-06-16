@@ -19,9 +19,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="font-sans antialiased">
         <header className="sticky top-0 z-50 border-b border-blue-950/10 bg-white/95 backdrop-blur">
-          <nav className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-6 py-4 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+          <nav className="mx-auto flex min-h-24 w-full max-w-7xl flex-col gap-2 overflow-visible px-6 py-0 sm:min-h-28 sm:flex-row sm:items-center sm:justify-between lg:px-8">
             <Link href="/" className="flex items-center transition hover:opacity-85" aria-label="Field Office home">
-              <img src="/images/Logo%20(2).png" alt="Field Office" className="h-16 w-auto max-w-[16rem] rounded-sm object-contain sm:h-20 sm:max-w-[22rem]" />
+              <img src="/images/Logo%20(2).png" alt="Field Office" className="m-0 block h-24 w-auto max-w-[18rem] rounded-sm object-contain sm:h-28 sm:max-w-[24rem]" />
             </Link>
             <div className="flex flex-wrap items-center gap-4 sm:gap-7">
               {navItems.map((item) => (
