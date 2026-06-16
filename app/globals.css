@@ -198,6 +198,10 @@ body {
     padding-inline: calc(2rem * var(--admin-horizontal-spacing));
   }
 
+  .hero-home {
+    padding-block: calc(2.75rem * var(--admin-vertical-spacing));
+  }
+
   .hero-section-compact {
     padding-block: calc(2.5rem * var(--admin-vertical-spacing));
   }
@@ -211,11 +215,17 @@ body {
 
 .hero-home-image {
   position: absolute;
-  inset: 0 0 0 auto;
-  width: min(66rem, 55vw);
+  top: 50%;
+  right: max(1.5rem, calc((100vw - (80rem * var(--admin-content-width))) / 2));
+  width: min(48rem, 47vw);
+  height: calc(100% - 2.5rem);
+  min-height: 30rem;
+  transform: translateY(-50%);
+  border-radius: 1.25rem;
   background-image: url("/images/d2f3a19b-8350-428d-8070-88f224a99d10.png");
-  background-position: center right;
+  background-position: 56% center;
   background-size: cover;
+  box-shadow: 0 24px 60px color-mix(in srgb, var(--admin-dark) 16%, transparent);
   z-index: -2;
 }
 
@@ -223,8 +233,8 @@ body {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, var(--admin-page) 0%, color-mix(in srgb, var(--admin-page) 98%, transparent) 36%, color-mix(in srgb, var(--admin-page) 68%, transparent) 51%, transparent 68%),
-    linear-gradient(180deg, color-mix(in srgb, white 58%, transparent) 0%, transparent 46%, color-mix(in srgb, black 24%, transparent) 100%);
+    linear-gradient(90deg, var(--admin-page) 0%, color-mix(in srgb, var(--admin-page) 98%, transparent) 38%, color-mix(in srgb, var(--admin-page) 70%, transparent) 54%, transparent 72%),
+    linear-gradient(180deg, color-mix(in srgb, white 42%, transparent) 0%, transparent 48%, color-mix(in srgb, black 16%, transparent) 100%);
   z-index: -1;
 }
 
@@ -264,7 +274,14 @@ body {
   }
 
   .hero-home-image {
+    inset: 0;
     width: 100%;
+    height: 100%;
+    min-height: 0;
+    transform: none;
+    border-radius: 0;
+    background-position: 58% center;
+    box-shadow: none;
     opacity: 0.24;
   }
 
