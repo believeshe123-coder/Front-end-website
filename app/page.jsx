@@ -24,45 +24,49 @@ const trustItems = [
   { title: "We Treat Your Business Like Ours", icon: "♡" },
 ];
 
-const officeCosts = [
-  "Missed calls → lost jobs",
-  "Late invoices → slower cash flow",
-  "Poor scheduling → wasted drive time",
-  "Admin work → nights and weekends lost",
+const commonSupportAreas = [
+  "Answering customer calls",
+  "Scheduling appointments",
+  "Sending estimates",
+  "Following up with customers",
+  "Managing invoices",
+  "Keeping calendars organized",
 ];
 
 const howItWorks = [
   {
     title: "Learn Your Business",
-    text: "Services, pricing, customers, scheduling process",
+    text: "Services, customers, pricing, and workflow.",
   },
   {
-    title: "Run the Office Work",
-    text: "Calls, scheduling, estimates, follow-ups, invoices",
+    title: "Support Your Daily Operations",
+    text: "Calls, scheduling, estimates, invoicing, and customer communication.",
   },
   {
-    title: "Keep You in the Field",
-    text: "More jobs, better customer service, less admin stress",
+    title: "Help You Stay Focused",
+    text: "Spend more time serving customers and growing your business.",
   },
 ];
 
 export default function Home() {
   return (
     <div className="overflow-hidden bg-white text-blue-950">
-      <section className="hero-section">
-        <div className="hero-grid lg:grid-cols-[0.9fr_1fr]">
-          <div>
+      <section className="hero-section hero-home">
+        <div className="hero-home-image" aria-hidden="true" />
+        <div className="hero-home-overlay" aria-hidden="true" />
+        <div className="hero-grid hero-home-grid">
+          <div className="hero-home-content">
             <p className="eyebrow">Office support for service businesses</p>
             <h1 className="hero-title hero-title-large">
               You handle the work.
               <span className="relative mt-1 block text-blue-700">We&apos;ll handle the office.</span>
             </h1>
             <p className="hero-copy">
-              Your office manager, dispatcher, scheduler, and customer service team—all for less than hiring one employee.
+              From answering phones and scheduling jobs to invoices and customer follow-ups, Field Office gives you a full office team without hiring one.
             </p>
             <div className="action-row">
               <Link href="/services" className="btn-primary">See Our Services</Link>
-              <Link href="/who-we-service" className="btn-secondary">Who We Service</Link>
+              <Link href="#services" className="btn-secondary">How We Help</Link>
               <Link href="/contact" className="btn-secondary">Request a Quote</Link>
             </div>
             <div className="mt-7 grid grid-cols-2 gap-4 sm:grid-cols-4">
@@ -73,13 +77,8 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <div className="relative">
-            <div className="overflow-hidden rounded-xl shadow-2xl shadow-blue-950/15 ring-1 ring-blue-950/10">
-              <img src="/images/d2f3a19b-8350-428d-8070-88f224a99d10.png" alt="Office support specialist taking notes while answering a customer call" className="h-[22rem] w-full object-cover lg:h-[26rem]" />
-            </div>
-            <div className="absolute -bottom-6 left-6 right-6 rounded-xl border border-slate-200 bg-white/95 p-5 shadow-2xl shadow-blue-950/15 backdrop-blur lg:left-8 lg:right-8">
-              <div className="flex items-center gap-5"><div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-4 border-blue-100 text-2xl text-blue-700">♙</div><p className="text-base font-black leading-7 text-blue-950">Professional office support from people who understand the trades.<span className="block text-blue-700">So you can stay focused in the field.</span></p></div>
-            </div>
+          <div className="hero-home-callout rounded-xl border border-slate-200 bg-white/95 p-5 shadow-2xl shadow-blue-950/15 backdrop-blur">
+            <div className="flex items-center gap-5"><div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-blue-600 text-2xl text-blue-700">♙</div><p className="text-base font-black leading-7 text-blue-950">Professional office support from people who understand the trades.<span className="block text-blue-700">So you can stay focused in the field.</span></p></div>
           </div>
         </div>
       </section>
@@ -99,35 +98,36 @@ export default function Home() {
       <section className="site-section bg-white" id="office-costs">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="eyebrow text-[13px]">Problem → Solution</p>
-            <h2 className="mt-3 text-3xl font-black leading-tight tracking-tight text-blue-950 sm:text-4xl">Why Field Office Works</h2>
+            <p className="eyebrow text-[13px]">Flexible office support</p>
+            <h2 className="mt-3 text-3xl font-black leading-tight tracking-tight text-blue-950 sm:text-4xl">Support that fits the way your business works</h2>
             <p className="mt-4 text-base font-semibold leading-7 text-slate-700">
-              You keep doing the work. We handle the calls, scheduling, estimates, invoices, and follow-up that keep the business moving.
+              Get practical help with the calls, scheduling, estimates, customer questions, and paperwork that keep things moving.
             </p>
           </div>
 
           <div className="mt-7 grid gap-6 xl:grid-cols-[0.8fr_1.2fr] xl:items-stretch">
             <div className="content-card flex flex-col bg-white">
-              <p className="eyebrow text-[13px]">The problem</p>
-              <h3 className="mt-3 text-[30px] font-black leading-tight tracking-tight text-blue-950 sm:text-[34px]">What office work is costing you</h3>
+              <p className="eyebrow text-[13px]">Office support</p>
+              <h3 className="mt-3 text-[30px] font-black leading-tight tracking-tight text-blue-950 sm:text-[34px]">When extra office support makes a difference</h3>
               <p className="mt-4 text-base font-semibold leading-7 text-slate-700">
-                When office work is handled between jobs, after hours, or whenever there is time, things start slipping.
+                As your business grows, so do the calls, scheduling, estimates, customer questions, and paperwork that keep things moving.
               </p>
-              <div className="mt-5 grid gap-3">
-                {officeCosts.map((cost) => (
-                  <div key={cost} className="rounded-xl border border-blue-100 bg-blue-50/60 p-4 text-[15px] font-black leading-6 text-blue-950 shadow-sm sm:text-base">
-                    {cost}
+              <p className="mt-5 text-base font-black leading-7 text-blue-950">Common areas we help with:</p>
+              <div className="mt-3 grid gap-3">
+                {commonSupportAreas.map((area) => (
+                  <div key={area} className="rounded-xl border border-blue-100 bg-blue-50/60 p-4 text-[15px] font-black leading-6 text-blue-950 shadow-sm sm:text-base">
+                    {area}
                   </div>
                 ))}
               </div>
-              <Link href="/contact" className="btn-primary mt-6 inline-flex w-fit">Get office support</Link>
+              <Link href="/services" className="btn-primary mt-6 inline-flex w-fit">Explore Support Options</Link>
             </div>
 
             <div className="content-card flex flex-col bg-white" id="how-it-works">
-              <p className="eyebrow text-[13px]">The solution</p>
-              <h3 className="mt-3 text-[30px] font-black leading-tight tracking-tight text-blue-950 sm:text-[34px]">How we become your office team</h3>
+              <p className="eyebrow text-[13px]">How it works</p>
+              <h3 className="mt-3 text-[30px] font-black leading-tight tracking-tight text-blue-950 sm:text-[34px]">How Field Office Works</h3>
               <p className="mt-4 text-base font-semibold leading-7 text-slate-700">
-                We learn how your business runs, plug into your systems, and help manage the daily office work behind the scenes.
+                We plug into the systems and processes you already use, providing the office support you need without the cost of building a full office staff.
               </p>
               <div className="mt-5 grid gap-4 lg:grid-cols-3 xl:grid-cols-1 2xl:grid-cols-3">
                 {howItWorks.map((step, index) => (
@@ -141,7 +141,7 @@ export default function Home() {
                   </article>
                 ))}
               </div>
-              <Link href="/services" className="btn-primary mt-6 inline-flex w-fit">See how it works</Link>
+              <Link href="#how-it-works" className="btn-primary mt-6 inline-flex w-fit">See How It Works</Link>
             </div>
           </div>
         </div>
