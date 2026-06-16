@@ -25,24 +25,24 @@ const trustItems = [
 ];
 
 const officeCosts = [
-  "Missed calls = lost jobs",
-  "Late invoices = delayed cash flow",
-  "Poor scheduling = wasted drive time",
-  "Administrative work = evenings and weekends lost",
+  "Missed calls → lost jobs",
+  "Late invoices → slower cash flow",
+  "Poor scheduling → wasted drive time",
+  "Admin work → nights and weekends lost",
 ];
 
 const howItWorks = [
   {
-    title: "We Learn Your Business",
-    items: ["Your services", "Your pricing", "Your customers", "Your scheduling process"],
+    title: "Learn Your Business",
+    text: "Services, pricing, customers, scheduling process",
   },
   {
-    title: "We Become Your Office Team",
-    items: ["Answer calls", "Schedule jobs", "Send estimates", "Follow up with customers"],
+    title: "Run the Office Work",
+    text: "Calls, scheduling, estimates, follow-ups, invoices",
   },
   {
-    title: "You Focus on the Work",
-    items: ["More jobs", "Better customer service", "Less administrative stress"],
+    title: "Keep You in the Field",
+    text: "More jobs, better customer service, less admin stress",
   },
 ];
 
@@ -97,43 +97,51 @@ export default function Home() {
       </section>
 
       <section className="site-section bg-white" id="office-costs">
-        <div className="mx-auto grid max-w-7xl gap-6 xl:grid-cols-[0.95fr_1.05fr] xl:items-start">
-          <div className="content-card bg-white">
-            <p className="eyebrow">The cost of doing it all yourself</p>
-            <h2 className="mt-3 text-4xl font-black leading-tight tracking-tight text-blue-950">What does office work cost you?</h2>
-            <p className="mt-4 max-w-2xl text-lg font-semibold leading-8 text-slate-700">
-              Field Office gives you a complete office team without payroll, benefits, training, or management headaches.
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="eyebrow text-[13px]">Problem → Solution</p>
+            <h2 className="mt-3 text-3xl font-black leading-tight tracking-tight text-blue-950 sm:text-4xl">Why Field Office Works</h2>
+            <p className="mt-4 text-base font-semibold leading-7 text-slate-700">
+              You keep doing the work. We handle the calls, scheduling, estimates, invoices, and follow-up that keep the business moving.
             </p>
-            <div className="mt-5 grid gap-3 sm:grid-cols-2">
-              {officeCosts.map((cost) => (
-                <div key={cost} className="rounded-xl border border-blue-100 bg-blue-50/60 p-4 text-lg font-black leading-7 text-blue-950 shadow-sm">
-                  {cost}
-                </div>
-              ))}
-            </div>
           </div>
 
-          <div className="content-card bg-white" id="how-it-works">
-            <p className="eyebrow">How it works</p>
-            <h2 className="mt-3 text-4xl font-black leading-tight tracking-tight text-blue-950">How do these people actually work with my business?</h2>
-            <p className="mt-4 leading-7 text-slate-700">
-              We plug into the way you already operate, learn your systems, and become the steady office support behind the hands that built our industries.
-            </p>
-            <div className="mt-5 grid gap-4 md:grid-cols-3 xl:grid-cols-1 2xl:grid-cols-3">
-              {howItWorks.map((step, index) => (
-                <article key={step.title} className="relative overflow-hidden rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-                  <div className="absolute -right-4 -top-6 text-8xl font-black text-blue-50">{index + 1}</div>
-                  <div className="relative">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-700 text-lg font-black text-white">{index + 1}</div>
-                    <h3 className="mt-4 text-xl font-black leading-tight text-blue-950">{step.title}</h3>
-                    <ul className="mt-4 space-y-2 text-sm font-semibold leading-6 text-slate-700">
-                      {step.items.map((item) => (
-                        <li key={item} className="flex gap-2"><span className="text-blue-700">•</span><span>{item}</span></li>
-                      ))}
-                    </ul>
+          <div className="mt-7 grid gap-6 xl:grid-cols-[0.8fr_1.2fr] xl:items-stretch">
+            <div className="content-card flex flex-col bg-white">
+              <p className="eyebrow text-[13px]">The problem</p>
+              <h3 className="mt-3 text-[30px] font-black leading-tight tracking-tight text-blue-950 sm:text-[34px]">What office work is costing you</h3>
+              <p className="mt-4 text-base font-semibold leading-7 text-slate-700">
+                When office work is handled between jobs, after hours, or whenever there is time, things start slipping.
+              </p>
+              <div className="mt-5 grid gap-3">
+                {officeCosts.map((cost) => (
+                  <div key={cost} className="rounded-xl border border-blue-100 bg-blue-50/60 p-4 text-[15px] font-black leading-6 text-blue-950 shadow-sm sm:text-base">
+                    {cost}
                   </div>
-                </article>
-              ))}
+                ))}
+              </div>
+              <Link href="/contact" className="btn-primary mt-6 inline-flex w-fit">Get office support</Link>
+            </div>
+
+            <div className="content-card flex flex-col bg-white" id="how-it-works">
+              <p className="eyebrow text-[13px]">The solution</p>
+              <h3 className="mt-3 text-[30px] font-black leading-tight tracking-tight text-blue-950 sm:text-[34px]">How we become your office team</h3>
+              <p className="mt-4 text-base font-semibold leading-7 text-slate-700">
+                We learn how your business runs, plug into your systems, and help manage the daily office work behind the scenes.
+              </p>
+              <div className="mt-5 grid gap-4 lg:grid-cols-3 xl:grid-cols-1 2xl:grid-cols-3">
+                {howItWorks.map((step, index) => (
+                  <article key={step.title} className="relative overflow-hidden rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+                    <div className="absolute -right-4 -top-6 text-7xl font-black text-blue-50">{index + 1}</div>
+                    <div className="relative">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-700 text-lg font-black text-white">{index + 1}</div>
+                      <h4 className="mt-4 text-lg font-black leading-tight text-blue-950">{step.title}</h4>
+                      <p className="mt-3 text-[15px] font-semibold leading-6 text-slate-700 sm:text-base">{step.text}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+              <Link href="/services" className="btn-primary mt-6 inline-flex w-fit">See how it works</Link>
             </div>
           </div>
         </div>
