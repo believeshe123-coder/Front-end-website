@@ -204,7 +204,7 @@ body {
 }
 
 .hero-home {
-  min-height: clamp(34rem, 58vw, 46rem);
+  min-height: clamp(35rem, 37vw, 45rem);
   background: #f8f8f6;
   isolation: isolate;
 }
@@ -212,7 +212,7 @@ body {
 .hero-home-image {
   position: absolute;
   inset: 0 0 0 auto;
-  width: min(64rem, 64vw);
+  width: min(66rem, 55vw);
   background-image: url("/images/d2f3a19b-8350-428d-8070-88f224a99d10.png");
   background-position: center right;
   background-size: cover;
@@ -223,14 +223,14 @@ body {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, var(--admin-page) 0%, color-mix(in srgb, var(--admin-page) 98%, transparent) 31%, color-mix(in srgb, var(--admin-page) 70%, transparent) 49%, transparent 69%),
-    linear-gradient(180deg, color-mix(in srgb, white 42%, transparent) 0%, transparent 48%, color-mix(in srgb, black 24%, transparent) 100%);
+    linear-gradient(90deg, var(--admin-page) 0%, color-mix(in srgb, var(--admin-page) 98%, transparent) 36%, color-mix(in srgb, var(--admin-page) 68%, transparent) 51%, transparent 68%),
+    linear-gradient(180deg, color-mix(in srgb, white 58%, transparent) 0%, transparent 46%, color-mix(in srgb, black 24%, transparent) 100%);
   z-index: -1;
 }
 
 .hero-home-grid {
-  min-height: clamp(29rem, 50vw, 39rem);
-  grid-template-columns: minmax(0, 0.82fr) minmax(19rem, 1fr);
+  min-height: clamp(30rem, 33vw, 39rem);
+  grid-template-columns: minmax(0, 0.9fr) minmax(24rem, 1fr);
   align-items: center;
 }
 
@@ -241,8 +241,21 @@ body {
 .hero-home-callout {
   align-self: end;
   justify-self: end;
-  width: min(100%, 39rem);
-  margin-bottom: -0.75rem;
+  width: min(100%, 43rem);
+  margin-bottom: 1.5rem;
+  margin-right: 0.75rem;
+}
+
+.hero-home .hero-copy {
+  font-size: clamp(1.15rem, 1.3vw, 1.38rem);
+  line-height: 1.55;
+}
+
+.hero-home .btn-primary,
+.hero-home .btn-secondary {
+  min-width: 10.25rem;
+  justify-content: center;
+  padding-block: 1rem;
 }
 
 @media (max-width: 1023px) {

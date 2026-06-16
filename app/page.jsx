@@ -98,10 +98,10 @@ export default function Home() {
       <section className="site-section bg-white" id="office-costs">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="eyebrow text-[13px]">Flexible office support</p>
-            <h2 className="mt-3 text-3xl font-black leading-tight tracking-tight text-blue-950 sm:text-4xl">Support that fits the way your business works</h2>
+            <p className="eyebrow text-[13px]">Problem - Solution</p>
+            <h2 className="mt-3 text-3xl font-black leading-tight tracking-tight text-blue-950 sm:text-4xl">Why Field Office Works</h2>
             <p className="mt-4 text-base font-semibold leading-7 text-slate-700">
-              Get practical help with the calls, scheduling, estimates, customer questions, and paperwork that keep things moving.
+              You keep doing the work. We handle the calls, scheduling, estimates, invoices, and follow-up that keep the business moving.
             </p>
           </div>
 
