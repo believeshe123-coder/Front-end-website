@@ -8,13 +8,13 @@ const industries = [
 ];
 
 const supportOffers = [
-  { title: "Call management", text: "Professional call support, messages, customer follow-up, and clear communication so every lead is handled well.", icon: "☎" },
-  { title: "Scheduling and dispatching", text: "Appointment scheduling, route coordination, crew updates, and daily dispatch support that keeps jobs moving.", icon: "▦" },
-  { title: "Financial support", text: "Connect us to your software, or use our system for estimates, invoices, reminders, and organized customer accounts.", icon: "$" },
-  { title: "Marketing support", text: "Social posts, review requests, lead tracking, follow-up campaigns, and help keeping your business visible.", icon: "↗" },
-  { title: "Recruiting help or temp management", text: "Job postings, applicant tracking, interview scheduling, candidate communication, and temporary workforce coordination.", icon: "♙" },
-  { title: "Business growth", text: "Reporting, process improvement, customer retention, and support that helps you make the next smart move.", icon: "▥" },
-  { title: "Custom support", text: "A flexible support plan built around the exact office tasks your business needs off your plate.", icon: "◆" },
+  { title: "Call management", text: "Professional call support, messages, customer follow-up, and clear communication so every lead is handled well." },
+  { title: "Scheduling and dispatching", text: "Appointment scheduling, route coordination, crew updates, and daily dispatch support that keeps jobs moving." },
+  { title: "Financial support", text: "Connect us to your software, or use our system for estimates, invoices, reminders, and organized customer accounts." },
+  { title: "Marketing support", text: "Social posts, review requests, lead tracking, follow-up campaigns, and help keeping your business visible." },
+  { title: "Recruiting help or temp management", text: "Job postings, applicant tracking, interview scheduling, candidate communication, and temporary workforce coordination." },
+  { title: "Business growth", text: "Reporting, process improvement, customer retention, and support that helps you make the next smart move." },
+  { title: "Custom support", text: "A flexible support plan built around the exact office tasks your business needs off your plate." },
 ];
 
 const trustItems = [
@@ -53,7 +53,7 @@ export default function Home() {
           </div>
           <div className="relative">
             <div className="overflow-hidden rounded-xl shadow-2xl shadow-blue-950/15 ring-1 ring-blue-950/10">
-              <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1300&q=85" alt="Smiling service professional standing by a work van" className="h-[22rem] w-full object-cover lg:h-[26rem]" />
+              <img src="https://chatgpt.com/backend-api/estuary/content?id=file_00000000e41c71fb9be70460ee6ebdc5&ts=494893&p=fs&cid=1&sig=163e89012bcd7cdaafe6417c2492f2fc40add17c63f961def4350d4a451d7c06&v=0" alt="Office support specialist taking notes while answering a customer call" className="h-[22rem] w-full object-cover lg:h-[26rem]" />
             </div>
             <div className="absolute -bottom-6 left-6 right-6 rounded-xl border border-slate-200 bg-white/95 p-5 shadow-2xl shadow-blue-950/15 backdrop-blur lg:left-8 lg:right-8">
               <div className="flex items-center gap-5"><div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-4 border-blue-100 text-2xl text-blue-700">♙</div><p className="text-base font-black leading-7 text-blue-950">Professional office support from people who understand the trades.<span className="block text-blue-700">So you can stay focused in the field.</span></p></div>
@@ -83,7 +83,6 @@ export default function Home() {
           <div className="mt-6 flex snap-x gap-4 overflow-x-auto pb-4 [scrollbar-width:thin]">
             {supportOffers.map((offer) => (
               <article key={offer.title} className="content-card min-w-[18rem] snap-start md:min-w-[23rem]">
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-700 text-xl font-black text-white shadow-lg shadow-blue-700/20">{offer.icon}</div>
                 <h3 className="text-xl font-black text-blue-950">{offer.title}</h3>
                 <p className="mt-2 leading-7 text-slate-700">{offer.text}</p>
               </article>

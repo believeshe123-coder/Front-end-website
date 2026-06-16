@@ -3,15 +3,15 @@
 import { useEffect, useState } from "react";
 
 const defaultSettings = {
-  verticalSpacing: 1,
-  horizontalSpacing: 1,
+  verticalSpacing: 0.7,
+  horizontalSpacing: 1.1,
   cardSpacing: 1,
-  heroImageHeight: 1,
-  contentWidth: 1,
-  primaryColor: "#1d4ed8",
-  darkColor: "#172554",
-  accentColor: "#eff6ff",
-  pageColor: "#ffffff",
+  heroImageHeight: 1.35,
+  contentWidth: 1.1,
+  primaryColor: "#103dbb",
+  darkColor: "#26396d",
+  accentColor: "#fbf4e5",
+  pageColor: "#f8f8f6",
 };
 
 const storageKey = "field-office-admin-theme";
@@ -30,7 +30,7 @@ function applySettings(settings) {
 }
 
 export function AdminControls() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const [settings, setSettings] = useState(defaultSettings);
 
   useEffect(() => {
@@ -94,10 +94,6 @@ export function AdminControls() {
           <button type="button" className="admin-reset" onClick={resetSettings}>Reset design</button>
         </aside>
       ) : null}
-
-      <button type="button" className="admin-toggle" onClick={() => setIsOpen((current) => !current)} aria-expanded={isOpen}>
-        Admin
-      </button>
     </div>
   );
 }

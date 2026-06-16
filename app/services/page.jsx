@@ -17,8 +17,6 @@ export default function ServicesPage() {
         eyebrow="Services"
         title="Office support that gets to work quickly."
         description="Choose the help that fits your business: calls, scheduling, dispatching, financial support, marketing, recruiting, business growth, or a custom mix."
-        image="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1100&q=80"
-        imageAlt="Contractor using tools at a job site"
         compact
         hideActions
       />

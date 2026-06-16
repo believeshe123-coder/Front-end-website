@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
         <header className="sticky top-0 z-50 border-b border-blue-950/10 bg-white/95 backdrop-blur">
           <nav className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-6 py-4 sm:flex-row sm:items-center sm:justify-between lg:px-8">
             <Link href="/" className="flex items-center gap-3 text-blue-950 transition hover:text-blue-700">
-              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-700 text-2xl text-white shadow-lg shadow-blue-700/20">▱</span>
+              <span className="brand-mark flex h-12 w-12 items-center justify-center rounded-full text-2xl font-black shadow-lg">▱</span>
               <span className="block text-2xl font-black uppercase tracking-[0.08em]">Field Office</span>
             </Link>
             <div className="flex flex-wrap items-center gap-4 sm:gap-7">
