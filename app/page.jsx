@@ -24,6 +24,28 @@ const trustItems = [
   { title: "We Treat Your Business Like Ours", icon: "♡" },
 ];
 
+const officeCosts = [
+  "Missed calls = lost jobs",
+  "Late invoices = delayed cash flow",
+  "Poor scheduling = wasted drive time",
+  "Administrative work = evenings and weekends lost",
+];
+
+const howItWorks = [
+  {
+    title: "We Learn Your Business",
+    items: ["Your services", "Your pricing", "Your customers", "Your scheduling process"],
+  },
+  {
+    title: "We Become Your Office Team",
+    items: ["Answer calls", "Schedule jobs", "Send estimates", "Follow up with customers"],
+  },
+  {
+    title: "You Focus on the Work",
+    items: ["More jobs", "Better customer service", "Less administrative stress"],
+  },
+];
+
 export default function Home() {
   return (
     <div className="overflow-hidden bg-white text-blue-950">
@@ -36,7 +58,7 @@ export default function Home() {
               <span className="relative mt-1 block text-blue-700">We&apos;ll handle the office.</span>
             </h1>
             <p className="hero-copy">
-              We help service businesses that are too small for a full office staff but too busy to do everything themselves stay organized, serve more customers, and grow with confidence.
+              Your office manager, dispatcher, scheduler, and customer service team—all for less than hiring one employee.
             </p>
             <div className="action-row">
               <Link href="/services" className="btn-primary">See Our Services</Link>
@@ -71,6 +93,53 @@ export default function Home() {
             ))}
           </div>
           <Link href="/who-we-service" className="btn-primary mt-6 inline-flex">Explore who we service</Link>
+        </div>
+      </section>
+
+      <section className="site-section bg-white" id="office-costs">
+        <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+          <div>
+            <p className="eyebrow">The cost of doing it all yourself</p>
+            <h2 className="mt-3 text-4xl font-black leading-tight tracking-tight text-blue-950">What does office work cost you?</h2>
+            <p className="mt-4 max-w-2xl text-lg font-semibold leading-8 text-slate-700">
+              Field Office gives you a complete office team without payroll, benefits, training, or management headaches.
+            </p>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {officeCosts.map((cost) => (
+              <div key={cost} className="rounded-xl border border-blue-100 bg-blue-50/60 p-4 text-lg font-black leading-7 text-blue-950 shadow-sm">
+                {cost}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="site-section-tight bg-stone-50" id="how-it-works">
+        <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
+          <div className="content-card bg-white">
+            <p className="eyebrow">How it works</p>
+            <h2 className="mt-3 text-4xl font-black leading-tight tracking-tight text-blue-950">How do these people actually work with my business?</h2>
+            <p className="mt-4 leading-7 text-slate-700">
+              We plug into the way you already operate, learn your systems, and become the steady office support behind the hands that built our industries.
+            </p>
+          </div>
+          <div className="grid gap-4 md:grid-cols-3">
+            {howItWorks.map((step, index) => (
+              <article key={step.title} className="content-card relative overflow-hidden">
+                <div className="absolute -right-4 -top-6 text-8xl font-black text-blue-50">{index + 1}</div>
+                <div className="relative">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-700 text-lg font-black text-white">{index + 1}</div>
+                  <h3 className="mt-4 text-xl font-black leading-tight text-blue-950">{step.title}</h3>
+                  <ul className="mt-4 space-y-2 text-sm font-semibold leading-6 text-slate-700">
+                    {step.items.map((item) => (
+                      <li key={item} className="flex gap-2"><span className="text-blue-700">•</span><span>{item}</span></li>
+                    ))}
+                  </ul>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
