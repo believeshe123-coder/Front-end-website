@@ -1,13 +1,10 @@
 import Link from "next/link";
 
 const industries = [
-  { label: "HVAC", icon: "✽" },
-  { label: "Plumbing", icon: "♒" },
-  { label: "Electrical", icon: "ϟ" },
-  { label: "Landscaping", icon: "♧" },
-  { label: "Cleaning", icon: "♜" },
-  { label: "Painting", icon: "▰" },
-  { label: "And More", icon: "•••" },
+  { label: "Trades & Home Services", icon: "⌂" },
+  { label: "Beauty & Wellness", icon: "✦" },
+  { label: "Personal Services", icon: "◈" },
+  { label: "Healthcare & Professional Services", icon: "+" },
 ];
 
 const supportOffers = [
@@ -39,10 +36,11 @@ export default function Home() {
               <span className="relative mt-1 block text-blue-700">We&apos;ll handle the office.</span>
             </h1>
             <p className="mt-8 max-w-2xl text-lg font-medium leading-8 text-slate-700">
-              We help contractors and small businesses stay organized, serve more customers, and grow with confidence without the overhead of hiring in-house.
+              We help service businesses that are too small for a full office staff but too busy to do everything themselves stay organized, serve more customers, and grow with confidence.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link href="/services" className="rounded-lg bg-blue-700 px-7 py-4 text-sm font-black text-white shadow-lg shadow-blue-700/20 transition hover:-translate-y-0.5 hover:bg-blue-800">See Our Services</Link>
+              <Link href="/who-we-service" className="rounded-lg border-2 border-blue-600 bg-white px-7 py-4 text-sm font-black text-blue-950 transition hover:-translate-y-0.5 hover:bg-blue-50">Who We Service</Link>
               <Link href="/contact" className="rounded-lg border-2 border-blue-600 bg-white px-7 py-4 text-sm font-black text-blue-950 transition hover:-translate-y-0.5 hover:bg-blue-50">Request a Quote</Link>
             </div>
             <div className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-4">
@@ -67,11 +65,12 @@ export default function Home() {
       <section className="bg-stone-50 px-6 py-8 lg:px-8" id="how-we-work">
         <div className="mx-auto max-w-7xl text-center">
           <h2 className="text-2xl font-black tracking-tight text-blue-950">We support the businesses that keep things running.</h2>
-          <div className="mt-6 grid grid-cols-2 gap-y-6 sm:grid-cols-4 lg:grid-cols-7">
+          <div className="mt-6 grid grid-cols-2 gap-y-6 sm:grid-cols-4 lg:grid-cols-4">
             {industries.map((industry, index) => (
               <div key={industry.label} className={`flex flex-col items-center gap-2 ${index ? "lg:border-l lg:border-slate-300" : ""}`}><span className="text-4xl font-black text-blue-700">{industry.icon}</span><span className="text-sm font-black text-blue-950">{industry.label}</span></div>
             ))}
           </div>
+          <Link href="/who-we-service" className="mt-8 inline-flex rounded-lg bg-blue-700 px-7 py-4 text-sm font-black text-white shadow-lg shadow-blue-700/20 transition hover:-translate-y-0.5 hover:bg-blue-800">Explore who we service</Link>
         </div>
       </section>
 
