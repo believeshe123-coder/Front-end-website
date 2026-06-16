@@ -53,7 +53,7 @@ export default function Home() {
           </div>
           <div className="relative">
             <div className="overflow-hidden rounded-xl shadow-2xl shadow-blue-950/15 ring-1 ring-blue-950/10">
-              <img src="https://chatgpt.com/backend-api/estuary/content?id=file_00000000e41c71fb9be70460ee6ebdc5&ts=494893&p=fs&cid=1&sig=163e89012bcd7cdaafe6417c2492f2fc40add17c63f961def4350d4a451d7c06&v=0" alt="Office support specialist taking notes while answering a customer call" className="h-[22rem] w-full object-cover lg:h-[26rem]" />
+              <img src="/images/home-office-support.svg" alt="Office support specialist taking notes while answering a customer call" className="h-[22rem] w-full object-cover lg:h-[26rem]" />
             </div>
             <div className="absolute -bottom-6 left-6 right-6 rounded-xl border border-slate-200 bg-white/95 p-5 shadow-2xl shadow-blue-950/15 backdrop-blur lg:left-8 lg:right-8">
               <div className="flex items-center gap-5"><div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-4 border-blue-100 text-2xl text-blue-700">♙</div><p className="text-base font-black leading-7 text-blue-950">Professional office support from people who understand the trades.<span className="block text-blue-700">So you can stay focused in the field.</span></p></div>
