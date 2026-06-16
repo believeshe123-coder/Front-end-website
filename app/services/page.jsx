@@ -23,19 +23,19 @@ export default function ServicesPage() {
         hideActions
       />
 
-      <section className="bg-stone-50 px-6 py-12 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-6">
+      <section className="site-section-tight bg-stone-50">
+        <div className="mx-auto grid max-w-7xl gap-5">
           {serviceSections.map((section) => (
-            <article key={section.title} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-lg shadow-slate-900/10 md:p-8">
-              <div className="grid gap-6 lg:grid-cols-[0.7fr_1.3fr] lg:items-start">
+            <article key={section.title} className="content-card">
+              <div className="grid gap-5 lg:grid-cols-[0.7fr_1.3fr] lg:items-start">
                 <div>
                   <p className="text-sm font-bold uppercase tracking-[0.25em] text-blue-700">Services include</p>
                   <h2 className="mt-3 text-3xl font-black tracking-tight text-blue-950">{section.title}</h2>
-                  <p className="mt-4 leading-7 text-slate-700">{section.intro}</p>
+                  <p className="mt-3 leading-7 text-slate-700">{section.intro}</p>
                 </div>
-                <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
                   {section.services.map((service) => (
-                    <li key={service} className="rounded-lg border border-blue-100 bg-blue-50/60 p-4 font-semibold text-blue-950">{service}</li>
+                    <li key={service} className="rounded-lg border border-blue-100 bg-blue-50/60 p-3 font-semibold text-blue-950">{service}</li>
                   ))}
                 </ul>
               </div>

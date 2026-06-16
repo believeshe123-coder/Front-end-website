@@ -38,22 +38,22 @@ export default function WhoWeServicePage() {
         kicker="Built for busy service businesses"
       />
 
-      <section className="bg-stone-50 px-6 py-16 lg:px-8">
+      <section className="site-section bg-stone-50">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
-            <p className="text-sm font-black uppercase tracking-[0.28em] text-blue-700">Businesses we help</p>
+            <p className="eyebrow">Businesses we help</p>
             <h2 className="mt-3 text-4xl font-black tracking-tight text-blue-950">From field crews to appointment-based professionals.</h2>
             <p className="mt-4 text-lg leading-8 text-slate-700">These are common examples, but our support can be customized for almost any service business that needs reliable office help.</p>
           </div>
 
-          <div className="mt-10 grid gap-6 lg:grid-cols-2">
+          <div className="mt-8 grid gap-5 lg:grid-cols-2">
             {serviceGroups.map((group) => (
-              <article key={group.title} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-lg shadow-slate-900/10 md:p-8">
+              <article key={group.title} className="content-card">
                 <h3 className="text-3xl font-black tracking-tight text-blue-950">{group.title}</h3>
-                <p className="mt-4 leading-7 text-slate-700">{group.description}</p>
-                <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+                <p className="mt-3 leading-7 text-slate-700">{group.description}</p>
+                <ul className="mt-5 grid gap-2 sm:grid-cols-2">
                   {group.services.map((service) => (
-                    <li key={service} className="rounded-lg border border-blue-100 bg-blue-50/70 px-4 py-3 font-bold text-blue-950">{service}</li>
+                    <li key={service} className="rounded-lg border border-blue-100 bg-blue-50/70 px-4 py-2.5 font-bold text-blue-950">{service}</li>
                   ))}
                 </ul>
               </article>
@@ -62,11 +62,11 @@ export default function WhoWeServicePage() {
         </div>
       </section>
 
-      <section className="px-6 pb-16 lg:px-8">
-        <div className="mx-auto max-w-7xl rounded-2xl bg-blue-700 p-8 text-center text-white shadow-2xl shadow-blue-950/15 md:p-10">
+      <section className="site-section-bottom">
+        <div className="mx-auto max-w-7xl rounded-2xl bg-blue-700 p-6 text-center text-white shadow-2xl shadow-blue-950/15 md:p-8">
           <h2 className="text-3xl font-black tracking-tight">Not seeing your exact business?</h2>
           <p className="mx-auto mt-3 max-w-2xl leading-7 text-blue-50">If you serve customers and need help with calls, scheduling, follow-up, paperwork, or growth tasks, we can build a practical support plan around your day-to-day needs.</p>
-          <Link href="/contact" className="mt-6 inline-flex rounded-lg bg-white px-9 py-4 text-sm font-black text-blue-950 shadow-lg shadow-blue-950/20 transition hover:-translate-y-0.5 hover:bg-blue-50">Talk with us</Link>
+          <Link href="/contact" className="mt-5 inline-flex rounded-lg bg-white px-8 py-3 text-sm font-black text-blue-950 shadow-lg shadow-blue-950/20 transition hover:-translate-y-0.5 hover:bg-blue-50">Talk with us</Link>
         </div>
       </section>
     </div>
