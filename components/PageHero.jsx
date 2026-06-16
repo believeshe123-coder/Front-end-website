@@ -18,7 +18,7 @@ export function PageHero({
       <div className="absolute -right-24 top-12 h-72 w-72 rounded-full bg-blue-100/70 blur-3xl" aria-hidden="true" />
       <div className="absolute bottom-0 left-1/2 h-40 w-[34rem] -translate-x-1/2 rounded-full bg-orange-100/50 blur-3xl" aria-hidden="true" />
 
-      <div className="hero-grid">
+      <div className={image ? "hero-grid" : "relative mx-auto max-w-4xl"}>
         <div>
           <p className="eyebrow">
             {eyebrow}

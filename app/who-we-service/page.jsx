@@ -31,8 +31,6 @@ export default function WhoWeServicePage() {
         eyebrow="Who we service"
         title="Support for small service businesses that are growing fast."
         description="We work with service businesses that are too small for a full office staff but too busy to do everything themselves. If customers, appointments, paperwork, and follow-up are pulling you away from the work, we can help."
-        image="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1100&q=80"
-        imageAlt="Small business team reviewing office tasks together"
         primaryHref="/contact"
         primaryLabel="Request a quote"
         kicker="Built for busy service businesses"
