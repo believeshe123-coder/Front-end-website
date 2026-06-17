@@ -314,3 +314,97 @@ body {
 .mobile-menu summary::-webkit-details-marker {
   display: none;
 }
+
+.support-showcase {
+  padding: 2.75rem calc(1.5rem * var(--admin-horizontal-spacing)) 2.5rem;
+  background:
+    linear-gradient(180deg, #ffffff 0%, #ffffff 28%, color-mix(in srgb, var(--admin-accent) 34%, white) 28%, color-mix(in srgb, var(--admin-accent) 30%, white) 100%);
+}
+
+.support-industries {
+  padding-bottom: 3rem;
+}
+
+.support-industries .industry-card {
+  min-height: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #ffffff;
+}
+
+.roles-panel {
+  padding-top: 1.75rem;
+}
+
+.role-card-grid {
+  align-items: stretch;
+}
+
+.role-card {
+  min-height: 10rem;
+  padding: clamp(1.5rem, 2.2vw, 2.25rem);
+}
+
+.role-card p {
+  max-width: 18rem;
+  font-size: 1.0625rem;
+  font-weight: 600;
+}
+
+.hire-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.8fr) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: center;
+  margin-top: 2rem;
+  padding: clamp(1.5rem, 2.5vw, 2rem);
+  border: 1px solid color-mix(in srgb, var(--admin-gold-accent) 30%, white);
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--admin-accent) 50%, white);
+  box-shadow: 0 14px 36px color-mix(in srgb, var(--admin-dark) 6%, transparent);
+}
+
+.hire-benefits {
+  padding-inline: 2rem;
+  border-inline: 1px solid color-mix(in srgb, var(--admin-dark) 14%, transparent);
+}
+
+.hire-benefits span {
+  color: var(--admin-dark);
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.hire-panel-cta .btn-primary {
+  background-color: var(--admin-dark) !important;
+  color: #ffffff !important;
+  box-shadow: 0 16px 30px color-mix(in srgb, var(--admin-dark) 24%, transparent) !important;
+}
+
+.hire-panel-cta .btn-primary:hover {
+  background-color: color-mix(in srgb, var(--admin-dark) 86%, black) !important;
+}
+
+@media (max-width: 1023px) {
+  .support-showcase {
+    background: color-mix(in srgb, var(--admin-accent) 28%, white);
+  }
+
+  .hire-panel {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hire-benefits {
+    padding: 0;
+    border: 0;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1024px) {
+  .support-showcase {
+    padding-inline: calc(2rem * var(--admin-horizontal-spacing));
+  }
+}
