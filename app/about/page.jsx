@@ -42,10 +42,17 @@ const valueCards = [
 
 const founderStrengths = [
   "Construction industry experience",
+  "Office management leadership",
+  "Staffing and workforce coordination",
   "Customer communication",
-  "Office management expertise",
   "Small business operations support",
-  "Staffing & workforce coordination",
+];
+
+const teamPillars = [
+  "Real People",
+  "Clear Communication",
+  "Dependable Support",
+  "Built For Service Businesses",
 ];
 
 export default function AboutPage() {
@@ -53,8 +60,9 @@ export default function AboutPage() {
     <div className="about-page overflow-hidden bg-white text-blue-950">
       <section className="about-hero border-b border-slate-200">
         <div className="mx-auto max-w-4xl">
-          <p className="eyebrow">About us</p>
-          <h1 className="hero-title">About Field Office</h1>
+          <p className="eyebrow">About Field Office</p>
+          <h1 className="hero-title">Built on service.</h1>
+          <p className="about-hero-lede">Focused on helping good businesses succeed.</p>
           <p className="hero-copy">We provide reliable office support for service businesses so you can focus on the work that matters most.</p>
         </div>
       </section>
@@ -64,10 +72,10 @@ export default function AboutPage() {
           <div className="about-mission-copy">
             <p className="eyebrow text-amber-700">Our mission</p>
             <h2>Helping good businesses succeed.</h2>
-            <div className="space-y-5">
-              <p>Field Office was built on the values of honesty, respect, responsibility, and service. We believe small business owners deserve dependable support, clear communication, and a team they can trust.</p>
-              <p>Whether you’re a contractor, tradesman, service provider, or growing business owner, our goal is simple:</p>
-              <p className="font-black text-amber-700">Help you stay organized, serve your customers, and focus on the work that grows your business.</p>
+            <div className="about-copy-stack">
+              <p>Field Office was built on the values of honesty, respect, responsibility, and service. We believe business owners deserve dependable support, clear communication, and a team they can trust.</p>
+              <p>Whether you’re a contractor, tradesman, or service provider, our goal is simple:</p>
+              <p className="about-highlight">Help you stay organized, serve your customers, and focus on growing your business.</p>
             </div>
           </div>
           <div className="about-values-grid">
@@ -84,19 +92,35 @@ export default function AboutPage() {
 
       <section className="about-section about-founder-section pt-0">
         <div className="about-founder mx-auto max-w-7xl">
-          <div className="about-founder-image">
-            <img src="/images/headshot.png" alt="Field Office founder" />
-          </div>
+          <figure className="about-founder-figure">
+            <div className="about-founder-image">
+              <img src="/images/headshot.png" alt="Field Office founder" />
+            </div>
+            <figcaption>
+              <strong>Leahana Kraus</strong>
+              <span>Founder, Field Office</span>
+            </figcaption>
+          </figure>
           <div className="about-founder-copy">
             <p className="eyebrow text-amber-700">Meet the founder</p>
             <h2>From construction sites to office management.</h2>
-            <div className="space-y-4">
-              <p>Growing up, I spent time working construction alongside my dad. While he focused on the work in the field, I saw firsthand how much happens behind the scenes to keep a business running—scheduling jobs, answering calls, managing paperwork, and keeping customers informed.</p>
-              <p>That experience led me into staffing and office management, where I’ve spent years helping businesses solve operational challenges, support their customers, and keep their teams moving.</p>
-              <p>I created Field Office to give growing businesses the office support they need without the expense and complexity of hiring a full office staff. My goal is simple: provide dependable support, clear communication, and the kind of partnership I would want for my own business.</p>
+            <p className="about-subheading">The experience behind Field Office.</p>
+            <div className="about-story-grid">
+              <article>
+                <h3>Growing Up Around Small Business</h3>
+                <p>I spent time working construction alongside my dad and saw how much happens behind the scenes—scheduling jobs, answering calls, managing paperwork, and keeping customers informed.</p>
+              </article>
+              <article>
+                <h3>Building Experience In Office Management</h3>
+                <p>That foundation led me into staffing and office management, where I helped businesses solve operational challenges, support customers, and keep teams moving.</p>
+              </article>
+              <article>
+                <h3>Why I Started Field Office</h3>
+                <p>I created Field Office to give growing businesses dependable support, clear communication, and a trusted partner without the expense of hiring a full office staff.</p>
+              </article>
             </div>
             <div className="about-strengths">
-              <p className="eyebrow text-amber-700">What I bring to Field Office</p>
+              <h3>What I Bring To Field Office</h3>
               <ul>
                 {founderStrengths.map((strength) => (
                   <li key={strength}><span aria-hidden="true">✓</span>{strength}</li>
@@ -109,16 +133,20 @@ export default function AboutPage() {
 
       <section className="about-section pt-0">
         <div className="about-team-cta mx-auto max-w-7xl">
-          <div className="about-icon about-team-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" className="h-9 w-9"><path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm8 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM3.5 20v-1.5A4.5 4.5 0 0 1 8 14h1.5M20.5 20v-1.5A4.5 4.5 0 0 0 16 14h-1.5M8.5 20v-1a4 4 0 0 1 8 0v1" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" /></svg>
+          <div className="about-team-copy">
+            <p className="eyebrow text-amber-700">Our team</p>
+            <h2>A Team Behind Every Client</h2>
+            <p>While Field Office was founded by Leahana, our clients are supported by a team of people who share the same commitment to service, communication, and helping businesses succeed.</p>
+            <p>Together, we work behind the scenes so business owners can focus on serving their customers.</p>
           </div>
-          <div>
-            <h2>More Than One Person</h2>
-            <p>While Field Office was founded by Leahana, our clients are supported by a team of people who share the same commitment to service, communication, and helping businesses succeed. Together, we work behind the scenes so business owners can focus on serving their customers.</p>
-          </div>
+          <ul className="about-team-list">
+            {teamPillars.map((pillar) => (
+              <li key={pillar}><span aria-hidden="true">✓</span>{pillar}</li>
+            ))}
+          </ul>
           <div className="about-cta-copy">
-            <h2>Real people. Real support. Real results.</h2>
-            <Link href="/contact" className="btn-primary mt-6 inline-flex px-8 py-3">Get A Quote</Link>
+            <h2>Ready for dependable office support?</h2>
+            <Link href="/contact" className="btn-primary inline-flex px-8 py-3">Get A Quote</Link>
           </div>
         </div>
       </section>
