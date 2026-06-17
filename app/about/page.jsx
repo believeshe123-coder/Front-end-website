@@ -22,6 +22,27 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      <section className="site-section bg-blue-50/60">
+        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+          <div className="overflow-hidden rounded-2xl shadow-2xl shadow-blue-950/15 ring-1 ring-blue-950/10">
+            <img src="/images/headshot.png" alt="Field Office founder" className="h-full min-h-[30rem] w-full object-cover object-center" />
+          </div>
+          <div className="feature-panel bg-white text-slate-700 ring-blue-100">
+            <p className="eyebrow">Meet The Founder</p>
+            <h2 className="mt-3 text-3xl font-black tracking-tight text-blue-950 sm:text-4xl">Helping businesses stay organized has always been part of my life.</h2>
+            <div className="mt-6 space-y-4 text-lg leading-8">
+              <p>Growing up, I spent time working construction alongside my dad. While he focused on the work in the field, I saw firsthand how much happened behind the scenes to keep a business running. Scheduling jobs, answering calls, managing paperwork, and keeping customers informed were just as important as the work itself.</p>
+              <p>That experience eventually led me into staffing and office management, where I&apos;ve spent years helping businesses solve operational challenges, support their customers, and keep their teams moving. Every day, I worked with contractors, service providers, and business owners who were trying to balance the demands of running a company while still doing the work they loved.</p>
+              <p className="text-2xl font-black leading-tight text-blue-950">Field Office was built from those experiences.</p>
+              <p>I created Field Office to give growing businesses the office support they need without the expense and complexity of hiring a full office staff. My goal is simple: provide dependable support, clear communication, and the kind of partnership I would want for my own business.</p>
+              <p>While I founded Field Office, I am not the only person behind it. Our team is made up of people who share the same commitment to service, communication, and helping businesses succeed. Together, we work behind the scenes to support our clients, solve problems, and make sure the day-to-day office work gets handled professionally.</p>
+              <p>When you work with Field Office, you&apos;re not working with a call center or an automated service. You&apos;re working with a real team that understands both the work happening in the field and the office systems needed to support it.</p>
+              <p className="text-2xl font-black leading-tight text-blue-950">Helping good businesses succeed is what we&apos;re here for.</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
