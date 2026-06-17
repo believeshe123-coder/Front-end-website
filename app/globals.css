@@ -247,14 +247,14 @@ body {
   position: absolute;
   left: 0;
   right: 0;
-  top: 50%;
+  bottom: 0;
   width: 100%;
-  transform: translateY(-50%);
+  transform: none;
 }
 
 .hero-home .hero-copy {
-  font-size: clamp(1.15rem, 1.3vw, 1.38rem);
-  line-height: 1.55;
+  font-size: clamp(1rem, 1.05vw, 1.18rem);
+  line-height: 1.5;
 }
 
 @media (max-width: 1023px) {
@@ -274,6 +274,7 @@ body {
   .hero-home-callout {
     left: 1rem;
     right: 1rem;
+    bottom: 1rem;
     width: auto;
   }
 }
