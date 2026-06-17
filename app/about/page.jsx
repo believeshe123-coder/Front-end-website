@@ -58,15 +58,6 @@ const teamPillars = [
 export default function AboutPage() {
   return (
     <div className="about-page overflow-hidden bg-white text-blue-950">
-      <section className="about-hero border-b border-slate-200">
-        <div className="mx-auto max-w-4xl">
-          <p className="eyebrow">About Field Office</p>
-          <h1 className="hero-title">Built on service.</h1>
-          <p className="about-hero-lede">Focused on helping good businesses succeed.</p>
-          <p className="hero-copy">We provide reliable office support for service businesses so you can focus on the work that matters most.</p>
-        </div>
-      </section>
-
       <section className="about-section">
         <div className="about-mission mx-auto max-w-7xl">
           <div className="about-mission-copy">
