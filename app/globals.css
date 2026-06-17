@@ -8,8 +8,8 @@
 
 body {
   min-height: 100vh;
-  background: #f8fafc;
-  color: #0f172a;
+  background: #f5f6f8;
+  color: #384152;
 }
 
 @layer components {
@@ -80,19 +80,25 @@ body {
   --admin-card-spacing: 1;
   --admin-hero-image-height: 1.35;
   --admin-content-width: 1.25;
-  --admin-primary: #103dbb;
-  --admin-dark: #26396d;
-  --admin-accent: #fbf4e5;
-  --admin-page: #f8f8f6;
-  --admin-gold-accent: #d8af69;
+  --admin-primary: #1F3A78;
+  --admin-dark: #162B5B;
+  --admin-accent: #F7F4ED;
+  --admin-page: #F5F6F8;
+  --admin-gold-accent: #D8AC52;
+  --admin-gold-hover: #C79A3F;
+  --admin-text: #384152;
+  --admin-white: #FFFFFF;
+  --admin-border: #E5E7EB;
 }
 
 body {
   background: var(--admin-page);
+  color: var(--admin-text);
 }
 
-.bg-white {
-  background-color: var(--admin-page) !important;
+.bg-white,
+.bg-white\/95 {
+  background-color: var(--admin-white) !important;
 }
 
 .text-blue-950 {
@@ -117,20 +123,22 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: color-mix(in srgb, var(--admin-gold-accent) 82%, black) !important;
+  background-color: var(--admin-gold-hover) !important;
 }
 
 .bg-blue-50,
 .bg-blue-50\/50,
 .bg-blue-50\/60,
 .bg-blue-50\/70,
+.bg-stone-50,
 .hover\:bg-blue-50:hover {
-  background-color: color-mix(in srgb, var(--admin-accent) 82%, white) !important;
+  background-color: var(--admin-accent) !important;
 }
 
 .border-blue-100,
-.border-blue-600 {
-  border-color: color-mix(in srgb, var(--admin-primary) 35%, white) !important;
+.border-blue-600,
+.border-slate-200 {
+  border-color: var(--admin-border) !important;
 }
 
 .ring-blue-100,
@@ -318,7 +326,7 @@ body {
 .support-showcase {
   padding: 2.75rem calc(1.5rem * var(--admin-horizontal-spacing)) 2.5rem;
   background:
-    linear-gradient(180deg, #ffffff 0%, #ffffff 28%, color-mix(in srgb, var(--admin-accent) 34%, white) 28%, color-mix(in srgb, var(--admin-accent) 30%, white) 100%);
+    linear-gradient(180deg, var(--admin-white) 0%, var(--admin-white) 28%, var(--admin-accent) 28%, var(--admin-accent) 100%);
 }
 
 .support-industries {
@@ -330,7 +338,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #ffffff;
+  background: var(--admin-white);
 }
 
 .roles-panel {
@@ -361,7 +369,7 @@ body {
   padding: clamp(1.5rem, 2.5vw, 2rem);
   border: 1px solid color-mix(in srgb, var(--admin-gold-accent) 30%, white);
   border-radius: 1rem;
-  background: color-mix(in srgb, var(--admin-accent) 50%, white);
+  background: var(--admin-accent);
   box-shadow: 0 14px 36px color-mix(in srgb, var(--admin-dark) 6%, transparent);
 }
 
@@ -388,7 +396,7 @@ body {
 
 @media (max-width: 1023px) {
   .support-showcase {
-    background: color-mix(in srgb, var(--admin-accent) 28%, white);
+    background: var(--admin-accent);
   }
 
   .hire-panel {
@@ -417,7 +425,7 @@ body {
   margin-top: 2.25rem;
   padding: clamp(1.5rem, 3vw, 2.5rem);
   border-radius: 1.25rem;
-  background: #ffffff;
+  background: var(--admin-white);
   box-shadow: 0 16px 40px color-mix(in srgb, var(--admin-dark) 7%, transparent);
 }
 
@@ -426,7 +434,7 @@ body {
 }
 
 .about-values-card {
-  background: linear-gradient(180deg, color-mix(in srgb, var(--admin-accent) 44%, white), #ffffff);
+  background: linear-gradient(180deg, var(--admin-accent), var(--admin-white));
 }
 
 @media (max-width: 767px) {
@@ -434,4 +442,29 @@ body {
     grid-template-columns: 1fr;
     margin-top: 1.75rem;
   }
+}
+
+
+.text-slate-600,
+.text-slate-700,
+.text-slate-900 {
+  color: var(--admin-text) !important;
+}
+
+.bg-slate-50 {
+  background-color: var(--admin-page) !important;
+}
+
+.border-slate-300 {
+  border-color: var(--admin-border) !important;
+}
+
+.content-card {
+  background: var(--admin-white) !important;
+  border-color: var(--admin-border) !important;
+  box-shadow: 0 12px 28px color-mix(in srgb, var(--admin-dark) 7%, transparent) !important;
+}
+
+.feature-panel {
+  box-shadow: 0 10px 24px color-mix(in srgb, var(--admin-dark) 6%, transparent) !important;
 }
