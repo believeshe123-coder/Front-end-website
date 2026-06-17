@@ -362,29 +362,50 @@ body {
 
 .hire-panel {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.8fr) minmax(0, 1fr);
-  gap: 2rem;
+  grid-template-columns: minmax(16rem, 0.9fr) minmax(24rem, 1.45fr) minmax(14rem, 0.75fr);
+  gap: clamp(1.5rem, 3vw, 3rem);
   align-items: center;
   margin-top: 2rem;
-  padding: clamp(1.5rem, 2.5vw, 2rem);
+  padding: clamp(1.5rem, 2.5vw, 2.25rem);
   border: 1px solid color-mix(in srgb, var(--admin-gold-accent) 30%, white);
   border-radius: 1rem;
   background: var(--admin-accent);
   box-shadow: 0 14px 36px color-mix(in srgb, var(--admin-dark) 6%, transparent);
 }
 
+.hire-panel-intro {
+  max-width: 22rem;
+}
+
 .hire-benefits {
-  padding-inline: 2rem;
-  border-inline: 1px solid color-mix(in srgb, var(--admin-dark) 14%, transparent);
+  padding-inline: clamp(1rem, 2.5vw, 2rem);
+  border-inline: 1px solid color-mix(in srgb, var(--admin-dark) 12%, transparent);
+}
+
+.hire-benefits li {
+  min-height: 3.25rem;
 }
 
 .hire-benefits span {
+  display: flex;
+  width: 1.75rem;
+  height: 1.75rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--admin-gold-accent) 28%, white);
   color: var(--admin-dark);
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1;
 }
 
+.hire-panel-cta {
+  text-align: center;
+}
+
 .hire-panel-cta .btn-primary {
+  min-width: 12rem;
   background-color: var(--admin-dark) !important;
   color: #ffffff !important;
   box-shadow: 0 16px 30px color-mix(in srgb, var(--admin-dark) 24%, transparent) !important;
@@ -392,6 +413,18 @@ body {
 
 .hire-panel-cta .btn-primary:hover {
   background-color: color-mix(in srgb, var(--admin-dark) 86%, black) !important;
+}
+
+.final-cta-section {
+  padding-top: 2rem;
+  background: var(--admin-page);
+}
+
+.final-cta {
+  max-width: 56rem;
+  border-radius: 1.25rem;
+  background: var(--admin-white) !important;
+  box-shadow: 0 16px 36px color-mix(in srgb, var(--admin-dark) 7%, transparent);
 }
 
 @media (max-width: 1023px) {
@@ -402,6 +435,10 @@ body {
   .hire-panel {
     grid-template-columns: 1fr;
     text-align: center;
+  }
+
+  .hire-panel-intro {
+    max-width: none;
   }
 
   .hire-benefits {

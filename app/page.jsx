@@ -114,27 +114,28 @@ export default function Home() {
         </div>
 
         <div className="hire-panel mx-auto max-w-7xl">
-          <div className="hire-panel-intro text-center">
-            <h2 className="text-3xl font-black tracking-tight text-blue-950">Flexible Support<br />Without Hiring<br />Another Employee</h2>
+          <div className="hire-panel-intro">
+            <p className="eyebrow">Flexible support</p>
+            <h2 className="mt-3 text-3xl font-black tracking-tight text-blue-950">Support without hiring another employee.</h2>
             <p className="mt-4 font-semibold leading-7 text-slate-700">Get experienced office support without the cost, time, or hassle of hiring. We scale with your business.</p>
           </div>
-          <ul className="hire-benefits grid gap-x-10 gap-y-5 sm:grid-cols-2">
+          <ul className="hire-benefits grid gap-4 sm:grid-cols-2">
             {hireAlternatives.map((item) => (
-              <li key={item} className="flex items-center gap-4 font-black text-blue-950"><span aria-hidden="true">✓</span>{item}</li>
+              <li key={item} className="flex items-center gap-3 rounded-xl bg-white/70 p-3 font-black text-blue-950"><span aria-hidden="true">✓</span>{item}</li>
             ))}
           </ul>
-          <div className="hire-panel-cta text-center">
-            <Link href="/contact" className="btn-primary inline-flex w-full justify-center px-8 hover:bg-blue-800">Get a Quote</Link>
-            <p className="mt-4 font-semibold leading-7 text-slate-700">Let&apos;s build a plan that works for your business.</p>
+          <div className="hire-panel-cta">
+            <p className="font-semibold leading-7 text-slate-700">Let&apos;s build a plan that works for your business.</p>
+            <Link href="/contact" className="btn-primary mt-4 inline-flex justify-center px-8 hover:bg-blue-800">Get a Quote</Link>
           </div>
         </div>
       </section>
 
-      <section className="site-section-bottom">
-        <div className="feature-panel mx-auto bg-blue-50 text-center ring-blue-100">
+      <section className="site-section-bottom final-cta-section">
+        <div className="feature-panel final-cta mx-auto bg-blue-50 text-center ring-blue-100">
           <h2 className="text-3xl font-black tracking-tight text-blue-950">Ready for reliable support?</h2>
           <p className="mx-auto mt-3 max-w-2xl leading-7 text-slate-700">Tell us what your business needs help with, and get a practical quote for office support.</p>
-          <Link href="/contact" className="btn-primary mt-5 inline-flex px-8 hover:bg-blue-800">Get A Quote</Link>
+          <Link href="/contact" className="btn-primary mt-5 inline-flex px-8 hover:bg-blue-800">Get a Quote</Link>
         </div>
       </section>
     </div>
