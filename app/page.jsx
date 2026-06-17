@@ -1,10 +1,10 @@
 import Link from "next/link";
 
 const industryCards = [
-  { title: "Trades & Home Services", services: ["Electricians", "Plumbers", "HVAC", "Roofers", "Contractors"] },
-  { title: "Beauty & Wellness", services: ["Hair Stylists", "Barbers", "Nail Technicians", "Estheticians"] },
-  { title: "Personal Services", services: ["Pet Groomers", "Detailers", "Trainers"] },
-  { title: "Professional Services", services: ["Insurance", "Accounting", "Medical", "Real Estate"] },
+  "Trades & Home Services",
+  "Beauty & Wellness",
+  "Personal Services",
+  "Professional Services",
 ];
 
 const supportOffers = [
@@ -57,18 +57,14 @@ export default function Home() {
   return (
     <div className="overflow-hidden bg-white text-blue-950">
       <section className="hero-section hero-home">
-        <div className="hero-home-image" aria-hidden="true" />
-        <div className="hero-home-overlay" aria-hidden="true" />
         <div className="hero-grid hero-home-grid">
           <div className="hero-home-content">
             <p className="eyebrow">Office support for service businesses</p>
             <h1 className="hero-title hero-title-large">Remote Office Support For Service Businesses</h1>
-            <p className="hero-copy">
-              Stop losing time to calls, scheduling, estimates, invoices, and follow-up. Field Office gives growing service businesses the office support they need without the cost of hiring a full office staff.
-            </p>
-            <div className="action-row">
-              <Link href="/contact" className="btn-primary">Get a Quote</Link>
-              <Link href="/services" className="btn-secondary">See Services</Link>
+            <div className="hero-copy space-y-4">
+              <p>Stop losing time to calls, scheduling, estimates, invoices, and customer follow-up. Field Office provides customizable office support for growing service businesses—without the cost of hiring a full office staff.</p>
+              <p>Whether you need help with one part of your office operations or want us to manage everything behind the scenes, we build support around the way your business operates. From answering phones and scheduling jobs to handling paperwork, invoicing, customer communication, and more, our team can take on as much or as little as you need.</p>
+              <p>Keep your focus on the work in the field. We'll keep the office running.</p>
             </div>
             <div className="mt-7 grid grid-cols-2 gap-4 sm:grid-cols-4">
               {trustItems.map((item) => (
@@ -78,27 +74,25 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <div className="hero-home-callout rounded-xl border border-slate-200 bg-white/95 p-5 shadow-2xl shadow-blue-950/15 backdrop-blur">
-            <div className="flex items-center gap-5"><div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-blue-600 text-2xl font-black text-blue-700">✓</div><p className="text-base font-black leading-7 text-blue-950">Office support built around your calls, your schedule, and your customers.<span className="block text-blue-700">So your time stays focused in the field.</span></p></div>
+          <div className="hero-home-visual">
+            <div className="hero-home-image" aria-hidden="true" />
+            <div className="hero-home-callout rounded-xl border border-slate-200 bg-white/95 p-5 shadow-2xl shadow-blue-950/15 backdrop-blur">
+              <div className="flex items-center gap-5"><div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-blue-600 text-2xl font-black text-blue-700">✓</div><p className="text-base font-black leading-7 text-blue-950">Office support built around your calls, your schedule, and your customers.<span className="block text-blue-700">So your time stays focused in the field.</span></p></div>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="site-section-tight bg-stone-50" id="industries">
         <div className="mx-auto max-w-7xl">
-          <div className="mx-auto max-w-3xl text-center">
+          <div className="mx-auto max-w-6xl text-center">
             <p className="eyebrow">Service businesses we help</p>
-            <h2 className="mt-3 text-3xl font-black tracking-tight text-blue-950 sm:text-4xl">Office support for the businesses your customers count on.</h2>
+            <h2 className="mt-3 text-3xl font-black tracking-tight text-blue-950 sm:text-4xl xl:whitespace-nowrap">Office support for the businesses your customers count on.</h2>
           </div>
           <div className="mt-7 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             {industryCards.map((industry) => (
-              <article key={industry.title} className="content-card industry-card">
-                <h3 className="text-2xl font-black tracking-tight text-blue-950">{industry.title}</h3>
-                <ul className="mt-5 grid grid-cols-2 gap-2 md:grid-cols-3 xl:grid-cols-5">
-                  {industry.services.map((service) => (
-                    <li key={service} className="rounded-xl border border-blue-100 bg-blue-50/70 px-3 py-3 text-center text-sm font-black text-blue-950 shadow-sm">{service}</li>
-                  ))}
-                </ul>
+              <article key={industry} className="content-card industry-card">
+                <h3 className="text-2xl font-black tracking-tight text-blue-950">{industry}</h3>
               </article>
             ))}
           </div>

@@ -79,7 +79,7 @@ body {
   --admin-horizontal-spacing: 1.1;
   --admin-card-spacing: 1;
   --admin-hero-image-height: 1.35;
-  --admin-content-width: 1.1;
+  --admin-content-width: 1.25;
   --admin-primary: #103dbb;
   --admin-dark: #26396d;
   --admin-accent: #fbf4e5;
@@ -208,78 +208,48 @@ body {
 }
 
 .hero-home {
-  min-height: clamp(35rem, 37vw, 45rem);
+  min-height: auto;
   background:
-    linear-gradient(
-      90deg,
-      var(--admin-page) 0%,
-      var(--admin-page) 44%,
-      color-mix(in srgb, var(--admin-page) 92%, transparent) 58%,
-      color-mix(in srgb, var(--admin-page) 55%, transparent) 72%,
-      transparent 100%
-    ),
     radial-gradient(
       ellipse at 78% 50%,
       color-mix(in srgb, var(--admin-accent) 34%, transparent) 0%,
       transparent 58%
     ),
     var(--admin-page);
-  isolation: isolate;
+}
+
+.hero-home-grid {
+  grid-template-columns: minmax(0, 0.95fr) minmax(28rem, 1.05fr);
+  align-items: center;
+}
+
+.hero-home-content {
+  max-width: 43rem;
+}
+
+.hero-home-visual {
+  position: relative;
+  min-height: clamp(31rem, 39vw, 42rem);
 }
 
 .hero-home-image {
-  position: absolute;
-  top: 50%;
-  right: max(1.5rem, calc((100vw - (80rem * var(--admin-content-width))) / 2));
-  width: min(48rem, 47vw);
-  height: calc(100% - 2.5rem);
-  min-height: 30rem;
-  transform: translateY(-50%);
+  width: 100%;
+  height: 100%;
+  min-height: clamp(31rem, 39vw, 42rem);
   border-radius: 1.25rem;
   background-image: url("/images/d2f3a19b-8350-428d-8070-88f224a99d10.png");
   background-position: 56% center;
   background-size: cover;
   box-shadow: 0 18px 42px color-mix(in srgb, var(--admin-dark) 7%, transparent);
-  z-index: -2;
-}
-
-.hero-home-overlay {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(
-      90deg,
-      var(--admin-page) 0%,
-      var(--admin-page) 36%,
-      color-mix(in srgb, var(--admin-page) 82%, transparent) 50%,
-      color-mix(in srgb, var(--admin-page) 42%, transparent) 62%,
-      transparent 78%
-    ),
-    linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--admin-page) 50%, transparent) 0%,
-      transparent 44%,
-      color-mix(in srgb, var(--admin-page) 26%, transparent) 100%
-    );
-  z-index: -1;
-}
-
-.hero-home-grid {
-  min-height: clamp(30rem, 33vw, 39rem);
-  grid-template-columns: minmax(0, 0.9fr) minmax(24rem, 1fr);
-  align-items: center;
-}
-
-.hero-home-content {
-  max-width: 44rem;
 }
 
 .hero-home-callout {
-  align-self: end;
-  justify-self: end;
-  width: min(100%, 43rem);
-  margin-bottom: 1.5rem;
-  margin-right: 0.75rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
 }
 
 .hero-home .hero-copy {
@@ -287,44 +257,27 @@ body {
   line-height: 1.55;
 }
 
-.hero-home .btn-primary,
-.hero-home .btn-secondary {
-  min-width: 10.25rem;
-  justify-content: center;
-  padding-block: 1rem;
-}
-
 @media (max-width: 1023px) {
-  .hero-home {
-    min-height: auto;
-  }
-
-  .hero-home-image {
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    min-height: 0;
-    transform: none;
-    border-radius: 0;
-    background-position: 58% center;
-    box-shadow: none;
-    opacity: 0.24;
-  }
-
-  .hero-home-overlay {
-    background: linear-gradient(90deg, var(--admin-page) 0%, color-mix(in srgb, var(--admin-page) 92%, transparent) 100%);
-  }
-
   .hero-home-grid {
-    min-height: auto;
     grid-template-columns: 1fr;
   }
 
+  .hero-home-content {
+    max-width: none;
+  }
+
+  .hero-home-visual,
+  .hero-home-image {
+    min-height: 28rem;
+  }
+
   .hero-home-callout {
-    justify-self: start;
-    margin-bottom: 0;
+    left: 1rem;
+    right: 1rem;
+    width: auto;
   }
 }
+
 
 .industry-card {
   min-height: 100%;
