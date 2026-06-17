@@ -49,9 +49,9 @@ export default function WhoWeServicePage() {
               <article key={group.title} className="content-card">
                 <h3 className="text-3xl font-black tracking-tight text-blue-950">{group.title}</h3>
                 <p className="mt-3 leading-7 text-slate-700">{group.description}</p>
-                <ul className="mt-5 grid gap-2 sm:grid-cols-2">
+                <ul className="mt-5 grid grid-cols-2 gap-2 md:grid-cols-3 xl:grid-cols-5">
                   {group.services.map((service) => (
-                    <li key={service} className="rounded-lg border border-blue-100 bg-blue-50/70 px-4 py-2.5 font-bold text-blue-950">{service}</li>
+                    <li key={service} className="rounded-xl border border-blue-100 bg-blue-50/70 px-3 py-3 text-center text-sm font-black text-blue-950 shadow-sm">{service}</li>
                   ))}
                 </ul>
               </article>
