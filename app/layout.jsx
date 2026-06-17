@@ -8,7 +8,8 @@ export const metadata = {
 };
 
 const navItems = [
-  { href: "/about", label: "About" },
+  { href: "/#roles", label: "Services" },
+  { href: "/#industries", label: "Industries" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -45,8 +46,8 @@ export default function RootLayout({ children }) {
           </nav>
         </header>
         <main className="min-h-[calc(100vh-73px)]">{children}</main>
-        <footer className="border-t border-slate-200 bg-white px-6 py-8 lg:px-8">
-          <div className="mx-auto flex max-w-7xl flex-col gap-2 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between">
+        <footer className="site-footer px-6 py-8 lg:px-8">
+          <div className="mx-auto flex max-w-7xl flex-col gap-2 text-sm text-white sm:flex-row sm:items-center sm:justify-between">
             <p>© 2026 Field Office.</p>
             <p>Practical support for businesses that keep things running.</p>
           </div>
