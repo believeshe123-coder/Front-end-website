@@ -14,7 +14,7 @@ export default function ContactPage() {
       <section className="hero-section">
         <div className="mx-auto max-w-4xl text-center">
           <p className="eyebrow">Contact us</p>
-          <h1 className="hero-title">Request a quote</h1>
+          <h1 className="hero-title">Request A Quote</h1>
           <p className="hero-copy mx-auto">Fill out the form below with your business details and the support you are interested in.</p>
         </div>
       </section>
@@ -41,6 +41,15 @@ export default function ContactPage() {
           <label className="grid gap-2 text-sm font-black text-blue-950">Anything else we should know?<textarea name="Additional details" className="min-h-36 rounded-lg border border-slate-300 bg-slate-50 px-4 py-3 font-normal text-slate-900 outline-none transition focus:border-blue-600 focus:bg-white focus:ring-4 focus:ring-blue-100" placeholder="Tell us about your business, current software, biggest needs, timeline, etc." /></label>
           <button type="submit" className="btn-primary">Send quote request</button>
           <p className="text-sm leading-6 text-slate-600">Submitting opens your email app and addresses the request to believeshe123@gmail.com.</p>
+          <div className="rounded-2xl border border-blue-100 bg-blue-50/70 p-5 shadow-lg shadow-blue-950/5 md:p-6">
+            <h2 className="text-2xl font-black tracking-tight text-blue-950">What Happens Next?</h2>
+            <ol className="mt-4 grid gap-3 text-slate-700">
+              <li className="flex gap-3"><span className="font-black text-blue-700">1.</span><span>Submit your request.</span></li>
+              <li className="flex gap-3"><span className="font-black text-blue-700">2.</span><span>We schedule a quick conversation.</span></li>
+              <li className="flex gap-3"><span className="font-black text-blue-700">3.</span><span>We build a support plan.</span></li>
+              <li className="flex gap-3"><span className="font-black text-blue-700">4.</span><span>You decide if we&apos;re a good fit.</span></li>
+            </ol>
+          </div>
         </form>
       </section>
     </div>

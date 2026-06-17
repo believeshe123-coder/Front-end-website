@@ -4,7 +4,7 @@ export default function AboutPage() {
       <section className="hero-section">
         <div className="mx-auto max-w-4xl">
           <p className="eyebrow">About us</p>
-          <h1 className="hero-title">We&apos;re real people helping real businesses.</h1>
+          <h1 className="hero-title">About Field Office</h1>
         </div>
       </section>
 
