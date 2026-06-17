@@ -29,10 +29,10 @@ export default function WhoWeServicePage() {
     <div className="overflow-hidden bg-white text-blue-950">
       <PageHero
         eyebrow="Who we service"
-        title="Support for small service businesses that are growing fast."
+        title="Service Businesses We Help"
         description="We work with service businesses that are too small for a full office staff but too busy to do everything themselves. If customers, appointments, paperwork, and follow-up are pulling you away from the work, we can help."
         primaryHref="/contact"
-        primaryLabel="Request a quote"
+        primaryLabel="Get a Quote"
         kicker="Built for busy service businesses"
       />
 
