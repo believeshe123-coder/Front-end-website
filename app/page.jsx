@@ -8,13 +8,13 @@ const industryCards = [
 ];
 
 const supportOffers = [
-  { title: "Call management", text: "Keep customer calls answered, messages captured, and leads followed up before they move on." },
-  { title: "Scheduling and dispatching", text: "Keep your schedule, appointments, routes, and crew updates organized throughout the day." },
-  { title: "Financial support", text: "Keep estimates, invoices, reminders, and customer accounts moving without losing your evenings." },
-  { title: "Marketing support", text: "Keep reviews, social posts, lead tracking, and follow-up campaigns from falling behind." },
-  { title: "Recruiting help or temp management", text: "Keep hiring details, applicants, interviews, and temporary workforce coordination organized." },
-  { title: "Business growth", text: "Keep your processes, reporting, retention, and next steps clearer as your business grows." },
-  { title: "Custom support", text: "Build a flexible support plan around the office tasks taking the most time from your day." },
+  { title: "Never Miss A Customer Call", text: "Answering calls, capturing leads, taking messages, and following up before customers move on." },
+  { title: "Keep Every Job On Schedule", text: "Coordinating appointments, calendars, routes, reminders, and crew updates throughout the day." },
+  { title: "Get Quotes And Invoices Out Faster", text: "Preparing estimates, organizing invoices, sending reminders, and keeping accounts moving." },
+  { title: "Stay Visible After The Job Is Done", text: "Managing reviews, social posts, lead tracking, website updates, and customer follow-up campaigns." },
+  { title: "Hire Without Losing Your Day", text: "Organizing applicants, interviews, candidate communication, and temporary workforce coordination." },
+  { title: "Build Systems That Support Growth", text: "Improving workflows, reporting, retention tasks, and the next steps your business needs." },
+  { title: "Get Support Built Around Your Business", text: "Creating a flexible support plan for the office tasks taking the most time from your day." },
 ];
 
 const trustItems = [
@@ -24,13 +24,13 @@ const trustItems = [
   "Your Business Treated With Care",
 ];
 
-const comparisonRows = [
-  ["Missed Calls", "Calls Answered"],
-  ["Late Estimates", "Faster Quotes"],
-  ["Forgotten Follow Ups", "Consistent Customer Contact"],
-  ["Late Invoices", "Organized Billing"],
-  ["Owner Doing Everything", "Office Support Team"],
-];
+const withoutFieldOffice = ["Missed calls", "Late invoices", "After-hours paperwork", "Customer follow-up falls behind"];
+
+const withFieldOffice = ["Calls answered", "Invoices organized", "Scheduling handled", "Customers followed up with"];
+
+const integrations = ["QuickBooks", "Jobber", "Housecall Pro", "ServiceTitan", "Google Calendar", "Microsoft 365", "Gmail", "Custom Systems"];
+
+const hireAlternatives = ["No payroll taxes", "No benefits", "No hiring process", "No training a new employee", "No office overhead"];
 
 const commonSupportAreas = [
   "Answering customer calls",
@@ -94,9 +94,9 @@ export default function Home() {
             {industryCards.map((industry) => (
               <article key={industry.title} className="content-card industry-card">
                 <h3 className="text-2xl font-black tracking-tight text-blue-950">{industry.title}</h3>
-                <ul className="mt-5 grid gap-2">
+                <ul className="mt-5 grid grid-cols-2 gap-2 md:grid-cols-3 xl:grid-cols-5">
                   {industry.services.map((service) => (
-                    <li key={service} className="flex items-center gap-2 rounded-lg bg-blue-50/70 px-3 py-2 font-bold text-blue-950"><span className="text-blue-700">✓</span>{service}</li>
+                    <li key={service} className="rounded-xl border border-blue-100 bg-blue-50/70 px-3 py-3 text-center text-sm font-black text-blue-950 shadow-sm">{service}</li>
                   ))}
                 </ul>
               </article>
@@ -128,11 +128,23 @@ export default function Home() {
             <p className="eyebrow text-[13px]">Business Growing?</p>
             <h2 className="mt-3 text-3xl font-black leading-tight tracking-tight text-blue-950 sm:text-4xl">Why Field Office Works</h2>
           </div>
-          <div className="comparison-table mt-7 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg shadow-slate-900/10">
-            <div className="grid grid-cols-2 bg-blue-700 text-sm font-black uppercase tracking-[0.18em] text-white"><div className="p-4">Before Field Office</div><div className="p-4">With Field Office</div></div>
-            {comparisonRows.map(([before, after]) => (
-              <div key={before} className="grid grid-cols-2 border-t border-slate-200 text-lg font-black"><div className="p-4 text-slate-600">{before}</div><div className="p-4 text-blue-950">{after}</div></div>
-            ))}
+          <div className="mt-7 grid gap-5 lg:grid-cols-2">
+            <article className="content-card border-slate-300 bg-white">
+              <h3 className="text-2xl font-black tracking-tight text-slate-700">Without Field Office</h3>
+              <ul className="mt-5 grid gap-3">
+                {withoutFieldOffice.map((item) => (
+                  <li key={item} className="rounded-xl bg-slate-100 px-4 py-3 font-black text-slate-700">{item}</li>
+                ))}
+              </ul>
+            </article>
+            <article className="content-card bg-blue-50/70 ring-1 ring-blue-100">
+              <h3 className="text-2xl font-black tracking-tight text-blue-950">With Field Office</h3>
+              <ul className="mt-5 grid gap-3">
+                {withFieldOffice.map((item) => (
+                  <li key={item} className="rounded-xl bg-white px-4 py-3 font-black text-blue-950 shadow-sm">{item}</li>
+                ))}
+              </ul>
+            </article>
           </div>
         </div>
       </section>
@@ -167,7 +179,37 @@ export default function Home() {
       <section className="site-section bg-stone-50" id="services">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl"><p className="eyebrow">Support we offer</p><h2 className="mt-3 text-4xl font-black leading-tight tracking-tight text-blue-950">Choose the office help your business needs most.</h2></div>
-          <div className="mt-6 flex snap-x gap-4 overflow-x-auto pb-4 [scrollbar-width:thin]">{supportOffers.map((offer) => <article key={offer.title} className="content-card min-w-[18rem] snap-start md:min-w-[23rem]"><h3 className="text-xl font-black text-blue-950">{offer.title}</h3><p className="mt-2 leading-7 text-slate-700">{offer.text}</p></article>)}</div>
+          <div className="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-3">{supportOffers.map((offer) => <article key={offer.title} className="content-card"><h3 className="text-xl font-black text-blue-950">{offer.title}</h3><p className="mt-2 leading-7 text-slate-700">{offer.text}</p></article>)}</div>
+        </div>
+      </section>
+
+
+
+      <section className="site-section bg-white">
+        <div className="mx-auto grid max-w-7xl gap-5 lg:grid-cols-2">
+          <article className="content-card bg-blue-50/70">
+            <p className="eyebrow">Flexible pricing</p>
+            <h2 className="mt-3 text-3xl font-black tracking-tight text-blue-950">Plans built around the support you need.</h2>
+            <p className="mt-4 text-lg font-semibold leading-8 text-slate-700">Flexible plans based on the support you need.</p>
+            <p className="mt-3 leading-7 text-slate-700">Whether you need help answering calls, managing schedules, handling invoices, or ongoing office support, we&apos;ll build a plan around your business.</p>
+          </article>
+          <article className="content-card">
+            <p className="eyebrow">Why not hire?</p>
+            <h2 className="mt-3 text-3xl font-black tracking-tight text-blue-950">Why businesses choose Field Office</h2>
+            <ul className="mt-5 grid gap-3 sm:grid-cols-2">
+              {hireAlternatives.map((item) => <li key={item} className="rounded-xl border border-blue-100 bg-blue-50/60 px-4 py-3 font-black text-blue-950">{item}</li>)}
+            </ul>
+            <p className="mt-5 text-lg font-black leading-8 text-blue-950">Get experienced office support when you need it.</p>
+          </article>
+        </div>
+      </section>
+
+      <section className="site-section bg-stone-50">
+        <div className="mx-auto max-w-7xl">
+          <div className="max-w-3xl"><p className="eyebrow">Software integrations</p><h2 className="mt-3 text-4xl font-black leading-tight tracking-tight text-blue-950">Works With The Software You Already Use</h2></div>
+          <div className="mt-6 grid grid-cols-2 gap-3 md:grid-cols-4">
+            {integrations.map((item) => <div key={item} className="rounded-xl border border-blue-100 bg-white px-4 py-4 text-center font-black text-blue-950 shadow-sm">{item}</div>)}
+          </div>
         </div>
       </section>
 

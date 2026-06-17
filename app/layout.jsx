@@ -19,9 +19,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="font-sans antialiased">
         <header className="sticky top-0 z-50 border-b border-blue-950/10 bg-white/95 backdrop-blur">
-          <nav className="mx-auto flex min-h-20 w-full max-w-7xl flex-row items-center justify-between gap-4 overflow-visible px-4 py-0 lg:px-8">
+          <nav className="mx-auto flex min-h-16 w-full max-w-7xl flex-row items-center justify-between gap-3 overflow-visible px-4 py-0 lg:min-h-20 lg:px-8">
             <Link href="/" className="flex items-center transition hover:opacity-85" aria-label="Field Office home">
-              <img src="/images/Logo%20(2).png" alt="Field Office" className="m-0 block h-20 w-auto max-w-[14rem] rounded-sm object-contain sm:h-24 sm:max-w-[20rem]" />
+              <img src="/images/Logo%20(2).png" alt="Field Office" className="m-0 block h-14 w-auto max-w-[10rem] rounded-sm object-contain sm:h-16 sm:max-w-[14rem] lg:h-24 lg:max-w-[20rem]" />
             </Link>
             <div className="hidden items-center gap-7 md:flex">
               {navItems.map((item) => (
@@ -31,14 +31,22 @@ export default function RootLayout({ children }) {
               ))}
               <Link href="/contact" className="btn-primary px-5 py-2.5">Get Quote</Link>
             </div>
-            <div className="flex items-center gap-3 md:hidden">
-              <Link href="/services" className="text-sm font-black text-blue-950">Services</Link>
+            <div className="flex items-center gap-2 md:hidden">
+              <details className="mobile-menu relative">
+                <summary className="flex h-10 w-10 cursor-pointer list-none items-center justify-center rounded-lg border border-blue-100 bg-blue-50 text-xl font-black text-blue-950" aria-label="Open navigation menu">☰</summary>
+                <div className="absolute right-0 top-12 z-50 grid min-w-44 gap-2 rounded-xl border border-slate-200 bg-white p-3 shadow-2xl shadow-blue-950/15">
+                  {navItems.map((item) => (
+                    <Link key={item.href} href={item.href} className="rounded-lg px-3 py-2 text-sm font-black text-blue-950 hover:bg-blue-50">
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </details>
               <Link href="/contact" className="btn-primary px-4 py-2">Get Quote</Link>
             </div>
           </nav>
         </header>
-        <main className="min-h-[calc(100vh-73px)] pb-16 md:pb-0">{children}</main>
-        <Link href="/contact" className="mobile-quote-button">Get A Quote</Link>
+        <main className="min-h-[calc(100vh-73px)]">{children}</main>
         <footer className="border-t border-slate-200 bg-white px-6 py-8 lg:px-8">
           <div className="mx-auto flex max-w-7xl flex-col gap-2 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between">
             <p>© 2026 Field Office.</p>
