@@ -325,12 +325,11 @@ body {
 
 .support-showcase {
   padding: 2.75rem calc(1.5rem * var(--admin-horizontal-spacing)) 2.5rem;
-  background:
-    linear-gradient(180deg, var(--admin-white) 0%, var(--admin-white) 28%, var(--admin-accent) 28%, var(--admin-accent) 100%);
+  background: var(--admin-white);
 }
 
 .support-industries {
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
 }
 
 .support-industries .industry-card {
@@ -342,11 +341,20 @@ body {
 }
 
 .roles-panel {
-  padding-top: 1.75rem;
+  margin-top: 1.25rem;
+  padding: clamp(2rem, 4vw, 3.5rem) clamp(1.25rem, 3vw, 2.75rem);
+  border-radius: 1.5rem;
+  background:
+    radial-gradient(circle at 50% 0%, color-mix(in srgb, var(--admin-white) 72%, transparent), transparent 38%),
+    var(--admin-accent);
 }
 
 .role-card-grid {
   align-items: stretch;
+}
+
+.roles-panel .content-card {
+  box-shadow: 0 10px 24px color-mix(in srgb, var(--admin-dark) 5%, transparent) !important;
 }
 
 .role-card {
@@ -429,7 +437,12 @@ body {
 
 @media (max-width: 1023px) {
   .support-showcase {
-    background: var(--admin-accent);
+    background: var(--admin-white);
+  }
+
+  .roles-panel {
+    margin-inline: 0;
+    border-radius: 1rem;
   }
 
   .hire-panel {
