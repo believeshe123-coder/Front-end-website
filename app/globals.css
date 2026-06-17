@@ -518,3 +518,189 @@ body {
 .feature-panel {
   box-shadow: 0 10px 24px color-mix(in srgb, var(--admin-dark) 6%, transparent) !important;
 }
+
+.site-footer {
+  border-top: 0;
+  background: linear-gradient(90deg, #001c49 0%, #0b3476 100%);
+  color: #ffffff;
+}
+
+.about-page {
+  --about-dark: var(--admin-dark);
+  --about-gold: #b97a00;
+  --about-soft: #fbf8f1;
+  background: #ffffff;
+}
+
+.about-hero {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  padding: clamp(2.75rem, 6vw, 4.5rem) 1.5rem clamp(2.25rem, 5vw, 3.75rem);
+}
+
+.about-section {
+  padding: clamp(2rem, 5vw, 3.75rem) 1.5rem;
+}
+
+.about-mission,
+.about-team-cta {
+  border: 1px solid color-mix(in srgb, var(--admin-dark) 10%, white);
+  border-radius: 1.25rem;
+  background:
+    radial-gradient(circle at 50% 45%, color-mix(in srgb, var(--admin-gold-accent) 12%, transparent), transparent 58%),
+    var(--about-soft);
+  box-shadow: 0 18px 44px color-mix(in srgb, var(--admin-dark) 8%, transparent);
+}
+
+.about-mission {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  padding: clamp(2rem, 4vw, 3.25rem);
+}
+
+.about-mission-copy {
+  padding-right: clamp(1rem, 4vw, 3.5rem);
+  border-right: 1px solid color-mix(in srgb, var(--admin-dark) 16%, transparent);
+}
+
+.about-mission h2,
+.about-founder-copy h2,
+.about-team-cta h2 {
+  margin-top: 0.75rem;
+  color: var(--about-dark);
+  font-size: clamp(1.85rem, 3vw, 2.65rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+.about-mission-copy p,
+.about-founder-copy p,
+.about-team-cta p {
+  color: var(--about-dark);
+  font-weight: 600;
+  line-height: 1.75;
+}
+
+.about-values-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.5rem, 4vw, 2.75rem);
+  align-content: center;
+}
+
+.about-value-card h3 {
+  margin-top: 1rem;
+  color: var(--about-dark);
+  font-weight: 900;
+}
+
+.about-value-card p {
+  margin-top: 0.4rem;
+  color: var(--about-dark);
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.about-icon {
+  display: flex;
+  width: 4.75rem;
+  height: 4.75rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--about-soft) 72%, white);
+  color: var(--admin-primary);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--admin-gold-accent) 10%, transparent);
+}
+
+.about-founder {
+  display: grid;
+  grid-template-columns: minmax(18rem, 0.78fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 3.5rem);
+  align-items: center;
+}
+
+.about-founder-image {
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 20px 46px color-mix(in srgb, var(--admin-dark) 16%, transparent);
+}
+
+.about-founder-image img {
+  display: block;
+  width: 100%;
+  min-height: clamp(30rem, 48vw, 43rem);
+  object-fit: cover;
+  object-position: center;
+}
+
+.about-founder-copy {
+  max-width: 50rem;
+}
+
+.about-strengths {
+  margin-top: 1.5rem;
+  padding: 1.4rem 1.5rem;
+  border: 1px solid color-mix(in srgb, var(--admin-dark) 10%, white);
+  border-radius: 1rem;
+  background: var(--about-soft);
+}
+
+.about-strengths ul {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem 1.5rem;
+}
+
+.about-strengths li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--about-dark);
+  font-weight: 600;
+}
+
+.about-strengths span {
+  color: var(--about-gold);
+  font-weight: 900;
+}
+
+.about-team-cta {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1.15fr) minmax(16rem, 0.85fr);
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  align-items: center;
+  padding: clamp(1.75rem, 4vw, 3rem);
+  background: #ffffff;
+}
+
+.about-team-icon {
+  width: 6rem;
+  height: 6rem;
+}
+
+.about-cta-copy {
+  padding-left: clamp(1.5rem, 4vw, 3.5rem);
+  border-left: 1px solid color-mix(in srgb, var(--admin-dark) 13%, transparent);
+}
+
+@media (max-width: 900px) {
+  .about-mission,
+  .about-founder,
+  .about-team-cta {
+    grid-template-columns: 1fr;
+  }
+
+  .about-mission-copy,
+  .about-cta-copy {
+    padding: 0;
+    border: 0;
+  }
+
+  .about-values-grid,
+  .about-strengths ul {
+    grid-template-columns: 1fr;
+  }
+}
