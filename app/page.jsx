@@ -1,16 +1,16 @@
 import Link from "next/link";
 
 const industryCards = [
-  "Trades & Home Services",
-  "Beauty & Wellness",
-  "Personal Services",
-  "Professional Services",
+  { title: "Trades & Home Services", text: "Electricians, Plumbers, HVAC, Roofers, Contractors, and more" },
+  { title: "Beauty & Wellness", text: "Hair Stylists, Barbers, Nail Techs, Estheticians, and more" },
+  { title: "Personal Services", text: "Pet Groomers, Detailers, Trainers, and more" },
+  { title: "Professional Services", text: "Insurance, Accounting, Real Estate, and more" },
 ];
 
 const roleCards = [
   { title: "Receptionist", text: "Calls, messages, lead intake, and customer follow-up." },
   { title: "Scheduler", text: "Appointments, calendars, routes, and crew updates." },
-  { title: "Office Manager", text: "Estimates, invoices, paperwork, and payment reminders." },
+  { title: "Book Keeper", text: "Manage invoices, payments, records, and financial follow-up." },
   { title: "Marketing Assistant", text: "Reviews, social posts, lead follow-up, and website updates." },
   { title: "Recruiting Support", text: "Job posts, applicant tracking, interviews, and worker coordination." },
   { title: "Custom Support", text: "A flexible plan built around your business." },
@@ -23,7 +23,7 @@ const trustItems = [
   "Your Business Treated With Care",
 ];
 
-const hireAlternatives = ["No payroll taxes", "No benefits", "No hiring process", "No training a new employee", "No office overhead"];
+const hireAlternatives = ["No hiring process", "No office overhead", "No benefits costs", "Support when you need it", "No payroll taxes", "Scale up or down anytime"];
 
 export default function Home() {
   return (
@@ -55,56 +55,52 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="site-section-tight bg-stone-50" id="industries">
-        <div className="mx-auto max-w-7xl">
+      <section className="support-showcase" id="industries">
+        <div className="support-industries mx-auto max-w-7xl">
           <div className="mx-auto max-w-6xl text-center">
             <p className="eyebrow">Service businesses we help</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-blue-950 sm:text-4xl xl:whitespace-nowrap">Office support for the businesses your customers count on.</h2>
           </div>
           <div className="mt-7 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             {industryCards.map((industry) => (
-              <article key={industry} className="content-card industry-card">
-                <h3 className="text-2xl font-black tracking-tight text-blue-950">{industry}</h3>
+              <article key={industry.title} className="content-card industry-card text-center">
+                <h3 className="text-xl font-black tracking-tight text-blue-950">{industry.title}</h3>
+                <p className="mx-auto mt-3 max-w-64 text-base font-semibold leading-7 text-slate-700">{industry.text}</p>
               </article>
             ))}
           </div>
         </div>
-      </section>
 
-      <section className="site-section bg-white" id="roles">
-        <div className="mx-auto max-w-7xl">
+        <div className="roles-panel mx-auto max-w-7xl" id="roles">
           <div className="mx-auto max-w-4xl text-center">
             <p className="eyebrow">Flexible office support</p>
             <h2 className="mt-3 text-3xl font-black leading-tight tracking-tight text-blue-950 sm:text-4xl">One Team. Multiple Roles.</h2>
             <p className="mt-4 text-lg font-semibold leading-8 text-slate-700">Field Office can step in where your business needs support most. We can help answer phones, schedule jobs, follow up with customers, manage invoices, support marketing, and keep office work moving behind the scenes.</p>
           </div>
-          <div className="mt-7 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          <div className="role-card-grid mx-auto mt-7 grid max-w-6xl gap-5 md:grid-cols-2 xl:grid-cols-3">
             {roleCards.map((role) => (
-              <article key={role.title} className="content-card">
+              <article key={role.title} className="content-card role-card">
                 <h3 className="text-xl font-black text-blue-950">{role.title}</h3>
-                <p className="mt-2 leading-7 text-slate-700">{role.text}</p>
+                <p className="mt-3 leading-7 text-slate-700">{role.text}</p>
               </article>
             ))}
           </div>
         </div>
-      </section>
 
-      <section className="site-section bg-white">
-        <div className="mx-auto grid max-w-7xl gap-5 lg:grid-cols-2">
-          <article className="content-card bg-blue-50/70">
-            <p className="eyebrow">Flexible pricing</p>
-            <h2 className="mt-3 text-3xl font-black tracking-tight text-blue-950">Plans built around the support you need.</h2>
-            <p className="mt-4 text-lg font-semibold leading-8 text-slate-700">Flexible plans based on the support you need.</p>
-            <p className="mt-3 leading-7 text-slate-700">Whether you need help answering calls, managing schedules, handling invoices, or ongoing office support, we&apos;ll build a plan around your business.</p>
-          </article>
-          <article className="content-card">
-            <p className="eyebrow">Why not hire?</p>
-            <h2 className="mt-3 text-3xl font-black tracking-tight text-blue-950">Why businesses choose Field Office</h2>
-            <ul className="mt-5 grid gap-3 sm:grid-cols-2">
-              {hireAlternatives.map((item) => <li key={item} className="rounded-xl border border-blue-100 bg-blue-50/60 px-4 py-3 font-black text-blue-950">{item}</li>)}
-            </ul>
-            <p className="mt-5 text-lg font-black leading-8 text-blue-950">Get experienced office support when you need it.</p>
-          </article>
+        <div className="hire-panel mx-auto max-w-7xl">
+          <div className="hire-panel-intro text-center">
+            <h2 className="text-3xl font-black tracking-tight text-blue-950">Flexible Support<br />Without Hiring<br />Another Employee</h2>
+            <p className="mt-4 font-semibold leading-7 text-slate-700">Get experienced office support without the cost, time, or hassle of hiring. We scale with your business.</p>
+          </div>
+          <ul className="hire-benefits grid gap-x-10 gap-y-5 sm:grid-cols-2">
+            {hireAlternatives.map((item) => (
+              <li key={item} className="flex items-center gap-4 font-black text-blue-950"><span aria-hidden="true">✓</span>{item}</li>
+            ))}
+          </ul>
+          <div className="hire-panel-cta text-center">
+            <Link href="/contact" className="btn-primary inline-flex w-full justify-center px-8 hover:bg-blue-800">Get a Quote</Link>
+            <p className="mt-4 font-semibold leading-7 text-slate-700">Let&apos;s build a plan that works for your business.</p>
+          </div>
         </div>
       </section>
 
