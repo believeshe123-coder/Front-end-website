@@ -8,8 +8,6 @@ export const metadata = {
 };
 
 const navItems = [
-  { href: "/services", label: "Services" },
-  { href: "/who-we-service", label: "Industries" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];

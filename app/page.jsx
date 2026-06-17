@@ -23,6 +23,8 @@ const trustItems = [
   "Your Business Treated With Care",
 ];
 
+const aboutValues = ["Honest pricing", "Clear communication", "Dependable support"];
+
 const hireAlternatives = ["No hiring process", "No office overhead", "No benefits costs", "Support when you need it", "No payroll taxes", "Scale up or down anytime"];
 
 export default function Home() {
@@ -84,6 +86,30 @@ export default function Home() {
                 <p className="mt-3 leading-7 text-slate-700">{role.text}</p>
               </article>
             ))}
+          </div>
+        </div>
+
+        <div className="about-values-panel mx-auto max-w-7xl" id="about-field-office">
+          <div className="about-values-copy">
+            <p className="eyebrow">About Field Office</p>
+            <h2 className="mt-3 text-3xl font-black leading-tight tracking-tight text-blue-950 sm:text-4xl">Built on honesty, service, and real support.</h2>
+            <div className="mt-5 space-y-4 text-base font-semibold leading-7 text-slate-700 sm:text-lg sm:leading-8">
+              <p>Field Office was built on the values of honesty, respect, responsibility, and service. We understand the challenges of running a small business because we’ve worked alongside the hardworking people who keep their communities running every day.</p>
+              <p>Our goal is simple: help good businesses stay organized, serve their customers, and grow with confidence.</p>
+              <p>When you work with us, you’re not hiring a call center or an automated service. You’re gaining a dependable support team that cares about your business, communicates clearly, and does the work we promise.</p>
+            </div>
+            <Link href="/about" className="btn-secondary mt-6 inline-flex px-6 py-3">Learn More About Us</Link>
+          </div>
+          <div className="about-values-card content-card">
+            <p className="text-sm font-black uppercase tracking-[0.22em] text-blue-700">Built on real values</p>
+            <ul className="mt-5 grid gap-3">
+              {aboutValues.map((value) => (
+                <li key={value} className="flex items-center gap-4 rounded-xl bg-blue-50/70 p-4 text-lg font-black text-blue-950">
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white text-blue-700 shadow-sm">✓</span>
+                  {value}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 

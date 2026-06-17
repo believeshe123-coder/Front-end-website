@@ -408,3 +408,30 @@ body {
     padding-inline: calc(2rem * var(--admin-horizontal-spacing));
   }
 }
+
+.about-values-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(18rem, 0.75fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+  margin-top: 2.25rem;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border-radius: 1.25rem;
+  background: #ffffff;
+  box-shadow: 0 16px 40px color-mix(in srgb, var(--admin-dark) 7%, transparent);
+}
+
+.about-values-copy {
+  max-width: 47rem;
+}
+
+.about-values-card {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--admin-accent) 44%, white), #ffffff);
+}
+
+@media (max-width: 767px) {
+  .about-values-panel {
+    grid-template-columns: 1fr;
+    margin-top: 1.75rem;
+  }
+}
