@@ -130,14 +130,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <section className="site-section-bottom final-cta-section">
-        <div className="feature-panel final-cta mx-auto bg-blue-50 text-center ring-blue-100">
-          <h2 className="text-3xl font-black tracking-tight text-blue-950">Ready for reliable support?</h2>
-          <p className="mx-auto mt-3 max-w-2xl leading-7 text-slate-700">Tell us what your business needs help with, and get a practical quote for office support.</p>
-          <Link href="/contact" className="btn-primary mt-5 inline-flex px-8 hover:bg-blue-800">Get a Quote</Link>
-        </div>
-      </section>
     </div>
   );
 }

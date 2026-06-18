@@ -427,18 +427,6 @@ body {
   background-color: color-mix(in srgb, var(--admin-dark) 86%, black) !important;
 }
 
-.final-cta-section {
-  padding-top: 1.25rem;
-  background: var(--admin-page);
-}
-
-.final-cta {
-  max-width: 56rem;
-  border-radius: 1.25rem;
-  background: var(--admin-white) !important;
-  box-shadow: 0 16px 36px color-mix(in srgb, var(--admin-dark) 7%, transparent);
-}
-
 @media (max-width: 1023px) {
   .support-showcase {
     background: var(--admin-white);
@@ -647,25 +635,28 @@ body {
 
 .about-founder {
   display: grid;
-  grid-template-columns: minmax(18rem, 0.78fr) minmax(0, 1fr);
-  gap: clamp(1.5rem, 3.5vw, 2.75rem);
+  grid-template-columns: minmax(16rem, 0.52fr) minmax(0, 1.18fr);
+  gap: clamp(1.5rem, 4vw, 3.25rem);
   align-items: center;
 }
 
 .about-founder-figure {
+  width: min(100%, 24rem);
   margin: 0;
+  justify-self: center;
 }
 
 .about-founder-image {
+  aspect-ratio: 1;
   overflow: hidden;
-  border-radius: 1rem;
+  border-radius: 999px;
   box-shadow: 0 20px 46px color-mix(in srgb, var(--admin-dark) 16%, transparent);
 }
 
 .about-founder-image img {
   display: block;
   width: 100%;
-  min-height: clamp(24rem, 40vw, 34rem);
+  height: 100%;
   object-fit: cover;
   object-position: center;
 }
@@ -688,7 +679,7 @@ body {
 }
 
 .about-founder-copy {
-  max-width: 50rem;
+  max-width: 58rem;
 }
 
 .about-subheading {
