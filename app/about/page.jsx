@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 const valueCards = [
   {
     title: "Honest Pricing",
@@ -136,10 +134,6 @@ export default function AboutPage() {
               <li key={pillar}><span aria-hidden="true">✓</span>{pillar}</li>
             ))}
           </ul>
-          <div className="about-cta-copy">
-            <h2>Ready for dependable office support?</h2>
-            <Link href="/contact" className="btn-primary inline-flex px-8 py-3">Get A Quote</Link>
-          </div>
         </div>
       </section>
     </div>
