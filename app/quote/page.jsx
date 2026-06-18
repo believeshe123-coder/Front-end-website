@@ -140,6 +140,23 @@ export default function QuotePage() {
             <p className="text-sm leading-6 text-slate-600">Submitting opens your email app and addresses the request to believeshe123@gmail.com.</p>
           </form>
         )}
+
+        <div className="mx-auto mt-8 grid max-w-4xl gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-2xl shadow-blue-950/10 md:p-6">
+          <div className="grid gap-2">
+            <p className="eyebrow text-amber-700">Online quote form</p>
+            <h2 className="text-2xl font-black tracking-tight text-blue-950">Complete Our Google Form</h2>
+            <p className="text-base leading-7 text-slate-700">Prefer to submit through Google Forms? Fill out the embedded form below and we&apos;ll follow up with you.</p>
+          </div>
+
+          <iframe
+            src="https://forms.gle/fePzmKzUmRxgtbZ4A?embedded=true"
+            title="Google quote request form"
+            className="min-h-[720px] w-full rounded-xl border border-blue-100 bg-slate-50"
+            loading="lazy"
+          >
+            Loading…
+          </iframe>
+        </div>
       </section>
     </div>
   );
