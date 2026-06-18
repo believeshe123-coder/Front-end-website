@@ -46,6 +46,7 @@ const founderStrengths = [
   "Staffing and workforce coordination",
   "Customer communication",
   "Small business operations support",
+  "Project management experience",
 ];
 
 const teamPillars = [
@@ -99,7 +100,7 @@ export default function AboutPage() {
             <div className="about-story-grid">
               <article>
                 <h3>Growing Up Around Small Business</h3>
-                <p>I spent time working construction alongside my dad and saw how much happens behind the scenes—scheduling jobs, answering calls, managing paperwork, and keeping customers informed.</p>
+                <p>I spent time working construction alongside my dad and saw how much happens behind the scenes: scheduling jobs, answering calls, managing paperwork, and keeping customers informed.</p>
               </article>
               <article>
                 <h3>Building Experience In Office Management</h3>
@@ -111,7 +112,7 @@ export default function AboutPage() {
               </article>
             </div>
             <div className="about-strengths">
-              <h3>What I Bring To Field Office</h3>
+              <h3>What My Team Brings To Field Office</h3>
               <ul>
                 {founderStrengths.map((strength) => (
                   <li key={strength}><span aria-hidden="true">✓</span>{strength}</li>
