@@ -126,7 +126,7 @@ export default function Home() {
           </ul>
           <div className="hire-panel-cta">
             <p className="font-semibold leading-7 text-slate-700">Let&apos;s build a plan that works for your business.</p>
-            <Link href="/contact" className="btn-primary mt-4 inline-flex justify-center px-8 hover:bg-blue-800">Get a Quote</Link>
+            <Link href="/quote" className="btn-primary mt-4 inline-flex justify-center px-8 hover:bg-blue-800">Get A Quote Here</Link>
           </div>
         </div>
       </section>
