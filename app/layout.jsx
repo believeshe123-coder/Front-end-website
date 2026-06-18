@@ -8,8 +8,8 @@ export const metadata = {
 };
 
 const navItems = [
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
+  { href: "/about", label: "About Us" },
+  { href: "/contact", label: "Contact Us" },
 ];
 
 export default function RootLayout({ children }) {
