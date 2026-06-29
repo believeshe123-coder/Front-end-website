@@ -595,7 +595,7 @@ body {
 }
 
 .hire-panel {
-  margin-bottom: 0;
+  margin-bottom: clamp(2rem, 5vw, 4rem);
 }
 
 .support-industries .industry-card,
@@ -795,6 +795,14 @@ body {
 
 .feature-panel {
   box-shadow: 0 10px 24px color-mix(in srgb, var(--admin-dark) 6%, transparent) !important;
+}
+
+
+/* Keep the final homepage panel fully visible with breathing room above the footer. */
+.hire-panel.fade-up {
+  animation: none;
+  opacity: 1;
+  transform: none;
 }
 
 .site-footer {
