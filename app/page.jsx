@@ -63,7 +63,7 @@ export default function Home() {
             <p className="eyebrow">Service businesses we help</p>
             <h2 className="mx-auto mt-3 max-w-5xl text-3xl font-black tracking-tight text-blue-950 sm:text-4xl">Office support for the businesses your customers count on.</h2>
           </div>
-          <div className="mt-9 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             {industryCards.map((industry) => (
               <article key={industry.title} className="content-card industry-card text-center">
                 <h3 className="text-xl font-black tracking-tight text-blue-950">{industry.title}</h3>
@@ -79,7 +79,7 @@ export default function Home() {
             <h2 className="mt-3 text-3xl font-black leading-tight tracking-tight text-blue-950 sm:text-4xl">One Team. Multiple Roles.</h2>
             <p className="mt-4 text-lg font-semibold leading-8 text-slate-700">Field Office can step in where your business needs support most. We can help answer phones, schedule jobs, follow up with customers, manage invoices, support marketing, and keep office work moving behind the scenes.</p>
           </div>
-          <div className="role-card-grid mx-auto mt-10 grid max-w-6xl gap-x-10 gap-y-9 md:grid-cols-2 xl:grid-cols-3">
+          <div className="role-card-grid mx-auto mt-14 grid max-w-6xl gap-x-10 gap-y-12 md:grid-cols-2 xl:grid-cols-3">
             {roleCards.map((role) => (
               <article key={role.title} className="role-card">
                 <h3 className="text-xl font-black text-blue-950">{role.title}</h3>
