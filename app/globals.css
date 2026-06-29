@@ -487,6 +487,273 @@ body {
 }
 
 
+
+/* Modern homepage refresh */
+@media (prefers-reduced-motion: no-preference) {
+  .fade-up {
+    animation: fade-up 0.8s ease both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 28%;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-home {
+  padding-block: clamp(5.5rem, 9vw, 8rem) clamp(6rem, 10vw, 9rem) !important;
+  border-bottom: 0;
+  background:
+    radial-gradient(circle at 18% 18%, color-mix(in srgb, var(--admin-gold-accent) 15%, transparent) 0, transparent 26rem),
+    radial-gradient(circle at 82% 20%, color-mix(in srgb, var(--admin-primary) 12%, transparent) 0, transparent 28rem),
+    linear-gradient(180deg, #ffffff 0%, color-mix(in srgb, var(--admin-accent) 42%, white) 100%);
+}
+
+.hero-home::before,
+.hero-home::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  border-radius: 999px;
+  filter: blur(34px);
+  opacity: 0.55;
+}
+
+.hero-home::before {
+  width: 18rem;
+  height: 18rem;
+  right: 8%;
+  top: 8%;
+  background: color-mix(in srgb, var(--admin-gold-accent) 18%, transparent);
+}
+
+.hero-home::after {
+  width: 22rem;
+  height: 22rem;
+  left: -9rem;
+  bottom: 8%;
+  background: color-mix(in srgb, var(--admin-primary) 10%, transparent);
+}
+
+.hero-title-large {
+  font-size: clamp(3.4rem, 7.4vw, 6.8rem) !important;
+  letter-spacing: -0.065em;
+}
+
+.hero-home .hero-copy {
+  margin-top: 1.6rem;
+  max-width: 45rem;
+  font-size: clamp(1.06rem, 1.1vw, 1.22rem);
+  line-height: 1.72;
+}
+
+.hero-home-image {
+  border-radius: 2rem;
+  box-shadow: 0 30px 80px color-mix(in srgb, var(--admin-dark) 12%, transparent);
+}
+
+.hero-home-callout {
+  width: min(34rem, 92%);
+  right: auto;
+  bottom: -2rem;
+  transform: translateX(-1.5rem);
+  box-shadow: 0 24px 60px color-mix(in srgb, var(--admin-dark) 14%, transparent) !important;
+}
+
+.support-showcase {
+  padding: clamp(6rem, 10vw, 8.75rem) calc(1.5rem * var(--admin-horizontal-spacing));
+  background:
+    linear-gradient(180deg, #ffffff 0 28%, color-mix(in srgb, var(--admin-accent) 55%, white) 28% 57%, #ffffff 57% 100%);
+}
+
+.support-industries,
+.roles-panel,
+.about-values-panel,
+.hire-panel {
+  margin-top: 0;
+  margin-bottom: clamp(6.5rem, 10vw, 9rem);
+}
+
+.hire-panel {
+  margin-bottom: 0;
+}
+
+.support-industries .industry-card,
+.content-card {
+  border-color: #ECE8E2 !important;
+  border-radius: 1.15rem;
+  box-shadow: none !important;
+  padding: clamp(1.75rem, 2.7vw, 2.25rem) !important;
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.support-industries .industry-card:hover,
+.content-card:hover {
+  transform: translateY(-5px);
+  border-color: color-mix(in srgb, var(--admin-gold-accent) 28%, #ECE8E2) !important;
+  box-shadow: 0 20px 45px color-mix(in srgb, var(--admin-dark) 9%, transparent) !important;
+}
+
+.roles-panel {
+  padding: clamp(5rem, 8vw, 7rem) 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.role-card-grid {
+  align-items: start;
+}
+
+.role-card {
+  min-height: 0;
+  padding: 0 0 0 1.25rem;
+  border-left: 1px solid #ECE8E2;
+  transition: transform 220ms ease, border-color 220ms ease;
+}
+
+.role-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--admin-gold-accent);
+}
+
+.role-card p {
+  max-width: 21rem;
+  font-size: 1.08rem;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.about-values-panel {
+  grid-template-columns: minmax(0, 1.05fr) minmax(20rem, 0.72fr);
+  gap: clamp(3rem, 7vw, 6rem);
+  padding: clamp(1rem, 2vw, 1.5rem) 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.about-values-copy {
+  max-width: 54rem;
+}
+
+.about-values-copy h2,
+.roles-panel h2,
+.hire-panel h2,
+.support-industries h2 {
+  font-size: clamp(2.35rem, 4.2vw, 4.25rem) !important;
+  line-height: 0.98 !important;
+  letter-spacing: -0.055em;
+}
+
+.about-values-copy p,
+.roles-panel p,
+.hire-panel p {
+  line-height: 1.75;
+}
+
+.about-values-list {
+  align-self: center;
+}
+
+.about-value-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.35rem 0;
+  border-bottom: 1px solid #ECE8E2;
+  color: var(--admin-dark);
+  font-size: 1.2rem;
+  font-weight: 850;
+}
+
+.about-value-row:first-child {
+  border-top: 1px solid #ECE8E2;
+}
+
+.about-check {
+  display: inline-flex;
+  width: 2.25rem;
+  height: 2.25rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--admin-gold-accent) 22%, white);
+  color: var(--admin-dark);
+  font-weight: 900;
+}
+
+.hire-panel {
+  grid-template-columns: minmax(16rem, 0.85fr) minmax(24rem, 1.35fr) minmax(14rem, 0.7fr);
+  padding: clamp(3.5rem, 6vw, 5rem) 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.hire-benefits {
+  gap: 1.25rem 2rem;
+  padding-inline: clamp(1.25rem, 3vw, 3rem);
+  border-inline: 1px solid #ECE8E2;
+}
+
+.btn-primary,
+.btn-secondary {
+  border-radius: 0.95rem;
+  padding: 0.9rem 1.45rem;
+  transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease, border-color 220ms ease;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: translateY(-3px);
+}
+
+@media (max-width: 1023px) {
+  .hero-home {
+    padding-block: 4.5rem 5.5rem !important;
+  }
+
+  .hero-home-callout {
+    transform: none;
+    bottom: 1rem;
+  }
+
+  .support-showcase {
+    background: #ffffff;
+  }
+
+  .support-industries,
+  .roles-panel,
+  .about-values-panel,
+  .hire-panel {
+    margin-bottom: 5.5rem;
+  }
+
+  .roles-panel {
+    padding-block: 4.5rem;
+  }
+
+  .about-values-panel,
+  .hire-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .hire-benefits {
+    border: 0;
+    padding: 0;
+  }
+}
+
 .text-slate-600,
 .text-slate-700,
 .text-slate-900 {
@@ -807,4 +1074,81 @@ label,
 button,
 a {
   overflow-wrap: anywhere;
+}
+
+/* Keep the refreshed homepage lighter than legacy card defaults declared above. */
+.support-showcase .content-card {
+  border-color: #ECE8E2 !important;
+  box-shadow: none !important;
+}
+
+.support-showcase .content-card:hover {
+  box-shadow: 0 20px 45px color-mix(in srgb, var(--admin-dark) 9%, transparent) !important;
+}
+
+/* Tightened homepage rhythm after review: keep sections connected and headings readable. */
+.support-showcase {
+  padding-top: clamp(3.75rem, 6vw, 5.25rem);
+  padding-bottom: clamp(3.75rem, 6vw, 5.25rem);
+  background:
+    linear-gradient(180deg, #ffffff 0 34%, color-mix(in srgb, var(--admin-accent) 52%, white) 34% 69%, #ffffff 69% 100%);
+}
+
+.support-industries,
+.roles-panel,
+.about-values-panel,
+.hire-panel {
+  margin-bottom: clamp(3.75rem, 6vw, 5.5rem);
+}
+
+.roles-panel {
+  padding: clamp(3.25rem, 5vw, 4.75rem) 0;
+}
+
+.support-industries h2 {
+  max-width: 64rem;
+  margin-inline: auto;
+  font-size: clamp(2.15rem, 3.25vw, 3.35rem) !important;
+  line-height: 1.06 !important;
+  text-wrap: balance;
+}
+
+.roles-panel h2,
+.about-values-copy h2,
+.hire-panel h2 {
+  font-size: clamp(2.15rem, 3.55vw, 3.65rem) !important;
+  line-height: 1.04 !important;
+  text-wrap: balance;
+}
+
+.role-card-grid {
+  margin-top: clamp(2.25rem, 4vw, 3rem) !important;
+}
+
+.about-values-panel {
+  gap: clamp(2.25rem, 5vw, 4.25rem);
+  padding-block: clamp(0.5rem, 1vw, 1rem);
+}
+
+.hire-panel {
+  padding-block: clamp(2.75rem, 4.5vw, 4rem);
+  margin-bottom: 0;
+}
+
+@media (max-width: 1023px) {
+  .support-showcase {
+    padding-top: 3.25rem;
+    padding-bottom: 3.25rem;
+  }
+
+  .support-industries,
+  .roles-panel,
+  .about-values-panel,
+  .hire-panel {
+    margin-bottom: 3.75rem;
+  }
+
+  .roles-panel {
+    padding-block: 3.25rem;
+  }
 }

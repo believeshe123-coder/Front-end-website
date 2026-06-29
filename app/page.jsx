@@ -40,7 +40,7 @@ export default function Home() {
               <p>Whether you need help with one part of your office operations or want us to manage everything behind the scenes, we build support around the way your business operates. From answering phones and scheduling jobs to handling paperwork, invoicing, customer communication, and more, our team can take on as much or as little as you need.</p>
               <p>Keep your focus on the work in the field. We'll keep the office running.</p>
             </div>
-            <div className="mt-7 grid grid-cols-2 gap-4 sm:grid-cols-4">
+            <div className="fade-up mt-9 grid grid-cols-2 gap-5 sm:grid-cols-4">
               {trustItems.map((item) => (
                 <div key={item} className="flex items-center gap-3 text-sm font-black leading-tight text-blue-950">
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-50 text-lg text-blue-700">✓</span><span>{item}</span>
@@ -50,7 +50,7 @@ export default function Home() {
           </div>
           <div className="hero-home-visual">
             <div className="hero-home-image" aria-hidden="true" />
-            <div className="hero-home-callout rounded-xl border border-slate-200 bg-white/95 p-5 shadow-2xl shadow-blue-950/15 backdrop-blur">
+            <div className="hero-home-callout rounded-2xl border border-slate-200 bg-white/95 p-6 shadow-2xl shadow-blue-950/15 backdrop-blur">
               <div className="flex items-center gap-5"><div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-blue-600 text-2xl font-black text-blue-700">✓</div><p className="text-base font-black leading-7 text-blue-950">Office support built around your calls, your schedule, and your customers.<span className="block text-blue-700">So your time stays focused in the field.</span></p></div>
             </div>
           </div>
@@ -58,12 +58,12 @@ export default function Home() {
       </section>
 
       <section className="support-showcase" id="industries">
-        <div className="support-industries mx-auto max-w-7xl">
+        <div className="support-industries fade-up mx-auto max-w-7xl">
           <div className="mx-auto max-w-6xl text-center">
             <p className="eyebrow">Service businesses we help</p>
-            <h2 className="mt-3 text-3xl font-black tracking-tight text-blue-950 sm:text-4xl xl:whitespace-nowrap">Office support for the businesses your customers count on.</h2>
+            <h2 className="mx-auto mt-3 max-w-5xl text-3xl font-black tracking-tight text-blue-950 sm:text-4xl">Office support for the businesses your customers count on.</h2>
           </div>
-          <div className="mt-7 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-9 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             {industryCards.map((industry) => (
               <article key={industry.title} className="content-card industry-card text-center">
                 <h3 className="text-xl font-black tracking-tight text-blue-950">{industry.title}</h3>
@@ -73,15 +73,15 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="roles-panel mx-auto max-w-7xl" id="roles">
+        <div className="roles-panel fade-up mx-auto max-w-7xl" id="roles">
           <div className="mx-auto max-w-4xl text-center">
             <p className="eyebrow">Flexible office support</p>
             <h2 className="mt-3 text-3xl font-black leading-tight tracking-tight text-blue-950 sm:text-4xl">One Team. Multiple Roles.</h2>
             <p className="mt-4 text-lg font-semibold leading-8 text-slate-700">Field Office can step in where your business needs support most. We can help answer phones, schedule jobs, follow up with customers, manage invoices, support marketing, and keep office work moving behind the scenes.</p>
           </div>
-          <div className="role-card-grid mx-auto mt-7 grid max-w-6xl gap-5 md:grid-cols-2 xl:grid-cols-3">
+          <div className="role-card-grid mx-auto mt-10 grid max-w-6xl gap-x-10 gap-y-9 md:grid-cols-2 xl:grid-cols-3">
             {roleCards.map((role) => (
-              <article key={role.title} className="content-card role-card">
+              <article key={role.title} className="role-card">
                 <h3 className="text-xl font-black text-blue-950">{role.title}</h3>
                 <p className="mt-3 leading-7 text-slate-700">{role.text}</p>
               </article>
@@ -89,7 +89,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="about-values-panel mx-auto max-w-7xl" id="about-field-office">
+        <div className="about-values-panel fade-up mx-auto max-w-7xl" id="about-field-office">
           <div className="about-values-copy">
             <p className="eyebrow">About Field Office</p>
             <h2 className="mt-3 text-3xl font-black leading-tight tracking-tight text-blue-950 sm:text-4xl">Built on honesty, service, and real support.</h2>
@@ -100,12 +100,12 @@ export default function Home() {
             </div>
             <Link href="/about" className="btn-secondary mt-6 inline-flex px-6 py-3">Learn More About Us</Link>
           </div>
-          <div className="about-values-card content-card">
+          <div className="about-values-list">
             <p className="text-sm font-black uppercase tracking-[0.22em] text-blue-700">Built on real values</p>
-            <ul className="mt-5 grid gap-3">
+            <ul className="mt-6">
               {aboutValues.map((value) => (
-                <li key={value} className="flex items-center gap-4 rounded-xl bg-blue-50/70 p-4 text-lg font-black text-blue-950">
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white text-blue-700 shadow-sm">✓</span>
+                <li key={value} className="about-value-row">
+                  <span className="about-check" aria-hidden="true">✓</span>
                   {value}
                 </li>
               ))}
@@ -113,7 +113,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="hire-panel mx-auto max-w-7xl">
+        <div className="hire-panel fade-up mx-auto max-w-7xl">
           <div className="hire-panel-intro">
             <p className="eyebrow">Flexible support</p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-blue-950">Support without hiring another employee.</h2>
@@ -121,7 +121,7 @@ export default function Home() {
           </div>
           <ul className="hire-benefits grid gap-4 sm:grid-cols-2">
             {hireAlternatives.map((item) => (
-              <li key={item} className="flex items-center gap-3 rounded-xl bg-white/70 p-3 font-black text-blue-950"><span aria-hidden="true">✓</span>{item}</li>
+              <li key={item} className="flex items-center gap-3 font-black text-blue-950"><span aria-hidden="true">✓</span>{item}</li>
             ))}
           </ul>
           <div className="hire-panel-cta">
