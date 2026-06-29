@@ -181,7 +181,8 @@ body {
 
 .content-card,
 .feature-panel {
-  padding: calc(1.25rem * var(--admin-card-spacing));
+  padding-block: calc(1.25rem * var(--admin-card-spacing) * var(--admin-vertical-spacing));
+  padding-inline: calc(1.25rem * var(--admin-card-spacing));
 }
 
 .hero-section img[class*="h-["],
@@ -312,7 +313,8 @@ body {
   border-radius: 0.85rem;
   background: var(--admin-gold-accent);
   color: var(--admin-dark);
-  padding: 1rem;
+  padding-block: calc(1rem * var(--admin-vertical-spacing));
+  padding-inline: 1rem;
   font-weight: 900;
   box-shadow: 0 18px 34px color-mix(in srgb, var(--admin-dark) 24%, transparent);
 }
@@ -328,12 +330,13 @@ body {
 }
 
 .support-showcase {
-  padding: 1.75rem calc(1.5rem * var(--admin-horizontal-spacing)) 1.75rem;
+  padding-block: calc(1.75rem * var(--admin-vertical-spacing));
+  padding-inline: calc(1.5rem * var(--admin-horizontal-spacing));
   background: var(--admin-white);
 }
 
 .support-industries {
-  padding-bottom: 1.25rem;
+  padding-bottom: calc(1.25rem * var(--admin-vertical-spacing));
 }
 
 .support-industries .industry-card {
@@ -346,7 +349,8 @@ body {
 
 .roles-panel {
   margin-top: 0.75rem;
-  padding: clamp(1.35rem, 3vw, 2.4rem) clamp(1rem, 2.5vw, 2.25rem);
+  padding-block: calc(clamp(1.35rem, 3vw, 2.4rem) * var(--admin-vertical-spacing));
+  padding-inline: clamp(1rem, 2.5vw, 2.25rem);
   border-radius: 1.5rem;
   background:
     radial-gradient(circle at 50% 0%, color-mix(in srgb, var(--admin-white) 72%, transparent), transparent 38%),
@@ -363,7 +367,8 @@ body {
 
 .role-card {
   min-height: 8rem;
-  padding: clamp(1rem, 1.8vw, 1.65rem);
+  padding-block: calc(clamp(1rem, 1.8vw, 1.65rem) * var(--admin-vertical-spacing));
+  padding-inline: clamp(1rem, 1.8vw, 1.65rem);
 }
 
 .role-card p {
@@ -378,7 +383,8 @@ body {
   gap: clamp(1.5rem, 3vw, 3rem);
   align-items: center;
   margin-top: 1.25rem;
-  padding: clamp(1rem, 2vw, 1.75rem);
+  padding-block: calc(clamp(1rem, 2vw, 1.75rem) * var(--admin-vertical-spacing));
+  padding-inline: clamp(1rem, 2vw, 1.75rem);
   border: 1px solid color-mix(in srgb, var(--admin-gold-accent) 30%, white);
   border-radius: 1rem;
   background: var(--admin-accent);
@@ -465,7 +471,8 @@ body {
   gap: clamp(1.5rem, 4vw, 3rem);
   align-items: center;
   margin-top: 1.35rem;
-  padding: clamp(1rem, 2.4vw, 1.9rem);
+  padding-block: calc(clamp(1rem, 2.4vw, 1.9rem) * var(--admin-vertical-spacing));
+  padding-inline: clamp(1rem, 2.4vw, 1.9rem);
   border-radius: 1.25rem;
   background: var(--admin-white);
   box-shadow: 0 16px 40px color-mix(in srgb, var(--admin-dark) 7%, transparent);
@@ -569,7 +576,8 @@ body {
 }
 
 .support-showcase {
-  padding: calc(clamp(6rem, 10vw, 8.75rem) * var(--admin-vertical-spacing)) calc(1.5rem * var(--admin-horizontal-spacing));
+  padding-block: calc(clamp(6rem, 10vw, 8.75rem) * var(--admin-vertical-spacing));
+  padding-inline: calc(1.5rem * var(--admin-horizontal-spacing));
   background:
     linear-gradient(180deg, #ffffff 0 28%, color-mix(in srgb, var(--admin-accent) 55%, white) 28% 57%, #ffffff 57% 100%);
 }
@@ -591,7 +599,8 @@ body {
   border-color: #ECE8E2 !important;
   border-radius: 1.15rem;
   box-shadow: none !important;
-  padding: clamp(1.75rem, 2.7vw, 2.25rem) !important;
+  padding-block: calc(clamp(1.75rem, 2.7vw, 2.25rem) * var(--admin-vertical-spacing)) !important;
+  padding-inline: clamp(1.75rem, 2.7vw, 2.25rem) !important;
   transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
 }
 
@@ -603,7 +612,8 @@ body {
 }
 
 .roles-panel {
-  padding: clamp(5rem, 8vw, 7rem) 0;
+  padding-block: calc(clamp(5rem, 8vw, 7rem) * var(--admin-vertical-spacing));
+  padding-inline: 0;
   border-radius: 0;
   background: transparent;
 }
@@ -614,7 +624,8 @@ body {
 
 .role-card {
   min-height: 0;
-  padding: 0 0 0 1.25rem;
+  padding-block: calc(0rem * var(--admin-vertical-spacing));
+  padding-inline: 1.25rem 0;
   border-left: 1px solid #ECE8E2;
   transition: transform 220ms ease, border-color 220ms ease;
 }
@@ -634,7 +645,8 @@ body {
 .about-values-panel {
   grid-template-columns: minmax(0, 1.05fr) minmax(20rem, 0.72fr);
   gap: clamp(3rem, 7vw, 6rem);
-  padding: clamp(1rem, 2vw, 1.5rem) 0;
+  padding-block: calc(clamp(1rem, 2vw, 1.5rem) * var(--admin-vertical-spacing));
+  padding-inline: 0;
   border-radius: 0;
   background: transparent;
   box-shadow: none;
@@ -667,7 +679,8 @@ body {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1.35rem 0;
+  padding-block: calc(1.35rem * var(--admin-vertical-spacing));
+  padding-inline: 0;
   border-bottom: 1px solid #ECE8E2;
   color: var(--admin-dark);
   font-size: 1.2rem;
@@ -693,7 +706,8 @@ body {
 
 .hire-panel {
   grid-template-columns: minmax(16rem, 0.85fr) minmax(24rem, 1.35fr) minmax(14rem, 0.7fr);
-  padding: clamp(3.5rem, 6vw, 5rem) 0;
+  padding-block: calc(clamp(3.5rem, 6vw, 5rem) * var(--admin-vertical-spacing));
+  padding-inline: 0;
   border: 0;
   border-radius: 0;
   background: transparent;
@@ -709,7 +723,8 @@ body {
 .btn-primary,
 .btn-secondary {
   border-radius: 0.95rem;
-  padding: 0.9rem 1.45rem;
+  padding-block: calc(0.9rem * var(--admin-vertical-spacing));
+  padding-inline: 1.45rem;
   transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease, border-color 220ms ease;
 }
 
@@ -740,7 +755,7 @@ body {
   }
 
   .roles-panel {
-    padding-block: 4.5rem;
+    padding-block: calc(4.5rem * var(--admin-vertical-spacing));
   }
 
   .about-values-panel,
@@ -793,7 +808,8 @@ body {
 
 .about-hero {
   background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
-  padding: clamp(2.4rem, 5.5vw, 4.25rem) 1.5rem clamp(2rem, 4.5vw, 3.5rem);
+  padding-block: calc(clamp(2.4rem, 5.5vw, 4.25rem) * var(--admin-vertical-spacing)) calc(clamp(2rem, 4.5vw, 3.5rem) * var(--admin-vertical-spacing));
+  padding-inline: 1.5rem;
 }
 
 .about-hero .hero-copy {
@@ -811,7 +827,8 @@ body {
 }
 
 .about-section {
-  padding: clamp(0.85rem, 2.2vw, 1.55rem) 1.5rem;
+  padding-block: calc(clamp(0.85rem, 2.2vw, 1.55rem) * var(--admin-vertical-spacing));
+  padding-inline: 1.5rem;
 }
 
 .about-mission,
@@ -825,7 +842,8 @@ body {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
   gap: clamp(1rem, 2.5vw, 2rem);
-  padding: clamp(1.15rem, 2.3vw, 1.85rem);
+  padding-block: calc(clamp(1.15rem, 2.3vw, 1.85rem) * var(--admin-vertical-spacing));
+  padding-inline: clamp(1.15rem, 2.3vw, 1.85rem);
   background:
     radial-gradient(circle at 50% 45%, color-mix(in srgb, var(--admin-gold-accent) 12%, transparent), transparent 58%),
     var(--about-soft);
@@ -974,7 +992,8 @@ body {
 
 .about-strengths {
   margin-top: 1rem;
-  padding: clamp(1rem, 2.2vw, 1.5rem);
+  padding-block: calc(clamp(1rem, 2.2vw, 1.5rem) * var(--admin-vertical-spacing));
+  padding-inline: clamp(1rem, 2.2vw, 1.5rem);
   border: 1px solid color-mix(in srgb, var(--admin-dark) 10%, white);
   border-radius: 1.25rem;
   background: #ffffff;
@@ -1010,7 +1029,8 @@ body {
   grid-template-columns: minmax(0, 1.1fr) minmax(15rem, 0.8fr);
   gap: clamp(1.25rem, 3vw, 2.5rem);
   align-items: center;
-  padding: clamp(1.15rem, 2.3vw, 1.85rem);
+  padding-block: calc(clamp(1.15rem, 2.3vw, 1.85rem) * var(--admin-vertical-spacing));
+  padding-inline: clamp(1.15rem, 2.3vw, 1.85rem);
   background:
     linear-gradient(135deg, #ffffff 0%, var(--about-soft) 100%);
 }
@@ -1022,7 +1042,8 @@ body {
 .about-team-list {
   display: grid;
   gap: 0.9rem;
-  padding: 1.25rem;
+  padding-block: calc(1.25rem * var(--admin-vertical-spacing));
+  padding-inline: 1.25rem;
   border-radius: 1rem;
   background: #ffffff;
   box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--admin-dark) 8%, transparent);
@@ -1035,7 +1056,7 @@ body {
   gap: 1rem;
   align-items: center;
   justify-content: space-between;
-  padding-top: 1.25rem;
+  padding-top: calc(1.25rem * var(--admin-vertical-spacing));
   border-top: 1px solid color-mix(in srgb, var(--admin-dark) 13%, transparent);
 }
 
@@ -1105,7 +1126,8 @@ a {
     left: 0.75rem;
     min-height: 12rem;
     width: 3.75rem;
-    padding: 0.75rem 0.5rem;
+    padding-block: calc(0.75rem * var(--admin-vertical-spacing));
+    padding-inline: 0.5rem;
   }
 
   .spacing-slider-input {
