@@ -29,7 +29,7 @@ const hireAlternatives = ["No hiring process", "No office overhead", "No benefit
 
 export default function Home() {
   return (
-    <div className="overflow-hidden bg-white text-blue-950">
+    <div className="overflow-hidden text-blue-950">
       <section className="hero-section hero-home">
         <div className="hero-grid hero-home-grid">
           <div className="hero-home-content">
