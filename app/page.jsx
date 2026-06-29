@@ -61,7 +61,6 @@ export default function Home() {
         <div className="support-industries fade-up mx-auto max-w-7xl">
           <div className="mx-auto max-w-6xl text-center">
             <p className="eyebrow">Service businesses we help</p>
-            <h2 className="mx-auto mt-3 max-w-5xl text-3xl font-black tracking-tight text-blue-950 sm:text-4xl">Office support for the businesses your customers count on.</h2>
           </div>
           <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             {industryCards.map((industry) => (
@@ -98,7 +97,6 @@ export default function Home() {
               <p>Our goal is simple: help good businesses stay organized, serve their customers, and grow with confidence.</p>
               <p>When you work with us, you’re not hiring a call center or an automated service. You’re gaining a dependable support team that cares about your business, communicates clearly, and does the work we promise.</p>
             </div>
-            <Link href="/about" className="btn-secondary mt-6 inline-flex px-6 py-3">Learn More About Us</Link>
           </div>
           <div className="about-values-list">
             <p className="text-sm font-black uppercase tracking-[0.22em] text-blue-700">Built on real values</p>
@@ -110,6 +108,7 @@ export default function Home() {
                 </li>
               ))}
             </ul>
+            <Link href="/about" className="btn-secondary mt-6 inline-flex px-6 py-3">Learn More About Us</Link>
           </div>
         </div>
 
