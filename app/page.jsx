@@ -61,7 +61,7 @@ export default function Home() {
         <div className="support-industries fade-up mx-auto max-w-7xl">
           <div className="mx-auto max-w-6xl text-center">
             <p className="eyebrow">Service businesses we help</p>
-            <h2 className="mt-3 text-3xl font-black tracking-tight text-blue-950 sm:text-4xl xl:whitespace-nowrap">Office support for the businesses your customers count on.</h2>
+            <h2 className="mx-auto mt-3 max-w-5xl text-3xl font-black tracking-tight text-blue-950 sm:text-4xl">Office support for the businesses your customers count on.</h2>
           </div>
           <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             {industryCards.map((industry) => (
