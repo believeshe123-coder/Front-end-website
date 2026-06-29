@@ -590,6 +590,10 @@ body {
   margin-bottom: clamp(6.5rem, 10vw, 9rem);
 }
 
+.support-industries {
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
 .hire-panel {
   margin-bottom: 0;
 }
@@ -612,7 +616,7 @@ body {
 }
 
 .roles-panel {
-  padding-block: calc(clamp(5rem, 8vw, 7rem) * var(--admin-vertical-spacing));
+  padding-block: calc(clamp(3rem, 5vw, 4.5rem) * var(--admin-vertical-spacing));
   padding-inline: 0;
   border-radius: 0;
   background: transparent;
