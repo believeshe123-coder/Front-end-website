@@ -5,6 +5,11 @@ export const metadata = {
   title: "Field Office",
   description:
     "Remote office support for service businesses that need help with calls, scheduling, estimates, invoices, follow-up, and growth.",
+  icons: {
+    icon: "/images/49c629de-fa9f-42b4-b9ad-d1ffaaddd7d8.png",
+    shortcut: "/images/49c629de-fa9f-42b4-b9ad-d1ffaaddd7d8.png",
+    apple: "/images/49c629de-fa9f-42b4-b9ad-d1ffaaddd7d8.png",
+  },
 };
 
 const navItems = [
@@ -18,8 +23,9 @@ export default function RootLayout({ children }) {
       <body className="font-sans antialiased">
         <header className="sticky top-0 z-50 border-b border-blue-950/10 bg-white/95 backdrop-blur">
           <nav className="mx-auto flex min-h-16 w-full max-w-7xl flex-row items-center justify-between gap-3 overflow-visible px-4 py-0 lg:min-h-20 lg:px-8">
-            <Link href="/" className="flex items-center transition hover:opacity-85" aria-label="Field Office home">
-              <img src="/images/Logo%20(2).png" alt="Field Office" className="m-0 block h-14 w-auto max-w-[10rem] rounded-sm object-contain sm:h-16 sm:max-w-[14rem] lg:h-24 lg:max-w-[20rem]" />
+            <Link href="/" className="flex items-center gap-3 transition hover:opacity-85" aria-label="Field Office home">
+              <img src="/images/49c629de-fa9f-42b4-b9ad-d1ffaaddd7d8.png" alt="" className="m-0 block h-12 w-12 rounded-sm object-contain sm:h-14 sm:w-14 lg:h-16 lg:w-16" />
+              <span className="rounded-md border border-blue-950/15 bg-white px-3 py-2 text-xl font-black leading-none tracking-tight text-blue-950 shadow-sm sm:text-2xl lg:text-3xl">Field Office</span>
             </Link>
             <div className="hidden items-center gap-7 md:flex">
               {navItems.map((item) => (
