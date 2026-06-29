@@ -1,5 +1,4 @@
 import Link from "next/link";
-import VerticalSpacingSlider from "@/components/VerticalSpacingSlider";
 import "./globals.css";
 
 export const metadata = {
@@ -51,7 +50,6 @@ export default function RootLayout({ children }) {
             </div>
           </nav>
         </header>
-        <VerticalSpacingSlider />
         <main className="min-h-[calc(100vh-73px)]">{children}</main>
         <footer className="site-footer px-6 py-8 lg:px-8">
           <div className="mx-auto flex max-w-7xl flex-col gap-2 text-sm text-white sm:flex-row sm:items-center sm:justify-between">
