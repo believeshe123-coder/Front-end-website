@@ -1085,3 +1085,78 @@ a {
 .support-showcase .content-card:hover {
   box-shadow: 0 20px 45px color-mix(in srgb, var(--admin-dark) 9%, transparent) !important;
 }
+
+/* Left-side spacing control */
+.spacing-slider {
+  position: fixed;
+  left: 1rem;
+  top: 50%;
+  z-index: 70;
+  display: flex;
+  min-height: 15rem;
+  width: 4.5rem;
+  transform: translateY(-50%);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  border: 1px solid color-mix(in srgb, var(--admin-dark) 12%, white);
+  border-radius: 999px;
+  background: var(--admin-white);
+  padding: 1rem 0.65rem;
+  box-shadow: 0 18px 45px color-mix(in srgb, var(--admin-dark) 12%, transparent);
+}
+
+.spacing-slider-label {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: var(--admin-dark);
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.spacing-slider-input {
+  width: 8rem;
+  accent-color: var(--admin-gold-accent);
+  transform: rotate(-90deg);
+}
+
+.spacing-slider-value {
+  border-radius: 999px;
+  background: var(--admin-accent);
+  color: var(--admin-dark);
+  font-size: 0.7rem;
+  font-weight: 900;
+  line-height: 1;
+  padding: 0.35rem 0.4rem;
+}
+
+.hero-home,
+.support-showcase,
+.about-page,
+.about-hero,
+.about-mission,
+.about-team-cta {
+  background: var(--admin-page) !important;
+}
+
+.hero-home::before,
+.hero-home::after {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .spacing-slider {
+    left: 0.75rem;
+    min-height: 12rem;
+    width: 3.75rem;
+    padding: 0.75rem 0.5rem;
+  }
+
+  .spacing-slider-input {
+    width: 6.5rem;
+  }
+}
