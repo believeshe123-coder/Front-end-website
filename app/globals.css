@@ -587,11 +587,11 @@ body {
 .about-values-panel,
 .hire-panel {
   margin-top: 0;
-  margin-bottom: clamp(6.5rem, 10vw, 9rem);
+  margin-bottom: 20px;
 }
 
 .support-industries {
-  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 20px;
 }
 
 .hire-panel {
@@ -616,7 +616,7 @@ body {
 }
 
 .roles-panel {
-  padding-block: calc(clamp(3rem, 5vw, 4.5rem) * var(--admin-vertical-spacing));
+  padding-block: 20px;
   padding-inline: 0;
   border-radius: 0;
   background: transparent;
@@ -755,11 +755,11 @@ body {
   .roles-panel,
   .about-values-panel,
   .hire-panel {
-    margin-bottom: 5.5rem;
+    margin-bottom: 20px;
   }
 
   .roles-panel {
-    padding-block: calc(4.5rem * var(--admin-vertical-spacing));
+    padding-block: 20px;
   }
 
   .about-values-panel,
