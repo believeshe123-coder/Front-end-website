@@ -379,7 +379,7 @@ body {
 
 .hire-panel {
   display: grid;
-  grid-template-columns: minmax(16rem, 0.9fr) minmax(24rem, 1.45fr) minmax(14rem, 0.75fr);
+  grid-template-columns: minmax(28rem, 1.25fr) minmax(24rem, 1.25fr) minmax(14rem, 0.75fr);
   gap: clamp(1.5rem, 3vw, 3rem);
   align-items: center;
   margin-top: 1.25rem;
@@ -392,7 +392,7 @@ body {
 }
 
 .hire-panel-intro {
-  max-width: 22rem;
+  max-width: 34rem;
 }
 
 .hire-benefits {
