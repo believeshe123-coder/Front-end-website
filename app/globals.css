@@ -551,7 +551,7 @@ body {
 }
 
 .hero-title-large {
-  font-size: clamp(3.4rem, 7.4vw, 6.8rem) !important;
+  font-size: clamp(2.25rem, 4.5vw, 4.5rem) !important;
   letter-spacing: -0.065em;
 }
 
@@ -831,7 +831,7 @@ body {
 }
 
 .about-section {
-  padding-block: calc(clamp(0.85rem, 2.2vw, 1.55rem) * var(--admin-vertical-spacing));
+  padding-block: calc(clamp(2.75rem, 5vw, 4.5rem) * var(--admin-vertical-spacing));
   padding-inline: 1.5rem;
 }
 
@@ -845,8 +845,8 @@ body {
 .about-mission {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-  gap: clamp(1rem, 2.5vw, 2rem);
-  padding-block: calc(clamp(1.15rem, 2.3vw, 1.85rem) * var(--admin-vertical-spacing));
+  gap: clamp(2rem, 4vw, 3.5rem);
+  padding-block: calc(clamp(2.25rem, 4vw, 3.25rem) * var(--admin-vertical-spacing));
   padding-inline: clamp(1.15rem, 2.3vw, 1.85rem);
   background:
     radial-gradient(circle at 50% 45%, color-mix(in srgb, var(--admin-gold-accent) 12%, transparent), transparent 58%),
@@ -893,7 +893,7 @@ body {
 .about-values-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(0.75rem, 1.8vw, 1.25rem);
+  gap: clamp(1.5rem, 2.6vw, 2.25rem);
   align-content: center;
 }
 
@@ -978,9 +978,9 @@ body {
 }
 
 .about-story-grid {
-  margin-top: 0.9rem;
+  margin-top: 1.4rem;
   display: grid;
-  gap: 0.75rem;
+  gap: 1.25rem;
 }
 
 .about-story-grid h3,
@@ -995,8 +995,8 @@ body {
 }
 
 .about-strengths {
-  margin-top: 1rem;
-  padding-block: calc(clamp(1rem, 2.2vw, 1.5rem) * var(--admin-vertical-spacing));
+  margin-top: 1.8rem;
+  padding-block: calc(clamp(1.35rem, 2.6vw, 2rem) * var(--admin-vertical-spacing));
   padding-inline: clamp(1rem, 2.2vw, 1.5rem);
   border: 1px solid color-mix(in srgb, var(--admin-dark) 10%, white);
   border-radius: 1.25rem;
@@ -1033,7 +1033,7 @@ body {
   grid-template-columns: minmax(0, 1.1fr) minmax(15rem, 0.8fr);
   gap: clamp(1.25rem, 3vw, 2.5rem);
   align-items: center;
-  padding-block: calc(clamp(1.15rem, 2.3vw, 1.85rem) * var(--admin-vertical-spacing));
+  padding-block: calc(clamp(2.25rem, 4vw, 3.25rem) * var(--admin-vertical-spacing));
   padding-inline: clamp(1.15rem, 2.3vw, 1.85rem);
   background:
     linear-gradient(135deg, #ffffff 0%, var(--about-soft) 100%);

@@ -40,7 +40,7 @@ export default function Home() {
               <p>Whether you need help with one part of your office operations or want us to manage everything behind the scenes, we build support around the way your business operates. From answering phones and scheduling jobs to handling paperwork, invoicing, customer communication, and more, our team can take on as much or as little as you need.</p>
               <p>Keep your focus on the work in the field. We'll keep the office running.</p>
             </div>
-            <div className="fade-up mt-9 grid grid-cols-2 gap-5 sm:grid-cols-4">
+            <div className="fade-up mb-5 mt-9 grid grid-cols-2 gap-5 sm:grid-cols-4">
               {trustItems.map((item) => (
                 <div key={item} className="flex items-center gap-3 text-sm font-black leading-tight text-blue-950">
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-50 text-lg text-blue-700">✓</span><span>{item}</span>
