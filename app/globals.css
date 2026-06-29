@@ -664,9 +664,9 @@ body {
 .roles-panel h2,
 .hire-panel h2,
 .support-industries h2 {
-  font-size: clamp(2.35rem, 4.2vw, 4.25rem) !important;
-  line-height: 0.98 !important;
-  letter-spacing: -0.055em;
+  font-size: clamp(1.5rem, 2.2vw, 2.25rem) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.035em;
 }
 
 .about-values-copy p,
