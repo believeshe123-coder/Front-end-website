@@ -938,7 +938,7 @@ body {
 }
 
 .about-founder-copy {
-  width: min(100%, 70rem);
+  width: min(100%, 62rem);
   padding-block: clamp(0.25rem, 1vw, 0.75rem);
 }
 
@@ -948,18 +948,31 @@ body {
   font-weight: 800 !important;
 }
 
+.about-founder-card {
+  margin-top: clamp(1.75rem, 3vw, 2.35rem);
+  padding: clamp(1.4rem, 3.5vw, 2.75rem);
+  border: 1px solid color-mix(in srgb, var(--admin-dark) 9%, white);
+  border-radius: 1.45rem;
+  background: #ffffff;
+  box-shadow: 0 18px 45px color-mix(in srgb, var(--admin-dark) 8%, transparent);
+}
+
 .about-story-grid {
-  margin-top: 1.75rem;
   display: grid;
-  gap: 1rem;
 }
 
 .about-story-grid article {
-  padding: clamp(1rem, 1.8vw, 1.3rem) clamp(1rem, 2vw, 1.5rem);
-  border-left: 3px solid color-mix(in srgb, var(--about-gold) 42%, white);
-  border-radius: 1rem;
-  background: #ffffff;
-  box-shadow: 0 12px 30px color-mix(in srgb, var(--admin-dark) 5%, transparent);
+  padding-block: clamp(1.25rem, 2.5vw, 1.8rem);
+  padding-left: clamp(1rem, 2vw, 1.35rem);
+  border-left: 3px solid color-mix(in srgb, var(--about-gold) 45%, white);
+}
+
+.about-story-grid article:first-child {
+  padding-top: 0;
+}
+
+.about-story-grid article + article {
+  border-top: 1px solid color-mix(in srgb, var(--admin-dark) 10%, transparent);
 }
 
 .about-story-grid h3,
@@ -970,17 +983,20 @@ body {
 }
 
 .about-story-grid p {
-  margin-top: 0.35rem;
+  max-width: 58rem;
+  margin-top: 0.55rem;
+  font-size: 1.02rem;
+  line-height: 1.72;
 }
 
 .about-strengths {
-  margin-top: 1.5rem;
-  padding-block: clamp(1.4rem, 2.8vw, 2rem);
-  padding-inline: clamp(1rem, 2.5vw, 1.75rem);
-  border: 1px solid color-mix(in srgb, var(--admin-dark) 10%, white);
-  border-radius: 1.25rem;
-  background: #ffffff;
-  box-shadow: 0 18px 40px color-mix(in srgb, var(--admin-dark) 10%, transparent);
+  margin-top: clamp(1.1rem, 2.5vw, 1.75rem);
+  padding-block: clamp(1.2rem, 2.8vw, 1.75rem);
+  padding-inline: clamp(1rem, 2.5vw, 1.5rem);
+  border: 1px solid color-mix(in srgb, var(--about-gold) 18%, white);
+  border-radius: 1.15rem;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--about-soft) 65%, white) 0%, #ffffff 100%);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--about-gold) 7%, transparent);
 }
 
 .about-strengths ul {
