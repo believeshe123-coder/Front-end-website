@@ -64,27 +64,29 @@ export default function AboutPage() {
             <p className="eyebrow text-amber-700">Meet the founder</p>
             <h2>From construction sites to office management.</h2>
             <p className="about-subheading">The experience behind Field Office.</p>
-            <div className="about-story-grid">
-              <article>
-                <h3>Growing Up Around Small Business</h3>
-                <p>I spent time working construction alongside my dad and saw how much happens behind the scenes: scheduling jobs, answering calls, managing paperwork, and keeping customers informed.</p>
-              </article>
-              <article>
-                <h3>Building Experience In Office Management</h3>
-                <p>That foundation led me into staffing and office management, where I helped businesses solve operational challenges, support customers, and keep teams moving.</p>
-              </article>
-              <article>
-                <h3>Why I Started Field Office</h3>
-                <p>I created Field Office to give growing businesses dependable support, clear communication, and a trusted partner without the expense of hiring a full office staff.</p>
-              </article>
-            </div>
-            <div className="about-strengths">
-              <h3>What My Team Brings To Field Office</h3>
-              <ul>
-                {founderStrengths.map((strength) => (
-                  <li key={strength}><span aria-hidden="true">✓</span>{strength}</li>
-                ))}
-              </ul>
+            <div className="about-founder-card">
+              <div className="about-story-grid">
+                <article>
+                  <h3>Growing Up Around Small Business</h3>
+                  <p>I spent time working construction alongside my dad and saw how much happens behind the scenes: scheduling jobs, answering calls, managing paperwork, and keeping customers informed.</p>
+                </article>
+                <article>
+                  <h3>Building Experience In Office Management</h3>
+                  <p>That foundation led me into staffing and office management, where I helped businesses solve operational challenges, support customers, and keep teams moving.</p>
+                </article>
+                <article>
+                  <h3>Why I Started Field Office</h3>
+                  <p>I created Field Office to give growing businesses dependable support, clear communication, and a trusted partner without the expense of hiring a full office staff.</p>
+                </article>
+              </div>
+              <div className="about-strengths">
+                <h3>What My Team Brings To Field Office</h3>
+                <ul>
+                  {founderStrengths.map((strength) => (
+                    <li key={strength}><span aria-hidden="true">✓</span>{strength}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
