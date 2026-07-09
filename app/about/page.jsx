@@ -2,39 +2,18 @@ const valueCards = [
   {
     title: "Honest Pricing",
     text: "Straightforward pricing with no hidden fees.",
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden="true" className="h-8 w-8">
-        <path d="M12 3.5 19 6v5.25c0 4.45-2.8 7.95-7 9.25-4.2-1.3-7-4.8-7-9.25V6l7-2.5Z" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-        <path d="m9 12 2 2 4-5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
   },
   {
     title: "Clear Communication",
     text: "We keep you informed every step of the way.",
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden="true" className="h-8 w-8">
-        <path d="M5 18.25c-1.35-1.3-2-2.95-2-4.75C3 8.8 7.05 5 12 5s9 3.8 9 8.5S16.95 22 12 22a9.8 9.8 0 0 1-3.3-.55L4.5 22l.5-3.75Z" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
   },
   {
     title: "Dependable Support",
     text: "A team you can count on to get the job done.",
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden="true" className="h-8 w-8">
-        <path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm8 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM3.5 20v-1.5A4.5 4.5 0 0 1 8 14h1.5M20.5 20v-1.5A4.5 4.5 0 0 0 16 14h-1.5M8.5 20v-1a4 4 0 0 1 8 0v1" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-      </svg>
-    ),
   },
   {
     title: "Real People",
     text: "You’ll always work with real people who care.",
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden="true" className="h-8 w-8">
-        <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-7 9v-1a7 7 0 0 1 14 0v1" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-      </svg>
-    ),
   },
 ];
 
@@ -71,7 +50,6 @@ export default function AboutPage() {
           <div className="about-values-grid">
             {valueCards.map((value) => (
               <article key={value.title} className="about-value-card">
-                <div className="about-icon">{value.icon}</div>
                 <h3>{value.title}</h3>
                 <p>{value.text}</p>
               </article>
@@ -82,15 +60,6 @@ export default function AboutPage() {
 
       <section className="about-section about-founder-section pt-0">
         <div className="about-founder mx-auto max-w-7xl">
-          <figure className="about-founder-figure">
-            <div className="about-founder-image">
-              <img src="/images/headshot.png" alt="Field Office founder" />
-            </div>
-            <figcaption>
-              <strong>Leahana Kraus</strong>
-              <span>Founder, Field Office</span>
-            </figcaption>
-          </figure>
           <div className="about-founder-copy">
             <p className="eyebrow text-amber-700">Meet the founder</p>
             <h2>From construction sites to office management.</h2>

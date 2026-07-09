@@ -920,7 +920,6 @@ body {
 }
 
 .about-value-card h3 {
-  margin-top: 0.85rem;
   color: var(--about-dark);
   font-weight: 900;
 }
@@ -932,73 +931,14 @@ body {
   line-height: 1.42;
 }
 
-.about-icon {
-  display: flex;
-  width: 4.5rem;
-  height: 4.5rem;
-  align-items: center;
-  justify-content: center;
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--about-soft) 72%, white);
-  color: var(--admin-primary);
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--admin-gold-accent) 10%, transparent);
-}
-
 .about-founder {
   display: grid;
-  grid-template-columns: minmax(18rem, 0.55fr) minmax(0, 1.15fr);
-  gap: clamp(2rem, 5vw, 4.5rem);
-  align-items: start;
-}
-
-.about-founder-figure {
-  position: sticky;
-  top: 6.5rem;
-  width: min(100%, 25rem);
-  margin: 0;
-  justify-self: center;
-  padding: clamp(0.85rem, 1.5vw, 1.1rem);
-  border: 1px solid color-mix(in srgb, var(--admin-dark) 9%, white);
-  border-radius: 2rem;
-  background: #ffffff;
-  box-shadow: 0 22px 54px color-mix(in srgb, var(--admin-dark) 10%, transparent);
-}
-
-.about-founder-image {
-  aspect-ratio: 1;
-  overflow: hidden;
-  border-radius: 1.5rem;
-  box-shadow: 0 16px 36px color-mix(in srgb, var(--admin-dark) 12%, transparent);
-}
-
-.about-founder-image img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.about-founder-figure figcaption {
-  margin-top: 1rem;
-  color: var(--about-dark);
-  font-weight: 700;
-  line-height: 1.35;
-  text-align: center;
-}
-
-.about-founder-figure strong,
-.about-founder-figure span {
-  display: block;
-}
-
-.about-founder-figure span {
-  color: #64748b;
-  font-weight: 700;
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
 }
 
 .about-founder-copy {
-  max-width: 58rem;
+  width: min(100%, 70rem);
   padding-block: clamp(0.25rem, 1vw, 0.75rem);
 }
 
@@ -1127,11 +1067,6 @@ body {
     border: 0;
   }
 
-  .about-founder-figure {
-    position: static;
-    width: min(100%, 28rem);
-  }
-
   .about-values-grid,
   .about-strengths ul {
     grid-template-columns: 1fr;
@@ -1153,8 +1088,7 @@ body {
   }
 
   .about-mission,
-  .about-team-cta,
-  .about-founder-figure {
+  .about-team-cta {
     padding-inline: 1rem;
   }
 
