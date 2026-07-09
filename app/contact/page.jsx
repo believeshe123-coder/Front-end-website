@@ -1,3 +1,5 @@
+import EmbeddedGoogleForm from "@/components/EmbeddedGoogleForm";
+
 export default function ContactPage() {
   return (
     <div className="overflow-hidden bg-white text-blue-950">
@@ -10,16 +12,7 @@ export default function ContactPage() {
       </section>
 
       <section className="site-section bg-stone-50">
-        <div className="mx-auto max-w-4xl rounded-2xl border border-slate-200 bg-white p-5 shadow-2xl shadow-blue-950/10 md:p-6">
-          <iframe
-            src="https://forms.gle/6mbKfqLCj6G32wxP8?embedded=true"
-            title="Google contact form"
-            className="min-h-[720px] w-full rounded-xl border border-blue-100 bg-slate-50"
-            loading="lazy"
-          >
-            Loading…
-          </iframe>
-        </div>
+        <EmbeddedGoogleForm src="https://forms.gle/6mbKfqLCj6G32wxP8" title="Google contact form" />
       </section>
     </div>
   );
