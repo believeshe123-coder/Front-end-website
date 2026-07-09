@@ -931,6 +931,37 @@ body {
   line-height: 1.42;
 }
 
+
+.about-people-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(20rem, 0.75fr);
+  gap: clamp(1.25rem, 3vw, 2rem);
+  align-items: stretch;
+}
+
+.about-people-panel {
+  min-width: 0;
+}
+
+.about-people-grid .about-founder,
+.about-people-grid .about-team-cta {
+  height: 100%;
+}
+
+.about-people-grid .about-founder-copy {
+  width: 100%;
+}
+
+.about-people-grid .about-team-cta {
+  grid-template-columns: 1fr;
+  align-content: start;
+  gap: clamp(1.2rem, 2.5vw, 1.75rem);
+}
+
+.about-people-grid .about-strengths ul {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .about-founder {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
@@ -1069,6 +1100,7 @@ body {
 @media (max-width: 900px) {
   .about-mission,
   .about-founder,
+  .about-people-grid,
   .about-team-cta {
     grid-template-columns: 1fr;
   }

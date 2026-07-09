@@ -58,53 +58,53 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="about-section about-founder-section pt-0">
-        <div className="about-founder mx-auto max-w-7xl">
-          <div className="about-founder-copy">
-            <p className="eyebrow text-amber-700">Meet the founder</p>
-            <h2>From construction sites to office management.</h2>
-            <p className="about-subheading">The experience behind Field Office.</p>
-            <div className="about-founder-card">
-              <div className="about-story-grid">
-                <article>
-                  <h3>Growing Up Around Small Business</h3>
-                  <p>I spent time working construction alongside my dad and saw how much happens behind the scenes: scheduling jobs, answering calls, managing paperwork, and keeping customers informed.</p>
-                </article>
-                <article>
-                  <h3>Building Experience In Office Management</h3>
-                  <p>That foundation led me into staffing and office management, where I helped businesses solve operational challenges, support customers, and keep teams moving.</p>
-                </article>
-                <article>
-                  <h3>Why I Started Field Office</h3>
-                  <p>I created Field Office to give growing businesses dependable support, clear communication, and a trusted partner without the expense of hiring a full office staff.</p>
-                </article>
-              </div>
-              <div className="about-strengths">
-                <h3>What My Team Brings To Field Office</h3>
-                <ul>
-                  {founderStrengths.map((strength) => (
-                    <li key={strength}><span aria-hidden="true">✓</span>{strength}</li>
-                  ))}
-                </ul>
+      <section className="about-section about-people-section pt-0">
+        <div className="about-people-grid mx-auto max-w-7xl">
+          <div className="about-founder about-people-panel">
+            <div className="about-founder-copy">
+              <p className="eyebrow text-amber-700">Meet the founder</p>
+              <h2>From construction sites to office management.</h2>
+              <p className="about-subheading">The experience behind Field Office.</p>
+              <div className="about-founder-card">
+                <div className="about-story-grid">
+                  <article>
+                    <h3>Growing Up Around Small Business</h3>
+                    <p>I spent time working construction alongside my dad and saw how much happens behind the scenes: scheduling jobs, answering calls, managing paperwork, and keeping customers informed.</p>
+                  </article>
+                  <article>
+                    <h3>Building Experience In Office Management</h3>
+                    <p>That foundation led me into staffing and office management, where I helped businesses solve operational challenges, support customers, and keep teams moving.</p>
+                  </article>
+                  <article>
+                    <h3>Why I Started Field Office</h3>
+                    <p>I created Field Office to give growing businesses dependable support, clear communication, and a trusted partner without the expense of hiring a full office staff.</p>
+                  </article>
+                </div>
+                <div className="about-strengths">
+                  <h3>What My Team Brings To Field Office</h3>
+                  <ul>
+                    {founderStrengths.map((strength) => (
+                      <li key={strength}><span aria-hidden="true">✓</span>{strength}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      <section className="about-section pt-0">
-        <div className="about-team-cta mx-auto max-w-7xl">
-          <div className="about-team-copy">
-            <p className="eyebrow text-amber-700">Our team</p>
-            <h2>A Team Behind Every Client</h2>
-            <p>While Field Office was founded by Leahana, our clients are supported by a team of people who share the same commitment to service, communication, and helping businesses succeed.</p>
-            <p>Together, we work behind the scenes so business owners can focus on serving their customers.</p>
+          <div className="about-team-cta about-people-panel">
+            <div className="about-team-copy">
+              <p className="eyebrow text-amber-700">Our team</p>
+              <h2>A Team Behind Every Client</h2>
+              <p>While Field Office was founded by Leahana, our clients are supported by a team of people who share the same commitment to service, communication, and helping businesses succeed.</p>
+              <p>Together, we work behind the scenes so business owners can focus on serving their customers.</p>
+            </div>
+            <ul className="about-team-list">
+              {teamPillars.map((pillar) => (
+                <li key={pillar}><span aria-hidden="true">✓</span>{pillar}</li>
+              ))}
+            </ul>
           </div>
-          <ul className="about-team-list">
-            {teamPillars.map((pillar) => (
-              <li key={pillar}><span aria-hidden="true">✓</span>{pillar}</li>
-            ))}
-          </ul>
         </div>
       </section>
     </div>
