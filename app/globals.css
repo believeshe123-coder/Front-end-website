@@ -845,7 +845,7 @@ body {
 }
 
 .about-section {
-  padding-block: clamp(3.5rem, 7vw, 6rem);
+  padding-block: clamp(1.15rem, 2.35vw, 2rem);
   padding-inline: clamp(1rem, 4vw, 2rem);
 }
 
@@ -860,7 +860,7 @@ body {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
   gap: clamp(2rem, 5vw, 4rem);
-  padding-block: clamp(2rem, 4.5vw, 3.5rem);
+  padding-block: clamp(0.7rem, 1.5vw, 1.2rem);
   padding-inline: clamp(1.25rem, 4vw, 3.5rem);
   background:
     radial-gradient(circle at 50% 45%, color-mix(in srgb, var(--admin-gold-accent) 12%, transparent), transparent 58%),
@@ -939,7 +939,7 @@ body {
 
 .about-founder-copy {
   width: min(100%, 62rem);
-  padding-block: clamp(0.25rem, 1vw, 0.75rem);
+  padding-block: clamp(0.1rem, 0.35vw, 0.25rem);
 }
 
 .about-subheading {
@@ -949,8 +949,8 @@ body {
 }
 
 .about-founder-card {
-  margin-top: clamp(1.75rem, 3vw, 2.35rem);
-  padding: clamp(1.4rem, 3.5vw, 2.75rem);
+  margin-top: clamp(0.6rem, 1vw, 0.8rem);
+  padding: clamp(0.5rem, 1.2vw, 0.95rem);
   border: 1px solid color-mix(in srgb, var(--admin-dark) 9%, white);
   border-radius: 1.45rem;
   background: #ffffff;
@@ -962,7 +962,7 @@ body {
 }
 
 .about-story-grid article {
-  padding-block: clamp(1.25rem, 2.5vw, 1.8rem);
+  padding-block: clamp(0.45rem, 0.85vw, 0.6rem);
   padding-left: clamp(1rem, 2vw, 1.35rem);
   border-left: 3px solid color-mix(in srgb, var(--about-gold) 45%, white);
 }
@@ -990,8 +990,8 @@ body {
 }
 
 .about-strengths {
-  margin-top: clamp(1.1rem, 2.5vw, 1.75rem);
-  padding-block: clamp(1.2rem, 2.8vw, 1.75rem);
+  margin-top: clamp(0.4rem, 0.85vw, 0.6rem);
+  padding-block: clamp(0.4rem, 0.95vw, 0.6rem);
   padding-inline: clamp(1rem, 2.5vw, 1.5rem);
   border: 1px solid color-mix(in srgb, var(--about-gold) 18%, white);
   border-radius: 1.15rem;
@@ -1031,7 +1031,7 @@ body {
   grid-template-columns: minmax(0, 1.15fr) minmax(16rem, 0.65fr);
   gap: clamp(1.75rem, 4vw, 3rem);
   align-items: center;
-  padding-block: clamp(2rem, 4.5vw, 3.5rem);
+  padding-block: clamp(0.7rem, 1.5vw, 1.2rem);
   padding-inline: clamp(1.25rem, 4vw, 3.5rem);
   background:
     linear-gradient(135deg, #ffffff 0%, var(--about-soft) 100%);
@@ -1074,7 +1074,7 @@ body {
   }
 
   .about-section {
-    padding-block: clamp(2.75rem, 9vw, 4.25rem);
+    padding-block: clamp(0.9rem, 3vw, 1.4rem);
   }
 
   .about-mission-copy,
