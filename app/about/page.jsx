@@ -26,13 +26,6 @@ const founderStrengths = [
   "Project management experience",
 ];
 
-const teamPillars = [
-  "Real People",
-  "Clear Communication",
-  "Dependable Support",
-  "Built For Service Businesses",
-];
-
 export default function AboutPage() {
   return (
     <div className="about-page overflow-hidden bg-white text-blue-950">
@@ -80,14 +73,6 @@ export default function AboutPage() {
                     <p>I created Field Office to give growing businesses dependable support, clear communication, and a trusted partner without the expense of hiring a full office staff.</p>
                   </article>
                 </div>
-                <div className="about-strengths">
-                  <h3>What My Team Brings To Field Office</h3>
-                  <ul>
-                    {founderStrengths.map((strength) => (
-                      <li key={strength}><span aria-hidden="true">✓</span>{strength}</li>
-                    ))}
-                  </ul>
-                </div>
               </div>
             </div>
           </div>
@@ -99,11 +84,14 @@ export default function AboutPage() {
               <p>While Field Office was founded by Leahana, our clients are supported by a team of people who share the same commitment to service, communication, and helping businesses succeed.</p>
               <p>Together, we work behind the scenes so business owners can focus on serving their customers.</p>
             </div>
-            <ul className="about-team-list">
-              {teamPillars.map((pillar) => (
-                <li key={pillar}><span aria-hidden="true">✓</span>{pillar}</li>
-              ))}
-            </ul>
+            <div className="about-strengths">
+              <h3>What My Team Brings To Field Office</h3>
+              <ul>
+                {founderStrengths.map((strength) => (
+                  <li key={strength}><span aria-hidden="true">✓</span>{strength}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
