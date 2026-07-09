@@ -967,7 +967,10 @@ body {
 }
 
 .about-founder-copy {
+  display: flex;
+  flex-direction: column;
   width: min(100%, 62rem);
+  height: 100%;
   padding-block: clamp(0.1rem, 0.35vw, 0.25rem);
 }
 
@@ -978,6 +981,7 @@ body {
 }
 
 .about-founder-card {
+  flex: 1;
   margin-top: clamp(0.6rem, 1vw, 0.8rem);
   padding: 0;
   border: 0;
@@ -988,9 +992,14 @@ body {
 
 .about-story-grid {
   display: grid;
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  height: 100%;
 }
 
 .about-story-grid article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding-block: clamp(0.45rem, 0.85vw, 0.6rem);
   padding-left: clamp(1rem, 2vw, 1.35rem);
   border-left: 3px solid color-mix(in srgb, var(--about-gold) 45%, white);
