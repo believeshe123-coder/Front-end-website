@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
                   {item.label}
                 </Link>
               ))}
-              <Link href="/quote" className="btn-primary px-5 py-2.5">Get A Quote Here</Link>
+              <Link href="/quote" className="btn-primary px-5 py-2.5">Request a Quote</Link>
             </div>
             <div className="flex items-center gap-2 md:hidden">
               <details className="mobile-menu relative">
@@ -46,7 +46,7 @@ export default function RootLayout({ children }) {
                   ))}
                 </div>
               </details>
-              <Link href="/quote" className="btn-primary px-4 py-2">Get A Quote Here</Link>
+              <Link href="/quote" className="btn-primary px-4 py-2">Request a Quote</Link>
             </div>
           </nav>
         </header>
