@@ -38,7 +38,7 @@ const hireAlternatives = ["No hiring process", "No office overhead", "No benefit
 
 export default function Home() {
   return (
-    <div className="overflow-hidden text-blue-950">
+    <div className="home-page overflow-hidden text-blue-950">
       <section className="hero-section hero-home">
         <div className="hero-grid hero-home-grid">
           <div className="hero-home-content">
@@ -137,14 +137,15 @@ export default function Home() {
             <h2 className="mt-3 text-3xl font-black tracking-tight text-blue-950">Support without hiring another employee.</h2>
             <p className="mt-4 font-semibold leading-7 text-slate-700">Get experienced office support without the cost, time, or hassle of hiring. We scale with your business.</p>
           </div>
-          <ul className="hire-benefits grid gap-4 sm:grid-cols-2">
-            {hireAlternatives.map((item) => (
-              <li key={item} className="flex items-center gap-3 font-black text-blue-950"><span aria-hidden="true">✓</span>{item}</li>
-            ))}
-          </ul>
-          <div className="hire-panel-cta">
-            <p className="font-semibold leading-7 text-slate-700">Let&apos;s build a plan that works for your business.</p>
-            <Link href="/quote" className="btn-primary mt-4 inline-flex justify-center px-8 hover:bg-blue-800">Get A Quote Here</Link>
+          <div className="hire-panel-actions">
+            <ul className="hire-benefits grid gap-4 sm:grid-cols-2">
+              {hireAlternatives.map((item) => (
+                <li key={item} className="flex items-center gap-3 font-black"><span aria-hidden="true">✓</span>{item}</li>
+              ))}
+            </ul>
+            <div className="hire-panel-cta">
+              <Link href="/quote" className="btn-primary inline-flex justify-center px-8">Request a Quote</Link>
+            </div>
           </div>
         </div>
       </section>
