@@ -33,7 +33,7 @@ export default function AboutPage() {
         <div className="about-mission mx-auto max-w-7xl">
           <div className="about-mission-copy">
             <p className="eyebrow text-amber-700">Our mission</p>
-            <h2>Helping good businesses succeed.</h2>
+            <h2>Behind every great service business is an office that keeps things moving.</h2>
             <div className="about-copy-stack">
               <p>Field Office was built on the values of honesty, respect, responsibility, and service. We believe business owners deserve dependable support, clear communication, and a team they can trust.</p>
               <p>Whether you’re a contractor, tradesman, or service provider, our goal is simple:</p>
@@ -59,19 +59,10 @@ export default function AboutPage() {
               <h2>From construction sites to office management.</h2>
               <p className="about-subheading">The experience behind Field Office.</p>
               <div className="about-founder-card">
-                <div className="about-story-grid">
-                  <article>
-                    <h3>Growing Up Around Small Business</h3>
-                    <p>I spent time working construction alongside my dad and saw how much happens behind the scenes: scheduling jobs, answering calls, managing paperwork, and keeping customers informed.</p>
-                  </article>
-                  <article>
-                    <h3>Building Experience In Office Management</h3>
-                    <p>That foundation led me into staffing and office management, where I helped businesses solve operational challenges, support customers, and keep teams moving.</p>
-                  </article>
-                  <article>
-                    <h3>Why I Started Field Office</h3>
-                    <p>I created Field Office to give growing businesses dependable support, clear communication, and a trusted partner without the expense of hiring a full office staff.</p>
-                  </article>
+                <div className="about-copy-stack">
+                  <p>I grew up seeing firsthand that running a service business involves far more than doing great work in the field. Working construction alongside my dad, I saw the calls, scheduling, paperwork, customer updates, and countless details that still needed attention after the physical work was done.</p>
+                  <p>That experience eventually led me into staffing and office management, where I helped businesses solve operational challenges, support customers, and keep their teams moving.</p>
+                  <p>I started Field Office to bring those experiences together—to give hardworking business owners dependable office support without the cost and complexity of building a full internal office staff.</p>
                 </div>
               </div>
             </div>
@@ -80,12 +71,12 @@ export default function AboutPage() {
           <div className="about-team-cta about-people-panel">
             <div className="about-team-copy">
               <p className="eyebrow text-amber-700">Our team</p>
-              <h2>A Team Behind Every Client</h2>
-              <p>While Field Office was founded by Leahana, our clients are supported by a team of people who share the same commitment to service, communication, and helping businesses succeed.</p>
-              <p>Together, we work behind the scenes so business owners can focus on serving their customers.</p>
+              <h2>Dedicated Support Behind Your Business</h2>
+              <p>Field Office provides dependable, hands-on support built around the needs of each client. With a commitment to service, clear communication, and reliable follow-through, the goal is to keep your office operations moving and your customers taken care of.</p>
+              <p>By handling the work behind the scenes, Field Office gives business owners more time to focus on serving their customers and growing their business.</p>
             </div>
             <div className="about-strengths">
-              <h3>What My Team Brings To Field Office</h3>
+              <h3>Experience Behind Field Office</h3>
               <ul>
                 {founderStrengths.map((strength) => (
                   <li key={strength}><span aria-hidden="true">✓</span>{strength}</li>
