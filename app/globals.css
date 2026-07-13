@@ -79,7 +79,7 @@ body {
 }
 
 :root {
-  --admin-vertical-spacing: 1;
+  --admin-vertical-spacing: 0.45;
   --admin-horizontal-spacing: 1.1;
   --admin-card-spacing: 0.82;
   --admin-hero-image-height: 1.05;
@@ -594,21 +594,25 @@ body {
   margin-bottom: 20px;
 }
 
-.support-industries::before {
+.support-industries > * {
+  position: relative;
+  z-index: 1;
+}
+
+.support-industries > .grid {
+  isolation: isolate;
+}
+
+.support-industries > .grid::before {
   content: "";
   position: absolute;
   z-index: -1;
   left: 50%;
-  top: 52%;
+  top: -30px;
+  bottom: -30px;
   width: 100vw;
-  height: clamp(5rem, 10vw, 7.5rem);
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   background: linear-gradient(90deg, #001c49 0%, #0b3476 100%);
-}
-
-.support-industries > * {
-  position: relative;
-  z-index: 1;
 }
 
 .hire-panel {
@@ -776,6 +780,23 @@ body {
 .experience-list span {
   color: var(--admin-gold-accent);
   font-weight: 950;
+}
+
+@media (min-width: 1280px) {
+  .experience-panel {
+    max-width: calc(100vw - 2.75rem) !important;
+    width: 100%;
+  }
+
+  .experience-list {
+    flex-wrap: nowrap;
+    gap: 1rem;
+  }
+
+  .experience-list li {
+    white-space: nowrap;
+    font-size: 0.875rem;
+  }
 }
 
 
