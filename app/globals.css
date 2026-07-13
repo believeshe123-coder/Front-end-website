@@ -591,7 +591,26 @@ body {
 }
 
 .support-industries {
+  position: relative;
+  isolation: isolate;
   margin-bottom: 20px;
+}
+
+.support-industries::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 52%;
+  width: 100vw;
+  height: clamp(5rem, 10vw, 7.5rem);
+  transform: translate(-50%, -50%);
+  background: linear-gradient(90deg, #001c49 0%, #0b3476 100%);
+}
+
+.support-industries > * {
+  position: relative;
+  z-index: 1;
 }
 
 .hire-panel {
@@ -616,10 +635,22 @@ body {
 }
 
 .roles-panel {
+  position: relative;
   padding-block: 20px;
   padding-inline: 0;
   border-radius: 0;
   background: transparent;
+}
+
+.roles-panel::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -20px;
+  width: 100vw;
+  height: 0.35rem;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #001c49 0%, #0b3476 100%);
 }
 
 .role-card-grid {
@@ -708,6 +739,50 @@ body {
   font-weight: 900;
 }
 
+
+.experience-panel {
+  margin-top: calc(clamp(0.75rem, 1.5vw, 1.25rem) * var(--admin-vertical-spacing));
+  margin-bottom: calc(clamp(2rem, 4vw, 3rem) * var(--admin-vertical-spacing));
+  padding: calc(clamp(1.5rem, 3vw, 2.25rem) * var(--admin-vertical-spacing)) clamp(1.25rem, 3vw, 2.5rem);
+  border: 1px solid color-mix(in srgb, var(--admin-gold-accent) 20%, white);
+  border-radius: 1.25rem;
+  background: color-mix(in srgb, var(--admin-gold-accent) 8%, white);
+  box-shadow: 0 16px 40px color-mix(in srgb, var(--admin-dark) 6%, transparent);
+  text-align: center;
+}
+
+.experience-panel-title {
+  color: var(--admin-dark);
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.experience-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem clamp(1.5rem, 3vw, 2.5rem);
+  margin-top: 1.35rem;
+}
+
+.experience-list li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--admin-dark);
+  font-size: clamp(0.98rem, 1.2vw, 1.1rem);
+  font-weight: 850;
+  line-height: 1.5;
+}
+
+.experience-list span {
+  color: var(--admin-gold-accent);
+  font-weight: 950;
+}
+
+
 .hire-panel {
   grid-template-columns: minmax(16rem, 0.85fr) minmax(24rem, 1.35fr) minmax(14rem, 0.7fr);
   padding-block: calc(clamp(3.5rem, 6vw, 5rem) * var(--admin-vertical-spacing));
@@ -754,6 +829,7 @@ body {
   .support-industries,
   .roles-panel,
   .about-values-panel,
+  .experience-panel,
   .hire-panel {
     margin-bottom: 20px;
   }
@@ -763,6 +839,7 @@ body {
   }
 
   .about-values-panel,
+  .experience-panel,
   .hire-panel {
     grid-template-columns: 1fr;
   }
@@ -867,8 +944,10 @@ body {
 
 .about-mission-copy {
   max-width: 64rem;
+  margin-inline: auto;
   padding-right: 0;
   border-right: 0;
+  text-align: center;
 }
 
 .about-mission h2,

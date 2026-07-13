@@ -23,7 +23,16 @@ const trustItems = [
   "Your Business Treated With Care",
 ];
 
-const aboutValues = ["Honest pricing", "Clear communication", "Dependable support"];
+const aboutValues = ["Honest pricing", "Clear communication", "Dependable support", "Personal service"];
+
+const experienceItems = [
+  "Construction industry experience",
+  "Office management leadership",
+  "Staffing & workforce coordination",
+  "Customer communication",
+  "Small business operations",
+  "Project management experience",
+];
 
 const hireAlternatives = ["No hiring process", "No office overhead", "No benefits costs", "Support when you need it", "No payroll taxes", "Scale up or down anytime"];
 
@@ -91,15 +100,14 @@ export default function Home() {
         <div className="about-values-panel fade-up mx-auto max-w-7xl" id="about-field-office">
           <div className="about-values-copy">
             <p className="eyebrow">About Field Office</p>
-            <h2 className="mt-3 text-3xl font-black leading-tight tracking-tight text-blue-950 sm:text-4xl">Built on honesty, service, and real support.</h2>
+            <h2 className="mt-3 text-3xl font-black leading-tight tracking-tight text-blue-950 sm:text-4xl">Built from real experience supporting service businesses.</h2>
             <div className="mt-5 space-y-4 text-base font-semibold leading-7 text-slate-700 sm:text-lg sm:leading-8">
-              <p>Field Office was built on the values of honesty, respect, responsibility, and service. We understand the challenges of running a small business because we’ve worked alongside the hardworking people who keep their communities running every day.</p>
-              <p>Our goal is simple: help good businesses stay organized, serve their customers, and grow with confidence.</p>
-              <p>When you work with us, you’re not hiring a call center or an automated service. You’re gaining a dependable support team that cares about your business, communicates clearly, and does the work we promise.</p>
+              <p>Field Office was built from firsthand experience in construction, staffing, and office management—and an understanding of how much work happens behind the scenes of a service business.</p>
+              <p>Our goal is simple: provide dependable office support that helps business owners stay organized, serve their customers, and keep their business moving.</p>
             </div>
           </div>
           <div className="about-values-list">
-            <p className="text-sm font-black uppercase tracking-[0.22em] text-blue-700">Built on real values</p>
+            <p className="text-sm font-black uppercase tracking-[0.22em] text-blue-700">What you can expect</p>
             <ul className="mt-6">
               {aboutValues.map((value) => (
                 <li key={value} className="about-value-row">
@@ -108,8 +116,19 @@ export default function Home() {
                 </li>
               ))}
             </ul>
-            <Link href="/about" className="btn-secondary mt-6 inline-flex px-6 py-3">Learn More About Us</Link>
           </div>
+        </div>
+
+        <div className="experience-panel fade-up mx-auto max-w-7xl">
+          <p className="experience-panel-title">Experience Behind Field Office</p>
+          <ul className="experience-list">
+            {experienceItems.map((item) => (
+              <li key={item}>
+                <span aria-hidden="true">✓</span>
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div className="hire-panel fade-up mx-auto max-w-7xl">
