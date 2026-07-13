@@ -79,7 +79,7 @@ body {
 }
 
 :root {
-  --admin-vertical-spacing: 0.05;
+  --admin-vertical-spacing: 1;
   --admin-horizontal-spacing: 1.1;
   --admin-card-spacing: 0.82;
   --admin-hero-image-height: 1.05;
@@ -507,11 +507,9 @@ body {
 @keyframes fade-up {
   from {
     opacity: 0;
-    transform: translateY(22px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
@@ -624,12 +622,11 @@ body {
   box-shadow: none !important;
   padding-block: calc(clamp(1.75rem, 2.7vw, 2.25rem) * var(--admin-vertical-spacing)) !important;
   padding-inline: clamp(1.75rem, 2.7vw, 2.25rem) !important;
-  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+  transition: box-shadow 220ms ease, border-color 220ms ease;
 }
 
 .support-industries .industry-card:hover,
 .content-card:hover {
-  transform: translateY(-5px);
   border-color: color-mix(in srgb, var(--admin-gold-accent) 28%, #ECE8E2) !important;
   box-shadow: 0 20px 45px color-mix(in srgb, var(--admin-dark) 9%, transparent) !important;
 }
@@ -648,7 +645,7 @@ body {
   left: 50%;
   bottom: -20px;
   width: 100vw;
-  height: 0.35rem;
+  height: 0.75rem;
   transform: translateX(-50%);
   background: linear-gradient(90deg, #001c49 0%, #0b3476 100%);
 }
@@ -662,11 +659,10 @@ body {
   padding-block: calc(0rem * var(--admin-vertical-spacing));
   padding-inline: 1.25rem 0;
   border-left: 1px solid #ECE8E2;
-  transition: transform 220ms ease, border-color 220ms ease;
+  transition: border-color 220ms ease;
 }
 
 .role-card:hover {
-  transform: translateY(-5px);
   border-color: var(--admin-gold-accent);
 }
 
