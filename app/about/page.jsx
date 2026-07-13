@@ -55,7 +55,6 @@ export default function AboutPage() {
         <div className="about-people-grid mx-auto max-w-7xl">
           <div className="about-founder about-people-panel">
             <div className="about-founder-copy">
-              <p className="eyebrow text-amber-700">Meet the founder</p>
               <h2>From construction sites to office management.</h2>
               <p className="about-subheading">The experience behind Field Office.</p>
               <div className="about-founder-card">
@@ -70,19 +69,19 @@ export default function AboutPage() {
 
           <div className="about-team-cta about-people-panel">
             <div className="about-team-copy">
-              <p className="eyebrow text-amber-700">Our team</p>
               <h2>Dedicated Support Behind Your Business</h2>
               <p>Field Office provides dependable, hands-on support built around the needs of each client. With a commitment to service, clear communication, and reliable follow-through, the goal is to keep your office operations moving and your customers taken care of.</p>
               <p>By handling the work behind the scenes, Field Office gives business owners more time to focus on serving their customers and growing their business.</p>
             </div>
-            <div className="about-strengths">
-              <h3>Experience Behind Field Office</h3>
-              <ul>
-                {founderStrengths.map((strength) => (
-                  <li key={strength}><span aria-hidden="true">✓</span>{strength}</li>
-                ))}
-              </ul>
-            </div>
+          </div>
+
+          <div className="about-strengths">
+            <h3>Experience Behind Field Office</h3>
+            <ul>
+              {founderStrengths.map((strength) => (
+                <li key={strength}><span aria-hidden="true">✓</span>{strength}</li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>

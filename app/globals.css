@@ -932,7 +932,7 @@ body {
 
 .about-people-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(20rem, 0.75fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(1.25rem, 3vw, 2rem);
   align-items: stretch;
 }
@@ -956,8 +956,12 @@ body {
   gap: clamp(1.2rem, 2.5vw, 1.75rem);
 }
 
+.about-people-grid .about-strengths {
+  grid-column: 1 / -1;
+}
+
 .about-people-grid .about-strengths ul {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
 .about-founder {
@@ -1130,13 +1134,20 @@ body {
     border: 0;
   }
 
-  .about-values-grid,
-  .about-strengths ul {
+  .about-values-grid {
     grid-template-columns: 1fr;
+  }
+
+  .about-strengths ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .about-team-cta {
     align-items: stretch;
+  }
+
+  .about-people-grid .about-strengths {
+    grid-column: auto;
   }
 }
 
@@ -1157,6 +1168,10 @@ body {
 
   .about-values-grid {
     gap: 0.85rem;
+  }
+
+  .about-strengths ul {
+    grid-template-columns: 1fr;
   }
 }
 
