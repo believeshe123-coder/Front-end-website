@@ -100,6 +100,56 @@ body {
   color: var(--admin-text);
 }
 
+/* Homepage-only palette requested for the refreshed landing page. */
+.home-page {
+  --admin-primary: #102A5E;
+  --admin-dark: #102A5E;
+  --admin-accent: #F4EBD8;
+  --admin-page: #FAF8F3;
+  --admin-gold-accent: #D9A83E;
+  --admin-gold-hover: #C99426;
+  --admin-text: #3F4858;
+  --admin-white: #FFFFFF;
+  background: #FAF8F3;
+  color: #3F4858;
+}
+
+.home-page .hero-home,
+.home-page .support-showcase {
+  background-color: #FAF8F3;
+}
+
+.home-page .text-blue-950,
+.home-page h1,
+.home-page h2,
+.home-page h3 {
+  color: #102A5E !important;
+}
+
+.home-page .text-slate-600,
+.home-page .text-slate-700,
+.home-page .text-slate-900,
+.home-page p {
+  color: #3F4858 !important;
+}
+
+.home-page .btn-primary {
+  background-color: #D9A83E !important;
+  color: #102A5E !important;
+}
+
+.home-page .btn-primary:hover {
+  background-color: #C99426 !important;
+}
+
+body:has(.home-page) .site-footer {
+  background: #102A5E;
+}
+
+body:has(.home-page) .site-footer p {
+  color: #FFFFFF;
+}
+
 .bg-white,
 .bg-white\/95 {
   background-color: var(--admin-white) !important;
@@ -514,7 +564,7 @@ body {
 }
 
 .hero-home {
-  padding-block: calc(clamp(5.5rem, 9vw, 8rem) * var(--admin-vertical-spacing)) calc(clamp(6rem, 10vw, 9rem) * var(--admin-vertical-spacing)) !important;
+  padding-block: calc(clamp(5.5rem, 9vw, 8rem) * var(--admin-vertical-spacing)) calc(clamp(2rem, 3vw, 2.75rem) * var(--admin-vertical-spacing)) !important;
   border-bottom: 0;
   background:
     radial-gradient(circle at 18% 18%, color-mix(in srgb, var(--admin-gold-accent) 15%, transparent) 0, transparent 26rem),
@@ -574,7 +624,7 @@ body {
 }
 
 .support-showcase {
-  padding-block: calc(clamp(6rem, 10vw, 8.75rem) * var(--admin-vertical-spacing));
+  padding-block: calc(clamp(1.5rem, 3vw, 2.25rem) * var(--admin-vertical-spacing)) 0;
   padding-inline: calc(1.5rem * var(--admin-horizontal-spacing));
   background:
     linear-gradient(180deg, #ffffff 0 28%, color-mix(in srgb, var(--admin-accent) 55%, white) 28% 57%, #ffffff 57% 100%);
@@ -612,11 +662,11 @@ body {
   bottom: -30px;
   width: 100vw;
   transform: translateX(-50%);
-  background: linear-gradient(90deg, #001c49 0%, #0b3476 100%);
+  background: linear-gradient(90deg, #102A5E 0%, #082552 100%);
 }
 
 .hire-panel {
-  margin-bottom: clamp(2rem, 5vw, 4rem);
+  margin-bottom: 0;
 }
 
 .support-industries .industry-card,
@@ -651,7 +701,7 @@ body {
   width: 100vw;
   height: 0.75rem;
   transform: translateX(-50%);
-  background: linear-gradient(90deg, #001c49 0%, #0b3476 100%);
+  background: linear-gradient(90deg, #102A5E 0%, #082552 100%);
 }
 
 .role-card-grid {
@@ -743,9 +793,13 @@ body {
 .experience-panel {
   margin-top: calc(clamp(0.75rem, 1.5vw, 1.25rem) * var(--admin-vertical-spacing));
   margin-bottom: calc(clamp(2rem, 4vw, 3rem) * var(--admin-vertical-spacing));
-  padding: calc(clamp(1.5rem, 3vw, 2.25rem) * var(--admin-vertical-spacing)) clamp(1.25rem, 3vw, 2.5rem);
+  width: 100vw;
+  max-width: none !important;
+  margin-inline: calc(50% - 50vw);
+  padding: calc(clamp(1.2rem, 2.4vw, 1.85rem) * var(--admin-vertical-spacing)) clamp(1.25rem, 3vw, 2.5rem);
   border: 1px solid color-mix(in srgb, var(--admin-gold-accent) 20%, white);
-  border-radius: 1.25rem;
+  border-inline: 0;
+  border-radius: 0;
   background: color-mix(in srgb, var(--admin-gold-accent) 8%, white);
   box-shadow: 0 16px 40px color-mix(in srgb, var(--admin-dark) 6%, transparent);
   text-align: center;
@@ -784,8 +838,8 @@ body {
 
 @media (min-width: 1280px) {
   .experience-panel {
-    max-width: calc(100vw - 2.75rem) !important;
-    width: 100%;
+    max-width: none !important;
+    width: 100vw;
   }
 
   .experience-list {
@@ -801,19 +855,60 @@ body {
 
 
 .hire-panel {
-  grid-template-columns: minmax(16rem, 0.85fr) minmax(24rem, 1.35fr) minmax(14rem, 0.7fr);
-  padding-block: calc(clamp(3.5rem, 6vw, 5rem) * var(--admin-vertical-spacing));
-  padding-inline: 0;
+  grid-template-columns: minmax(16rem, 1fr) minmax(0, 2fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  width: 100vw;
+  max-width: none !important;
+  margin-inline: calc(50% - 50vw);
+  padding-block: calc(clamp(3.25rem, 5vw, 4.5rem) * var(--admin-vertical-spacing));
+  padding-inline: clamp(1.5rem, 12vw, 14rem);
   border: 0;
   border-radius: 0;
-  background: transparent;
+  background: linear-gradient(90deg, #102A5E 0%, #082552 100%);
   box-shadow: none;
+  color: #ffffff;
+}
+
+.hire-panel-intro {
+  max-width: none;
+}
+
+.hire-panel .eyebrow,
+.hire-panel h2,
+.hire-panel p,
+.hire-benefits li {
+  color: #ffffff !important;
+}
+
+.hire-panel-actions {
+  display: grid;
+  gap: 1.5rem;
 }
 
 .hire-benefits {
   gap: 1.25rem 2rem;
-  padding-inline: clamp(1.25rem, 3vw, 3rem);
-  border-inline: 1px solid #ECE8E2;
+  padding-inline: 0;
+  border-inline: 0;
+}
+
+.hire-benefits span {
+  background: color-mix(in srgb, var(--admin-gold-accent) 28%, white);
+  color: var(--admin-dark);
+}
+
+.hire-panel-cta {
+  text-align: center;
+}
+
+.hire-panel-cta .btn-primary {
+  width: min(100%, 28rem);
+  background-color: var(--admin-gold-accent) !important;
+  color: var(--admin-dark) !important;
+  box-shadow: 0 18px 34px color-mix(in srgb, var(--admin-dark) 26%, transparent) !important;
+}
+
+.hire-panel-cta .btn-primary:hover {
+  background-color: var(--admin-gold-hover) !important;
 }
 
 .btn-primary,
@@ -1322,4 +1417,21 @@ a {
   .spacing-slider-input {
     width: 6.5rem;
   }
+}
+
+/* Final homepage-only color pass; scoped so Contact and Quote pages are untouched. */
+.home-page .hero-home {
+  background:
+    radial-gradient(circle at 18% 18%, color-mix(in srgb, #D9A83E 15%, transparent) 0, transparent 26rem),
+    radial-gradient(circle at 82% 20%, color-mix(in srgb, #102A5E 12%, transparent) 0, transparent 28rem),
+    linear-gradient(180deg, #FFFFFF 0%, #FAF8F3 100%);
+}
+
+.home-page .support-showcase {
+  background:
+    linear-gradient(180deg, #FAF8F3 0 28%, color-mix(in srgb, #F4EBD8 55%, #FFFFFF) 28% 57%, #FAF8F3 57% 100%);
+}
+
+.home-page .experience-panel {
+  background: #F4EBD8;
 }
