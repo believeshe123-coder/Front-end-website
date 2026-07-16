@@ -873,11 +873,11 @@ body:has(.home-page) .site-footer p {
   max-width: none;
 }
 
-.hire-panel .eyebrow,
-.hire-panel h2,
-.hire-panel p,
-.hire-benefits li {
-  color: #FAF8F3 !important;
+.home-page .hire-panel .eyebrow,
+.home-page .hire-panel h2,
+.home-page .hire-panel p,
+.home-page .hire-panel .hire-benefits li {
+  color: #ffffff !important;
 }
 
 .hire-panel-actions {
