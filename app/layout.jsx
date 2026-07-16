@@ -13,7 +13,6 @@ export const metadata = {
 };
 
 const navItems = [
-  { href: "/about", label: "About Us" },
   { href: "/contact", label: "Contact Us" },
 ];
 
@@ -54,7 +53,10 @@ export default function RootLayout({ children }) {
         <footer className="site-footer px-6 py-8 lg:px-8">
           <div className="mx-auto flex max-w-7xl flex-col gap-2 text-sm text-white sm:flex-row sm:items-center sm:justify-between">
             <p>© 2026 Field Office.</p>
-            <p>Practical support for businesses that keep things running.</p>
+            <div className="flex flex-col gap-2 sm:items-end">
+              <a href="mailto:fieldofficesupport@gmail.com" className="font-semibold text-white transition hover:text-white/80">fieldofficesupport@gmail.com</a>
+              <p>Practical support for businesses that keep things running.</p>
+            </div>
           </div>
         </footer>
       </body>
