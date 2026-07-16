@@ -882,13 +882,24 @@ body:has(.home-page) .site-footer p {
 
 .hire-panel-actions {
   display: grid;
-  gap: 1.5rem;
+  width: 100%;
+  max-width: 58rem;
+  margin-inline: auto;
+  gap: 1.75rem;
+  justify-items: center;
 }
 
 .hire-benefits {
-  gap: 1.25rem 2rem;
+  width: 100%;
+  max-width: 52rem;
+  grid-template-columns: repeat(2, minmax(14rem, 1fr));
+  gap: 1.75rem clamp(3rem, 10vw, 8rem);
   padding-inline: 0;
   border-inline: 0;
+}
+
+.hire-benefits li {
+  justify-content: flex-start;
 }
 
 .hire-benefits span {
